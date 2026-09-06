@@ -2,6 +2,11 @@ import dotenv from "dotenv";
 dotenv.config();
 import express from 'express';
 import mongoose from "mongoose";
+import registerUser from './controllers/userController.js';
+import userRoutes from './routes/userRoutes.js';
+import cookieParser from "cookie-parser";
+
+
 async function connectDB(){
     try{
          await mongoose.connect(process.env.MONGO_URI);
@@ -18,6 +23,11 @@ connectDB();
 
 
 const app = express();
+app.use(express.json());
+app.use(cookieParser());
+
+
+app.use('/api/users', userRoutes)
 app.get('/', (req,res)=>{
     res.send('Server is running ')
 });
