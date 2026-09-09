@@ -5,6 +5,9 @@ import mongoose from "mongoose";
 import registerUser from './controllers/userController.js';
 import userRoutes from './routes/userRoutes.js';
 import cookieParser from "cookie-parser";
+import passport from "passport";
+import './config/passport.js';
+
 
 
 async function connectDB(){
@@ -21,6 +24,8 @@ connectDB();
 const app = express();
 app.use(express.json());
 app.use(cookieParser());
+app.use(passport.initialize());
+
 
 
 app.use('/api/users', userRoutes)
