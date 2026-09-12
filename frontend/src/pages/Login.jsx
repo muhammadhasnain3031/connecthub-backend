@@ -1,0 +1,70 @@
+import { useState } from "react";
+import API from "../api/axiosInstance";
+
+const Login = () => {
+    // 1. Core State Hooks
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(null);
+
+    // 2. Form Request Handler Logic
+    const handleSubmit = async (e) => {
+        e.preventDefault(); // Page refresh handler interception
+        setLoading(true);
+        setError(null);
+
+        try {
+            const response = await API.post('/users/login', { email, password });
+            console.log('Login Success Payload:', response.data);
+            alert("Login Successful!");
+        } catch (err) {
+            // Polymorphic fallback assignment
+            const errorMessage = err.response?.data?.message || "Connection failed.";
+            setError(errorMessage);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    // 3. Clean HTML Return Stack (No Styling Layers)
+    return (
+        <div>
+            <h2>ConnectHub Login</h2>
+
+            {/* Error Notification Alert (Short-circuit conditional) */}
+            {error && <p style={{ color: 'red' }}><b>Error:</b> {error}</p>}
+
+            <form onSubmit={handleSubmit}>
+                <div>
+                    <label>Email ID:</label>
+                    <input 
+                        type="email" 
+                        value={email} 
+                        onChange={(e) => setEmail(e.target.value)} 
+                        required 
+                        disabled={loading}
+                    />
+                </div>
+
+                <div>
+                    <label>Password:</label>
+                    <input 
+                        type="password" 
+                        value={password} 
+                        onChange={(e) => setPassword(e.target.value)} 
+                        required 
+                        disabled={loading}
+                    />
+                </div>
+
+                {/* State-dependent button control */}
+                <button type="submit" disabled={loading}>
+                    {loading ? 'Verifying...' : 'Login'}
+                </button>
+            </form>
+        </div>
+    );
+};
+
+export default Login;
