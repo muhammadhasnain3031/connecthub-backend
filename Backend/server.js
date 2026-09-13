@@ -9,7 +9,7 @@
     import helmet from "helmet";
     import cors from 'cors';
     import rateLimit from "express-rate-limit";
-    import mongoSanitize from 'express-mongo-sanitize';
+    import sanitizeInput from "./middleware/sanitizeInput.js";
     import cookieParser from "cookie-parser";
     import compression from "compression";
 
@@ -28,7 +28,7 @@
     app.use(cookieParser());
     app.use(passport.initialize());
     
-    app.use(mongoSanitize());
+    app.use(sanitizeInput);
     app.use(compression());
 
 

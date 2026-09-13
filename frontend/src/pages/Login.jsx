@@ -1,8 +1,11 @@
 import { useState } from "react";
 import API from "../api/axiosInstance";
+import { useAuth } from "../context/AuthContext";
+
 
 const Login = () => {
     // 1. Core State Hooks
+    const {login} = useAuth();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [loading, setLoading] = useState(false);
@@ -16,12 +19,10 @@ const Login = () => {
 
         try {
             const response = await API.post('/users/login', { email, password });
-            console.log('Login Success Payload:', response.data);
+            login(response.data.user)
             alert("Login Successful!");
         } catch (err) {
-            // Polymorphic fallback assignment
-            const errorMessage = err.response?.data?.message || "Connection failed.";
-            setError(errorMessage);
+            setError(err.response?.data?.message || "Connection failed.");
         } finally {
             setLoading(false);
         }
