@@ -1,40 +1,53 @@
-import { useState } from "react";
+import { useReducer,useState } from "react";
 import API from "../api/axiosInstance";
 import { useAuth } from "../context/AuthContext";
 
+// 1. Reducer function — state kaise change hogi, yahan decide hota hai
+const loginReducer = (state, action) => {
+    switch (action.type) {
+        case 'SUBMIT_START':
+            return { ...state, loading: true, error: null };
+        case 'SUBMIT_SUCCESS':
+            return { ...state, loading: false, error: null };
+        case 'SUBMIT_FAIL':
+            return { ...state, loading: false, error: action.payload };
+        default:
+            return state;
+    }
+};
+
+const initialState = {
+    loading: false,
+    error: null,
+};
 
 const Login = () => {
-    // 1. Core State Hooks
-    const {login} = useAuth();
+    const { login } = useAuth();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState(null);
 
-    // 2. Form Request Handler Logic
+    // 2. useState ki jagah useReducer
+    const [state, dispatch] = useReducer(loginReducer, initialState);
+
     const handleSubmit = async (e) => {
-        e.preventDefault(); // Page refresh handler interception
-        setLoading(true);
-        setError(null);
+        e.preventDefault();
+        dispatch({ type: 'SUBMIT_START' });
 
         try {
             const response = await API.post('/users/login', { email, password });
-            login(response.data.user)
+            login(response.data.user);
+            dispatch({ type: 'SUBMIT_SUCCESS' });
             alert("Login Successful!");
         } catch (err) {
-            setError(err.response?.data?.message || "Connection failed.");
-        } finally {
-            setLoading(false);
+            dispatch({ type: 'SUBMIT_FAIL', payload: err.response?.data?.message || "Connection failed." });
         }
     };
 
-    // 3. Clean HTML Return Stack (No Styling Layers)
     return (
         <div>
             <h2>ConnectHub Login</h2>
 
-            {/* Error Notification Alert (Short-circuit conditional) */}
-            {error && <p style={{ color: 'red' }}><b>Error:</b> {error}</p>}
+            {state.error && <p style={{ color: 'red' }}><b>Error:</b> {state.error}</p>}
 
             <form onSubmit={handleSubmit}>
                 <div>
@@ -44,7 +57,7 @@ const Login = () => {
                         value={email} 
                         onChange={(e) => setEmail(e.target.value)} 
                         required 
-                        disabled={loading}
+                        disabled={state.loading}
                     />
                 </div>
 
@@ -55,13 +68,12 @@ const Login = () => {
                         value={password} 
                         onChange={(e) => setPassword(e.target.value)} 
                         required 
-                        disabled={loading}
+                        disabled={state.loading}
                     />
                 </div>
 
-                {/* State-dependent button control */}
-                <button type="submit" disabled={loading}>
-                    {loading ? 'Verifying...' : 'Login'}
+                <button type="submit" disabled={state.loading}>
+                    {state.loading ? 'Verifying...' : 'Login'}
                 </button>
             </form>
         </div>
