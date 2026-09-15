@@ -1,4 +1,5 @@
-import { useReducer,useState } from "react";
+import { useReducer, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import API from "../api/axiosInstance";
 import { useAuth } from "../context/AuthContext";
 
@@ -23,6 +24,7 @@ const initialState = {
 
 const Login = () => {
     const { login } = useAuth();
+    const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -37,7 +39,7 @@ const Login = () => {
             const response = await API.post('/users/login', { email, password });
             login(response.data.user);
             dispatch({ type: 'SUBMIT_SUCCESS' });
-            alert("Login Successful!");
+            navigate('/dashboard/bookings');
         } catch (err) {
             dispatch({ type: 'SUBMIT_FAIL', payload: err.response?.data?.message || "Connection failed." });
         }
