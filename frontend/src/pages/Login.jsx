@@ -1,55 +1,35 @@
-import { useReducer, useState } from "react";
+import { useState } from "react"; 
 import { useNavigate } from "react-router-dom";
-import API from "../api/axiosInstance";
-import { useAuth } from "../context/AuthContext";
-
-// 1. Reducer function — state kaise change hogi, yahan decide hota hai
-const loginReducer = (state, action) => {
-    switch (action.type) {
-        case 'SUBMIT_START':
-            return { ...state, loading: true, error: null };
-        case 'SUBMIT_SUCCESS':
-            return { ...state, loading: false, error: null };
-        case 'SUBMIT_FAIL':
-            return { ...state, loading: false, error: action.payload };
-        default:
-            return state;
-    }
-};
-
-const initialState = {
-    loading: false,
-    error: null,
-};
+import { loginUser } from "../store/authSlice";
+import { useDispatch, useSelector } from "react-redux"; 
 
 const Login = () => {
-    const { login } = useAuth();
+    const dispatch = useDispatch();
     const navigate = useNavigate();
+    
+    const { loading, error } = useSelector((state) => state.auth); 
+
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    // 2. useState ki jagah useReducer
-    const [state, dispatch] = useReducer(loginReducer, initialState);
-
-    const handleSubmit = async (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
-        dispatch({ type: 'SUBMIT_START' });
-
-        try {
-            const response = await API.post('/users/login', { email, password });
-            login(response.data.user);
-            dispatch({ type: 'SUBMIT_SUCCESS' });
-            navigate('/dashboard/bookings');
-        } catch (err) {
-            dispatch({ type: 'SUBMIT_FAIL', payload: err.response?.data?.message || "Connection failed." });
-        }
+        
+        dispatch(loginUser({ email, password }))
+            .unwrap()
+            .then(() => {
+                navigate('/dashboard/bookings');
+            })
+            .catch((err) => {
+                console.error("Login failed:", err);
+            });
     };
 
     return (
         <div>
             <h2>ConnectHub Login</h2>
 
-            {state.error && <p style={{ color: 'red' }}><b>Error:</b> {state.error}</p>}
+            {error && <p style={{ color: 'red' }}><b>Error:</b> {error}</p>}
 
             <form onSubmit={handleSubmit}>
                 <div>
@@ -59,7 +39,7 @@ const Login = () => {
                         value={email} 
                         onChange={(e) => setEmail(e.target.value)} 
                         required 
-                        disabled={state.loading}
+                        disabled={loading} 
                     />
                 </div>
 
@@ -70,12 +50,12 @@ const Login = () => {
                         value={password} 
                         onChange={(e) => setPassword(e.target.value)} 
                         required 
-                        disabled={state.loading}
+                        disabled={loading}
                     />
                 </div>
 
-                <button type="submit" disabled={state.loading}>
-                    {state.loading ? 'Verifying...' : 'Login'}
+                <button type="submit" disabled={loading}>
+                    {loading ? 'Verifying...' : 'Login'}
                 </button>
             </form>
         </div>
