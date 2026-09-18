@@ -12,6 +12,8 @@
     import sanitizeInput from "./middleware/sanitizeInput.js";
     import cookieParser from "cookie-parser";
     import compression from "compression";
+    import serviceRoutes from './routes/serviceRoutes.js';
+
 
 
 
@@ -30,6 +32,7 @@
     
     app.use(sanitizeInput);
     app.use(compression());
+    app.use('/api/services', serviceRoutes);
 
 
     async function connectDB(){
