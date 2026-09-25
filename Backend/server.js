@@ -13,6 +13,7 @@
     import cookieParser from "cookie-parser";
     import compression from "compression";
     import serviceRoutes from './routes/serviceRoutes.js';
+    import bookingRoutes from './routes/bookingRoutes.js'
 
 
 
@@ -33,6 +34,7 @@
     app.use(sanitizeInput);
     app.use(compression());
     app.use('/api/services', serviceRoutes);
+    app.use('/api/bookings', bookingRoutes);
 
 
     async function connectDB(){
