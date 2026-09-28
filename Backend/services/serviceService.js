@@ -14,23 +14,34 @@ class ServiceService {
     return await serviceRepository.create(finalData);
   }
 
-  async getServices(queryParams) {
+    async getServices(queryParams) {
     const { search, category, minPrice, maxPrice, page = 1, limit = 10 } = queryParams;
-    const queryObj = {};
+    
+    const andConditions = [];
 
     if (search) {
-      queryObj.title = { $regex: search, $options: 'i' };
+      andConditions.push({
+        $or: [
+          { title: { $regex: search, $options: 'i' } },
+          { description: { $regex: search, $options: 'i' } }
+        ]
+      });
     }
 
     if (category) {
-      queryObj.category = category;
+      andConditions.push({ category });
     }
 
     if (minPrice !== undefined || maxPrice !== undefined) {
-      queryObj.price = {};
-      if (minPrice !== undefined) queryObj.price.$gte = Number(minPrice);
-      if (maxPrice !== undefined) queryObj.price.$lte = Number(maxPrice);
+      const priceQuery = {};
+      if (minPrice !== undefined) priceQuery.$gte = Number(minPrice);
+      if (maxPrice !== undefined) priceQuery.$lte = Number(maxPrice);
+      
+      andConditions.push({ price: priceQuery });
     }
+
+   
+    const queryObj = andConditions.length > 0 ? { $and: andConditions } : {};
 
     const pageNumber = Number(page);
     const limitNumber = Number(limit);
@@ -49,6 +60,7 @@ class ServiceService {
       services: data
     };
   }
+
 
   async getServiceById(id) {
     const service = await serviceRepository.findById(id);
