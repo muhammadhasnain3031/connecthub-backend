@@ -38,3 +38,14 @@ export const deleteService = catchAsync(async (req, res, next) => {
   await serviceService.deleteService(req.params.id);
   res.status(200).json({ message: 'Service deleted successfully' });
 });
+
+export const getTopProvidersMetrics = catchAsync(async (req, res, next) => {
+  const analyticsData = await serviceService.getTopProviders();
+  
+  res.status(200).json({
+    success: true,
+    message: 'Top analytics pipeline metrics fetched successfully',
+    data: analyticsData
+  });
+});
+

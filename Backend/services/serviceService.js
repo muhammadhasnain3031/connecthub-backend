@@ -1,11 +1,11 @@
 import serviceRepository from '../repositories/serviceRepository.js';
 import { NotFoundError, BadRequestError } from '../utils/customErrors.js';
+import mongoose from 'mongoose'; // Object ID mapping ke liye zaroori hai
 
 class ServiceService {
   async createService(providerId, serviceData) {
     const { title, description, category, price } = serviceData;
 
-    // Field Validation (Purani Logic)
     if (!title || !description || !category || price === undefined) {
       throw new BadRequestError('All fields are required');
     }
@@ -14,9 +14,8 @@ class ServiceService {
     return await serviceRepository.create(finalData);
   }
 
-    async getServices(queryParams) {
+  async getServices(queryParams) {
     const { search, category, minPrice, maxPrice, page = 1, limit = 10 } = queryParams;
-    
     const andConditions = [];
 
     if (search) {
@@ -40,9 +39,7 @@ class ServiceService {
       andConditions.push({ price: priceQuery });
     }
 
-   
     const queryObj = andConditions.length > 0 ? { $and: andConditions } : {};
-
     const pageNumber = Number(page);
     const limitNumber = Number(limit);
     const skipValue = (pageNumber - 1) * limitNumber;
@@ -61,7 +58,6 @@ class ServiceService {
     };
   }
 
-
   async getServiceById(id) {
     const service = await serviceRepository.findById(id);
     if (!service) {
@@ -76,7 +72,6 @@ class ServiceService {
       throw new NotFoundError('Service not found');
     }
 
-    // Dynamic property updating logic (Purani Logic)
     const { title, description, category, price, images } = updateFields;
     if (title !== undefined) service.title = title;
     if (description !== undefined) service.description = description;
@@ -94,6 +89,47 @@ class ServiceService {
     }
     await serviceRepository.delete(service);
     return true;
+  }
+
+ 
+  async getTopProviders() {
+    const pipeline = [
+      {
+        $group: {
+          _id: '$providerId',
+          averagePrice: { $avg: '$price' },
+          totalServices: { $sum: 1 },
+        },
+      },
+      {
+        $sort: { totalServices: -1, averagePrice: 1 },
+      },
+      {
+        $limit: 10,
+      },
+      {
+        $lookup: {
+          from: 'users', 
+          localField: '_id',
+          foreignField: '_id',
+          as: 'providerDetails',
+        },
+      },
+      {
+        $unwind: '$providerDetails',
+      },
+      {
+        $project: {
+          _id: 1,
+          totalServices: 1,
+          averagePrice: { $round: ['$averagePrice', 2] },
+          'providerDetails.name': 1,
+          'providerDetails.email': 1,
+        },
+      },
+    ];
+
+    return await serviceRepository.aggregate(pipeline);
   }
 }
 
