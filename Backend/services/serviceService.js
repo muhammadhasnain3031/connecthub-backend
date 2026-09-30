@@ -1,18 +1,36 @@
+import BookingAnalytics from '../models/BookingAnalytics.js';
 import serviceRepository from '../repositories/serviceRepository.js';
 import { NotFoundError, BadRequestError } from '../utils/customErrors.js';
-import mongoose from 'mongoose'; // Object ID mapping ke liye zaroori hai
+import mongoose from 'mongoose'; 
 
 class ServiceService {
-  async createService(providerId, serviceData) {
+    async createService(providerId, serviceData) {
     const { title, description, category, price } = serviceData;
 
+    // Validation check
     if (!title || !description || !category || price === undefined) {
       throw new BadRequestError('All fields are required');
     }
     
     const finalData = { ...serviceData, providerId };
-    return await serviceRepository.create(finalData);
+    const createdService = await serviceRepository.create(finalData);
+
+    try {
+      const todayStr = new Date().toISOString().split('T')[0]; 
+      
+      
+      await BookingAnalytics.findOneAndUpdate(
+        { date: todayStr },
+        { $inc: { totalServicesCreated: 1 } },
+        { upsert: true }
+      );
+    } catch (analyticsError) {
+      console.error('Analytics tracking failed silently:', analyticsError);
+    }
+
+    return createdService;
   }
+
 
   async getServices(queryParams) {
     const { search, category, minPrice, maxPrice, page = 1, limit = 10 } = queryParams;
