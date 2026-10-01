@@ -16,11 +16,13 @@ export const createService = catchAsync(async (req, res, next) => {
   });
 });
 
+// Read All Services - 
 export const getAllServices = catchAsync(async (req, res, next) => {
   const result = await serviceService.getServices(req.query);
   res.status(200).json(result);
 });
 
+// Read Single Service By ID
 export const getServiceById = catchAsync(async (req, res, next) => {
   const service = await serviceService.getServiceById(req.params.id);
   res.status(200).json({ service });
@@ -48,4 +50,3 @@ export const getTopProvidersMetrics = catchAsync(async (req, res, next) => {
     data: analyticsData
   });
 });
-
