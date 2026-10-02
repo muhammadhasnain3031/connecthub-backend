@@ -5,12 +5,14 @@ import mongoose from 'mongoose';
 
 class ServiceService {
   async createService(providerId, serviceData) {
-    const { title, description, category, price } = serviceData;
+    // 1. Destructuring me 'images' ko bhi shamil kiya
+    const { title, description, category, price, images } = serviceData;
 
     if (!title || !description || !category || price === undefined) {
       throw new BadRequestError('All fields are required');
     }
     
+    // Yahan finalData me providerId aur serviceData (jis me images array hai) dono mix ho kar repository me jayenge
     const finalData = { ...serviceData, providerId };
     const createdService = await serviceRepository.create(finalData);
 
@@ -59,15 +61,13 @@ class ServiceService {
     const limitNumber = Number(limit);
     const skipValue = (pageNumber - 1) * limitNumber;
 
-    // Lean Execution Hint: Repository ko options bhej rahe hain taaki queries hydrated na hon (Lean optimization)
     const { data, total } = await serviceRepository.findAll(queryObj, {
       skip: skipValue,
       limit: limitNumber,
       sort: { createdAt: -1 },
-      lean: true // Repository layer is lean flat flag ko parse kar ke data optimize karegi
+      lean: true 
     });
 
-    // POJO mapping: Agar repository direct lean object return kar rahi hai to custom virtual mapping apply ho sakay
     const optimizedServices = data.map(service => {
       const doc = service.toObject ? service.toObject({ virtuals: true }) : service;
       if (!doc.shortDescription && doc.description) {
@@ -85,19 +85,16 @@ class ServiceService {
   }
 
   async getServiceById(id) {
-    // Agar read operations perform karne hain to repository layer mein .lean() default implement hona chahiye
     const service = await serviceRepository.findById(id);
     if (!service) {
       throw new NotFoundError('Service not found');
     }
     
-    // Mongoose Hydrated documents check and formatting
     const doc = service.toObject ? service.toObject({ virtuals: true }) : service;
     return doc;
   }
 
   async updateService(id, updateFields) {
-    // Update operation ke liye fully dynamic mongoose instance chahiye (No lean here, hooks triggers are active)
     const service = await serviceRepository.findById(id); 
     if (!service) {
       throw new NotFoundError('Service not found');
@@ -108,9 +105,10 @@ class ServiceService {
     if (description !== undefined) service.description = description;
     if (category !== undefined) service.category = category;
     if (price !== undefined) service.price = price;
+    
+    // Cloudinary upload ke baad jab naya images array aayega to ye purane ko overwrite ya extend kar dega
     if (images !== undefined) service.images = images;
 
-    // Is save execution ke sath hi humara 'pre-save slug validation hook' trigger hoga!
     return await service.save();
   }
 
@@ -160,7 +158,6 @@ class ServiceService {
       },
     ];
 
-    // Aggregations default out-of-the-box plain objects (lean) hi return karte hain!
     return await serviceRepository.aggregate(pipeline);
   }
 }

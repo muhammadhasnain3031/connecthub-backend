@@ -8,13 +8,25 @@ const catchAsync = (fn) => {
 
 export const createService = catchAsync(async (req, res, next) => {
   const providerId = req.user.id || req.user._id;
-  const service = await serviceService.createService(providerId, req.body);
+
+  // 1. Agar multiple files upload hui hain (req.files), to unke cloud paths (URLs) ka array banayein
+  const imageUrls = req.files ? req.files.map(file => file.path) : [];
+
+  // 2. req.body ke andar 'images' ka array inject karein taake service layer ko mil sake
+  const serviceData = {
+    ...req.body,
+    images: imageUrls
+  };
+
+  // 3. Purane req.body ki jagah ab updated serviceData pass karein
+  const service = await serviceService.createService(providerId, serviceData);
 
   res.status(201).json({ 
     message: 'Service created successfully', 
     service 
   });
 });
+
 
 // Read All Services - 
 export const getAllServices = catchAsync(async (req, res, next) => {
