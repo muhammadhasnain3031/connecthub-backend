@@ -1,75 +1,53 @@
 import fs from 'fs';
 import path from 'path';
 import bookingRepository from '../repositories/bookingRepository.js';
+import paymentRepository from '../repositories/paymentRepository.js';
 
-// =========================================================================
-// DAY-16: GET /api/bookings/export (Streams & File System System)
-// =========================================================================
 export const exportBookingsLog = async (req, res, next) => {
   try {
-    // 1. Mock Data (Dummy Bookings)
     const mockBookings = [
       { id: 'B101', client: 'Ali Khan', service: 'MERN Stack Development', amount: 150, date: '2026-03-10' },
       { id: 'B102', client: 'Zainab Ahmed', service: 'Graphic Design UI/UX', amount: 80, date: '2026-03-11' },
       { id: 'B103', client: 'Hamza Yusuf', service: 'SEO Optimization', amount: 120, date: '2026-03-12' },
       { id: 'B104', client: 'Ayesha Raza', service: 'Content Writing', amount: 50, date: '2026-03-13' },
     ];
-
-    // 2. Platform-Independent Path Setup 
     const exportsDir = path.join(process.cwd(), 'exports');
     const filePath = path.join(exportsDir, 'bookings-log.txt');
 
-    // 3. Folder Directory Check (Edge Case Control)
     if (!fs.existsSync(exportsDir)) {
       fs.mkdirSync(exportsDir);
     }
 
-    // 4. Initialize Writable Stream (The Core Streams Pattern)
     const writeStream = fs.createWriteStream(filePath, { flags: 'w', encoding: 'utf-8' });
-
-    // Header line write karein log file ke top par
     writeStream.write("=========================================\n");
     writeStream.write(`CONNECTHUB BOOKINGS LOG REPORT - GENERATED AT: ${new Date().toISOString()}\n`);
     writeStream.write("=========================================\n\n");
 
-    // 5. Streaming Data Chunks Loop
     mockBookings.forEach((booking, index) => {
       const logLine = `[LOG #${index + 1}] ID: ${booking.id} | Client: ${booking.client} | Service: ${booking.service} | Amount: $${booking.amount} | Date: ${booking.date}\n`;
-      
-      // Her line ko chunk ki surat mein write stream me bhej rahe hain
       writeStream.write(logLine);
     });
 
     writeStream.write("\n=========================================\n");
     writeStream.write("END OF LOG REPORT\n");
     writeStream.write("=========================================\n");
-
-    // 6. Stream Closing & Callback Event
     writeStream.end();
 
-    // Event checking hook 
     writeStream.on('finish', () => {
       console.log(`[Streams Success] Logs safely written to: ${filePath}`);
     });
 
-    // 7. Success Response sending back to front-end
     res.status(200).json({
       success: true,
       message: 'Bookings log report exported successfully using Writable Streams!',
       fileName: 'bookings-log.txt',
       savedLocation: filePath
     });
-
   } catch (error) {
     next(error);
   }
 };
 
-// =========================================================================
-// DAY-23: CORE BOOKING FLOW LOGIC
-// =========================================================================
-
-// 1. Naye Booking Create Karna
 export const createBooking = async (req, res, next) => {
   try {
     const { providerId, serviceId, amount } = req.body;
@@ -92,7 +70,6 @@ export const createBooking = async (req, res, next) => {
   }
 };
 
-// 2. Logged-in User (Client/Provider) ki Bookings Fetch Karna
 export const getUserBookings = async (req, res, next) => {
   try {
     const userId = req.user._id;
@@ -114,7 +91,6 @@ export const getUserBookings = async (req, res, next) => {
   }
 };
 
-// 3. Booking Status Cycle Change Karna (State Machine Architecture)
 export const updateBookingStatus = async (req, res, next) => {
   try {
     const bookingId = req.params.id;
@@ -137,8 +113,28 @@ export const updateBookingStatus = async (req, res, next) => {
       return res.status(403).json({ success: false, message: 'Only providers can accept bookings' });
     }
 
-    const updatedBooking = await bookingRepository.updateStatus(bookingId, status);
+    // New Day-24 ACID Validation Rule Integration
+    if (status === 'completed') {
+      if (!isProvider) {
+        return res.status(403).json({ success: false, message: 'Only providers can mark bookings as completed' });
+      }
+      
+      // Perform multi-document database wallet transaction inside ACID pipeline
+      const transaction = await paymentRepository.processWalletPayment({
+        bookingId: booking._id,
+        payerId: booking.clientId._id,
+        payeeId: booking.providerId._id,
+        amount: booking.amount,
+      });
 
+      return res.status(200).json({
+        success: true,
+        message: 'Booking completed and payment transferred securely via wallet.',
+        transaction,
+      });
+    }
+
+    const updatedBooking = await bookingRepository.updateStatus(bookingId, status);
     res.status(200).json({
       success: true,
       message: `Booking status updated to ${status}`,
