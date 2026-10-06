@@ -14,6 +14,8 @@ import cookieParser from "cookie-parser";
 import compression from "compression";
 import serviceRoutes from './routes/serviceRoutes.js';
 import bookingRoutes from './routes/bookingRoutes.js';
+// 1. Payment routes ko import karein
+import paymentRoutes from './routes/paymentRoutes.js'; 
 
 import errorMiddleware from "./middleware/errorMiddleware.js";
 
@@ -21,11 +23,17 @@ const app = express();
 const limiter = rateLimit({
     windowMs: 15 * 60 * 1000,
     max : 100,
-    message : { success: false, message : ' Too many reques, try again later'}
+    message : { success: false, message : ' Too many requests, try again later'}
 });
+
 app.use(cors({origin: 'http://localhost:5173', credentials:true}));
 app.use(helmet());
 app.use(limiter);
+
+// 2. STAGE 1: Stripe Payment Routes ko express.json() se PEHLE rakhein.
+// Taa ke jab hum isme Webhook add karein, to raw body securely fetch ho sakay.
+app.use('/api/payments', paymentRoutes);
+
 app.use(express.json());
 app.use(cookieParser());
 app.use(passport.initialize());
