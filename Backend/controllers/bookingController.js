@@ -91,10 +91,13 @@ export const getUserBookings = async (req, res, next) => {
   }
 };
 
+// ==========================================
+// DAY 28 UPDATED: Status Updates with Concurrency Resolution
+// ==========================================
 export const updateBookingStatus = async (req, res, next) => {
   try {
     const bookingId = req.params.id;
-    const { status } = req.body;
+    const { status, clientVersion } = req.body; // Client apna dekha hua version bhejega (__v)
     const userId = req.user._id;
 
     const booking = await bookingRepository.findById(bookingId);
@@ -113,13 +116,12 @@ export const updateBookingStatus = async (req, res, next) => {
       return res.status(403).json({ success: false, message: 'Only providers can accept bookings' });
     }
 
-    // New Day-24 ACID Validation Rule Integration
+    // Day-24 ACID Validation Rule Integration
     if (status === 'completed') {
       if (!isProvider) {
         return res.status(403).json({ success: false, message: 'Only providers can mark bookings as completed' });
       }
       
-      // Perform multi-document database wallet transaction inside ACID pipeline
       const transaction = await paymentRepository.processWalletPayment({
         bookingId: booking._id,
         payerId: booking.clientId._id,
@@ -134,7 +136,18 @@ export const updateBookingStatus = async (req, res, next) => {
       });
     }
 
-    const updatedBooking = await bookingRepository.updateStatus(bookingId, status);
+    // DAY 28: Update Query wrapping Mongoose internal version (__v) control logic
+    // Agar database ka version clientVersion se different hai to update block block ho jayega.
+    const updatedBooking = await bookingRepository.updateStatusSecurely(bookingId, status, clientVersion);
+    
+    if (!updatedBooking) {
+      return res.status(409).json({
+        success: false,
+        errorType: 'CONFLICT_ERROR',
+        message: 'This booking has already been modified by another action. Please refresh the page.'
+      });
+    }
+
     res.status(200).json({
       success: true,
       message: `Booking status updated to ${status}`,

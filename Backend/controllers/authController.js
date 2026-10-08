@@ -33,8 +33,19 @@ async function loginUser(req, res) {
             secure: process.env.NODE_ENV === 'production',
             sameSite: 'strict',
             maxAge: 7 * 24 * 60 * 60 * 1000,
-        })
-        return res.status(200).json({ message: 'Loggin successfully' })
+        });
+
+        // ⚡ FIX: userExist use kiya aur return statement ko ek hi line me properly structural format kiya
+        return res.status(200).json({
+            message: "Loggin successfully",
+            user: {
+                _id: userExist._id,
+                name: userExist.name,
+                email: userExist.email,
+                role: userExist.role
+            }
+        });
+
     }
     catch (error) {
         return res.status(500).json({ message: error.message })

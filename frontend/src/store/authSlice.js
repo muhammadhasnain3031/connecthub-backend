@@ -6,6 +6,7 @@ export const loginUser = createAsyncThunk(
   async (credentials, thunkAPI) => {
     try {
       const response = await API.post('/users/login', credentials);
+      // Backend se { message: "...", user: { _id, name, ... } } aa raha hai
       return response.data.user;
     } catch (err) {
       const message = err.response?.data?.message || "Connection failed.";
@@ -14,8 +15,20 @@ export const loginUser = createAsyncThunk(
   }
 );
 
+const getSavedUser = () => {
+  const savedUser = localStorage.getItem('user');
+  if (!savedUser || savedUser === "undefined" || savedUser === "null") {
+    return null;
+  }
+  try {
+    return JSON.parse(savedUser);
+  } catch (e) {
+    return null;
+  }
+};
+
 const initialState = {
-  user: localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : null,
+  user: getSavedUser(), 
   loading: false,
   error: null, 
 };
