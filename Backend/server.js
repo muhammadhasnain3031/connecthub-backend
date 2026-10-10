@@ -2,8 +2,8 @@ import dotenv from "dotenv";
 dotenv.config();
 import express from 'express';
 import mongoose from "mongoose";
-import { createServer } from "http"; // ⚡ Update: Added for Socket.io wrapper
-import { Server } from "socket.io"; // ⚡ Update: Added Socket.io server package
+import { createServer } from "http"; 
+import { Server } from "socket.io"; 
 import registerUser from './controllers/userController.js';
 import userRoutes from './routes/userRoutes.js';
 import passport from "passport";
@@ -19,12 +19,15 @@ import bookingRoutes from './routes/bookingRoutes.js';
 import paymentRoutes from './routes/paymentRoutes.js'; 
 import errorMiddleware from "./middleware/errorMiddleware.js";
 
+// ==========================================
+// DAY 29 TRIGGER PREPARATION (Listeners Register)
+// ==========================================
+// Nota: File sahi jagah (Backend) move karne ke baad import kaam karega
+import { initNotificationListeners } from './listeners/notificationListener.js'
 const app = express();
 
-// ⚡ Update: Express app ko HTTP server mein wrap kiya
 const httpServer = createServer(app);
 
-// ⚡ Update: Socket.io ko separate CORS options ke sath initialize kiya
 const io = new Server(httpServer, {
     cors: {
         origin: 'http://localhost:5173',
@@ -42,7 +45,6 @@ app.use(cors({origin: 'http://localhost:5173', credentials:true}));
 app.use(helmet());
 app.use(limiter);
 
-// Stripe Payment Routes ko express.json() se PEHLE rakhein raw body ke liye
 app.use('/api/payments', paymentRoutes);
 
 app.use(express.json());
@@ -65,30 +67,37 @@ async function connectDB(){
 }
 connectDB();
 
+// ==========================================
+// BOOT THE BACKGROUND EVENT LISTENERS
+// ==========================================
+// Server setup load hone se pehle hamare Pub/Sub listeners active hone chahiye
+initNotificationListeners();
+
 app.use('/api/users', userRoutes);
 app.get('/', (req,res)=>{
     res.send('Server is running ')
 });
 
-// ⚡ Update: Socket.io Connection Event Listeners (Room Isolation Pattern)
+// ==========================================
+// DAY 28 UPDATED: Socket Event Verification Rules
+// ==========================================
 io.on('connection', (socket) => {
     console.log(`⚡ User connected: ${socket.id}`);
 
-    // User dynamically ek specific conversation room join karega
     socket.on('joinRoom', (conversationId) => {
         socket.join(conversationId);
         console.log(`🚪 User with socket id ${socket.id} joined room: ${conversationId}`);
     });
 
-    // Message transmit karne ki logic
     socket.on('sendMessage', (messageData) => {
         const { conversationId } = messageData;
-        // Room ke baki members ko event emit karna bina sender ko disturb kiye
         socket.to(conversationId).emit('receiveMessage', messageData);
     });
 
+    // ⚡ UPDATE FOR DAY 28: Disconnect memory optimization routine
     socket.on('disconnect', () => {
-        console.log(`❌ User disconnected: ${socket.id}`);
+        console.log(`❌ User disconnected properly: ${socket.id}`);
+        // Yahan future mein active mapping pools se clean-up tags execute honge
     });
 });
 
@@ -96,7 +105,6 @@ app.use(errorMiddleware);
 
 const PORT = process.env.PORT || 5000;
 
-// ⚡ Update: App.listen ki jagah ab httpServer.listen chalega
 httpServer.listen(PORT,()=>{
     console.log(`Server is running on ${PORT}`)
 });

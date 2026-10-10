@@ -2,6 +2,8 @@ import fs from 'fs';
 import path from 'path';
 import bookingRepository from '../repositories/bookingRepository.js';
 import paymentRepository from '../repositories/paymentRepository.js';
+// 🔥 DAY 29 IMPORT: Centralized Event Hub Hub Connection Setup
+import appEventEmitter from '../utils/eventEmitter.js';
 
 export const exportBookingsLog = async (req, res, next) => {
   try {
@@ -91,13 +93,13 @@ export const getUserBookings = async (req, res, next) => {
   }
 };
 
-// ==========================================
-// DAY 28 UPDATED: Status Updates with Concurrency Resolution
-// ==========================================
+// ========================================================
+// DAY 28 & 29 MAPPED: Secure Status Management Controller
+// ========================================================
 export const updateBookingStatus = async (req, res, next) => {
   try {
     const bookingId = req.params.id;
-    const { status, clientVersion } = req.body; // Client apna dekha hua version bhejega (__v)
+    const { status, clientVersion } = req.body; // Client snapshots dynamic versions (__v)
     const userId = req.user._id;
 
     const booking = await bookingRepository.findById(bookingId);
@@ -129,6 +131,13 @@ export const updateBookingStatus = async (req, res, next) => {
         amount: booking.amount,
       });
 
+      // 🔥 DAY 29 EVENT: Payment trigger system broadcast emit dispatch routine
+      appEventEmitter.emit('payment_received', {
+        payeeId: booking.providerId._id,
+        amount: booking.amount,
+        bookingId: booking._id
+      });
+
       return res.status(200).json({
         success: true,
         message: 'Booking completed and payment transferred securely via wallet.',
@@ -136,8 +145,7 @@ export const updateBookingStatus = async (req, res, next) => {
       });
     }
 
-    // DAY 28: Update Query wrapping Mongoose internal version (__v) control logic
-    // Agar database ka version clientVersion se different hai to update block block ho jayega.
+    // DAY 28: Securely tracking matching version layers parameters criteria
     const updatedBooking = await bookingRepository.updateStatusSecurely(bookingId, status, clientVersion);
     
     if (!updatedBooking) {
@@ -146,6 +154,18 @@ export const updateBookingStatus = async (req, res, next) => {
         errorType: 'CONFLICT_ERROR',
         message: 'This booking has already been modified by another action. Please refresh the page.'
       });
+    }
+
+    // ========================================================
+    // 🔥 DAY 29 DECOUPLED TRIGGER: BACKGROUND EMIT SIGNAL
+    // ========================================================
+    if (status === 'cancelled') {
+      appEventEmitter.emit('booking_cancelled', {
+        clientId: booking.clientId._id,
+        providerId: booking.providerId._id,
+        serviceTitle: booking.serviceId?.title || 'Freelance Service Item'
+      });
+      console.log('[Pub/Sub Hub] booking_cancelled system notification event discharged safely.');
     }
 
     res.status(200).json({
