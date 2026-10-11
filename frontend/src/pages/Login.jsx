@@ -33,8 +33,11 @@ const Login = () => {
 
             <form onSubmit={handleSubmit}>
                 <div>
-                    <label>Email ID:</label>
+                    {/* Proper Name: Explicit Label-Input Association Pattern */}
+                    {/* htmlFor aur input ki id hamesha exactly string match honi chahiye */}
+                    <label htmlFor="email-input">Email ID:</label>
                     <input 
+                        id="email-input"
                         type="email" 
                         value={email} 
                         onChange={(e) => setEmail(e.target.value)} 
@@ -44,8 +47,9 @@ const Login = () => {
                 </div>
 
                 <div>
-                    <label>Password:</label>
+                    <label htmlFor="password-input">Password:</label>
                     <input 
+                        id="password-input"
                         type="password" 
                         value={password} 
                         onChange={(e) => setPassword(e.target.value)} 
