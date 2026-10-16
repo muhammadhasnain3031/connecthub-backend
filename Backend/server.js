@@ -4,6 +4,13 @@ import express from 'express';
 import mongoose from "mongoose";
 import { createServer } from "http"; 
 import { Server } from "socket.io"; 
+
+// ==========================================
+// DAY 34 LOGGING SYSTEM IMPORTS
+// ==========================================
+import morgan from 'morgan';
+import logger from './config/logger.js';
+
 import registerUser from './controllers/userController.js';
 import userRoutes from './routes/userRoutes.js';
 import passport from "passport";
@@ -19,13 +26,9 @@ import bookingRoutes from './routes/bookingRoutes.js';
 import paymentRoutes from './routes/paymentRoutes.js'; 
 import errorMiddleware from "./middleware/errorMiddleware.js";
 
-// ==========================================
-// DAY 29 TRIGGER PREPARATION (Listeners Register)
-// ==========================================
-// Nota: File sahi jagah (Backend) move karne ke baad import kaam karega
-import { initNotificationListeners } from './listeners/notificationListener.js'
-const app = express();
+import { initNotificationListeners } from './listeners/notificationListener.js';
 
+const app = express();
 const httpServer = createServer(app);
 
 const io = new Server(httpServer, {
@@ -35,58 +38,96 @@ const io = new Server(httpServer, {
     }
 });
 
-const limiter = rateLimit({
-    windowMs: 15 * 60 * 1000,
-    max : 100,
-    message : { success: false, message : ' Too many requests, try again later'}
+// ==========================================
+// DAY 34 LOGGING & RATE LIMITER CONFIGURATIONS
+// ==========================================
+// 1. Morgan Stream setup to pipe logs into Winston
+const morganStream = {
+  write: (message) => logger.http(message.trim()),
+};
+
+const morganMiddleware = morgan(
+  ':method :url :status :res[content-length] - :response-time ms',
+  { stream: morganStream }
+);
+
+// 2. Global Rate Limiter for general endpoints
+const globalLimiter = rateLimit({
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    max: 100,
+    message: { success: false, message: 'Too many requests, try again later.' }
 });
 
-app.use(cors({origin: 'http://localhost:5173', credentials:true}));
+// 3. Strict Rate Limiter for Sensitive Auth Routes (Brute-Force Protection)
+const authLimiter = rateLimit({
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    max: 15, // Only 15 attempts allowed
+    message: { 
+        success: false, 
+        message: 'Boht zyada koshish ki gayi hai. Meharbani kar ke 15 minutes baad dobara try karein.' 
+    },
+    handler: (req, res, next, options) => {
+        logger.warn(`⚠️ Rate Limit Hit: IP ${req.ip} tried to abuse endpoint: ${req.originalUrl}`);
+        res.status(options.statusCode).send(options.message);
+    }
+});
+
+// ==========================================
+// MIDDLEWARES PIPELINE (ORDER MATTERS)
+// ==========================================
+app.use(cors({ origin: 'http://localhost:5173', credentials: true }));
 app.use(helmet());
-app.use(limiter);
+app.use(globalLimiter);
+app.use(morganMiddleware); // Injected right after security layers to track every request
+
+// Apply strict rate limiting to auth routes before mounting endpoints
+app.use('/api/users/login', authLimiter);
+app.use('/api/users/register', authLimiter);
 
 app.use('/api/payments', paymentRoutes);
-
 app.use(express.json());
 app.use(cookieParser());
 app.use(passport.initialize());
-
 app.use(sanitizeInput);
 app.use(compression());
+
+// ==========================================
+// ROUTES ROUTING
+// ==========================================
 app.use('/api/services', serviceRoutes);
 app.use('/api/bookings', bookingRoutes);
+app.use('/api/users', userRoutes);
 
-async function connectDB(){
-    try{
+app.get('/', (req, res) => {
+    res.send('Server is running ');
+});
+
+// ==========================================
+// DATABASE CONNECTION WITH WINSTON LOGGING
+// ==========================================
+async function connectDB() {
+    try {
         await mongoose.connect(process.env.MONGO_URI);
-        console.log('Mongodb connected')
+        logger.info('Database status: MongoDB connected successfully');
     }
-    catch(error){
-        console.log(error)
+    catch (error) {
+        logger.error(`Database connection failed: ${error.message}`);
     }
 }
 connectDB();
 
-// ==========================================
-// BOOT THE BACKGROUND EVENT LISTENERS
-// ==========================================
-// Server setup load hone se pehle hamare Pub/Sub listeners active hone chahiye
+// Boot background Pub/Sub event listeners
 initNotificationListeners();
 
-app.use('/api/users', userRoutes);
-app.get('/', (req,res)=>{
-    res.send('Server is running ')
-});
-
 // ==========================================
-// DAY 28 UPDATED: Socket Event Verification Rules
+// SOCKET.IO REAL-TIME ROUTINES
 // ==========================================
 io.on('connection', (socket) => {
-    console.log(`⚡ User connected: ${socket.id}`);
+    logger.info(`⚡ Socket status: User connected with ID: ${socket.id}`);
 
     socket.on('joinRoom', (conversationId) => {
         socket.join(conversationId);
-        console.log(`🚪 User with socket id ${socket.id} joined room: ${conversationId}`);
+        logger.info(`🚪 Room event: Socket ${socket.id} joined conversation room: ${conversationId}`);
     });
 
     socket.on('sendMessage', (messageData) => {
@@ -94,27 +135,22 @@ io.on('connection', (socket) => {
         socket.to(conversationId).emit('receiveMessage', messageData);
     });
 
-    // ⚡ UPDATE FOR DAY 28: Disconnect memory optimization routine
     socket.on('disconnect', () => {
-        console.log(`❌ User disconnected properly: ${socket.id}`);
-        // Yahan future mein active mapping pools se clean-up tags execute honge
+        logger.info(`❌ Socket status: User disconnected properly: ${socket.id}`);
     });
 });
 
+// Centralized Custom Error Handling Middleware (Always at the end)
 app.use(errorMiddleware);
 
-// const PORT = process.env.PORT || 5000;
-
-// httpServer.listen(PORT,()=>{
-//     console.log(`Server is running on ${PORT}`)
-// });
-
-
+// ==========================================
+// SERVER BOOTUP CONTROL
+// ==========================================
 const PORT = process.env.PORT || 5000;
 if (process.env.NODE_ENV !== 'test') {
-    app.listen(PORT, () => {
-        console.log(`Server is running on port ${PORT}`);
+    httpServer.listen(PORT, () => {
+        logger.info(`🚀 Production Server is running on port ${PORT}`);
     });
 }
 
-export default app; // Yeh integration tests ke liye export ho raha hai
+export default app;
