@@ -8,3 +8,8 @@
 2026-10-16 12:29:54:2954 [INFO]: Database status: MongoDB connected successfully
 2026-10-16 13:01:07:17 [INFO]: 🚀 Production Server is running on port 5000
 2026-10-16 13:01:09:19 [INFO]: Database status: MongoDB connected successfully
+2026-10-16 13:48:55:4855 [INFO]: Database status: MongoDB connected successfully
+2026-10-16 13:50:51:5051 [INFO]: Database status: MongoDB connected successfully
+2026-10-16 13:50:53:5053 [HTTP]: POST /api/users/register 201 255 - 391.372 ms
+2026-10-16 13:53:18:5318 [INFO]: Database status: MongoDB connected successfully
+2026-10-16 13:53:20:5320 [HTTP]: POST /api/users/register 201 255 - 387.214 ms
