@@ -34,6 +34,8 @@ jobs:
           cd Backend
           npm run lint
 
+     # ... (Upar ka saara code bilkul same rahega, bas aakhri step badlein)
+
       - name: Execute Jest & Supertest Suite
         env:
           MONGO_URI: "mongodb://localhost:27017/connecthub_test"
@@ -45,5 +47,5 @@ jobs:
           STRIPE_SECRET_KEY: "sk_test_dummy_stripe_secret_key_string_for_automated_ci_pipeline"
         run: |
           cd Backend
-          # ⚡ FINAL LOCK: Adding cloud flags to match successful local execution environment
-          npx jest routes/auth.test.js --forceExit --detectOpenHandles
+          # ⚡ FIX: Direct cross-platform node execution with experimental vm modules flag enabled
+          node --experimental-vm-modules node_modules/jest/bin/jest.js routes/auth.test.js --forceExit --detectOpenHandles
