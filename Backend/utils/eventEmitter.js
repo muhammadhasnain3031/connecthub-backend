@@ -7,6 +7,8 @@ class AppEventEmitter extends EventEmitter {}
 // Pure application ke liye ek single/global instance (Singleton Pattern) create kar rahe hain
 const appEventEmitter = new AppEventEmitter();
 
-console.log('[Event Hub] Central Application EventEmitter initialized successfully.');
+console.log(
+  '[Event Hub] Central Application EventEmitter initialized successfully.'
+);
 
 export default appEventEmitter;

@@ -25,7 +25,7 @@ class ServiceRepository {
 
   async findAll(queryObj, options) {
     const { skip, limit, sort, lean } = options;
-    
+
     // Dynamic Query Optimization chain
     let query = Service.find(queryObj)
       .populate('providerId', 'name email')

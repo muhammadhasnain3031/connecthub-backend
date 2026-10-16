@@ -4,8 +4,8 @@ class BookingAnalyticsRepository {
   async trackEvent(dateStr, amount) {
     return await BookingAnalytics.findOneAndUpdate(
       { date: dateStr },
-      { 
-        $inc: { totalBookings: 1, totalRevenue: amount } 
+      {
+        $inc: { totalBookings: 1, totalRevenue: amount },
       },
       { upsert: true, new: true }
     );

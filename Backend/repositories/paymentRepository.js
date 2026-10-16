@@ -11,7 +11,9 @@ class PaymentRepository {
 
     try {
       // 2. Payer (Client) ka wallet fetch aur update karein (Session block ke andar)
-      const payerWallet = await Wallet.findOne({ userId: payerId }).session(session);
+      const payerWallet = await Wallet.findOne({ userId: payerId }).session(
+        session
+      );
       if (!payerWallet || payerWallet.balance < amount) {
         throw new Error('Insufficient wallet balance');
       }
@@ -21,7 +23,9 @@ class PaymentRepository {
       await payerWallet.save({ session });
 
       // 3. Payee (Provider) ka wallet fetch aur update karein
-      let payeeWallet = await Wallet.findOne({ userId: payeeId }).session(session);
+      let payeeWallet = await Wallet.findOne({ userId: payeeId }).session(
+        session
+      );
       if (!payeeWallet) {
         // Agar wallet nahi bana hua to dynamically create karein
         payeeWallet = new Wallet({ userId: payeeId, balance: 0 });
@@ -42,7 +46,11 @@ class PaymentRepository {
       await transaction.save({ session });
 
       // 5. Booking status update karein ko automatically secure safe state me bhej de
-      await Booking.findByIdAndUpdate(bookingId, { status: 'completed' }, { session });
+      await Booking.findByIdAndUpdate(
+        bookingId,
+        { status: 'completed' },
+        { session }
+      );
 
       // Agar sab theek rha to Commit changes
       await session.commitTransaction();

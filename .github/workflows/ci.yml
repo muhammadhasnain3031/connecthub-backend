@@ -1,0 +1,49 @@
+name: ConnectHub Continuous Integration
+
+# 1. Pipeline kab chalegi? (Trigger Rules)
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  # JOB 1: Backend Quality & Verification Code Auditing
+  backend-ci:
+    name: Backend Lint & Unit/Integration Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: GitHub Runner par code copy karein
+      - name: Checkout Code Base
+        uses: actions/checkout@v4
+
+      # Step 2: Node.js setup karein
+      - name: Setup Node.js Environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: './Backend/package-lock.json'
+
+      # Step 3: Backend dependencies install karein
+      - name: Install Backend Dependencies
+        run: |
+          cd Backend
+          npm ci
+
+      # Step 4: ESLint static checks run karein
+      - name: Run ESLint Quality Audit
+        run: |
+          cd Backend
+          npm run lint
+
+      # Step 5: Test Automation Pipeline execute karein
+      - name: Execute Jest & Supertest Suite
+        env:
+          MONGO_URI: "mongodb://localhost:27017/connecthub_test"
+          JWT_SECRET: "ci_pipeline_fallback_dummy_secret_key_string"
+          NODE_ENV: test
+        run: |
+          cd Backend
+          npm test
