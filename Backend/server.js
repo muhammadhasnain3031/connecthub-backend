@@ -1,9 +1,9 @@
-import dotenv from "dotenv";
+import dotenv from 'dotenv';
 dotenv.config();
 import express from 'express';
-import mongoose from "mongoose";
-import { createServer } from "http"; 
-import { Server } from "socket.io"; 
+import mongoose from 'mongoose';
+import { createServer } from 'http';
+import { Server } from 'socket.io';
 
 // ==========================================
 // DAY 34 LOGGING SYSTEM IMPORTS
@@ -11,20 +11,19 @@ import { Server } from "socket.io";
 import morgan from 'morgan';
 import logger from './config/logger.js';
 
-import registerUser from './controllers/userController.js';
 import userRoutes from './routes/userRoutes.js';
-import passport from "passport";
+import passport from 'passport';
 import './config/passport.js';
-import helmet from "helmet";
+import helmet from 'helmet';
 import cors from 'cors';
-import rateLimit from "express-rate-limit";
-import sanitizeInput from "./middleware/sanitizeInput.js";
-import cookieParser from "cookie-parser";
-import compression from "compression";
+import rateLimit from 'express-rate-limit';
+import sanitizeInput from './middleware/sanitizeInput.js';
+import cookieParser from 'cookie-parser';
+import compression from 'compression';
 import serviceRoutes from './routes/serviceRoutes.js';
 import bookingRoutes from './routes/bookingRoutes.js';
-import paymentRoutes from './routes/paymentRoutes.js'; 
-import errorMiddleware from "./middleware/errorMiddleware.js";
+import paymentRoutes from './routes/paymentRoutes.js';
+import errorMiddleware from './middleware/errorMiddleware.js';
 
 import { initNotificationListeners } from './listeners/notificationListener.js';
 
@@ -32,10 +31,10 @@ const app = express();
 const httpServer = createServer(app);
 
 const io = new Server(httpServer, {
-    cors: {
-        origin: 'http://localhost:5173',
-        credentials: true
-    }
+  cors: {
+    origin: 'http://localhost:5173',
+    credentials: true,
+  },
 });
 
 // ==========================================
@@ -53,23 +52,26 @@ const morganMiddleware = morgan(
 
 // 2. Global Rate Limiter for general endpoints
 const globalLimiter = rateLimit({
-    windowMs: 15 * 60 * 1000, // 15 minutes
-    max: 100,
-    message: { success: false, message: 'Too many requests, try again later.' }
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100,
+  message: { success: false, message: 'Too many requests, try again later.' },
 });
 
 // 3. Strict Rate Limiter for Sensitive Auth Routes (Brute-Force Protection)
 const authLimiter = rateLimit({
-    windowMs: 15 * 60 * 1000, // 15 minutes
-    max: 15, // Only 15 attempts allowed
-    message: { 
-        success: false, 
-        message: 'Boht zyada koshish ki gayi hai. Meharbani kar ke 15 minutes baad dobara try karein.' 
-    },
-    handler: (req, res, next, options) => {
-        logger.warn(`⚠️ Rate Limit Hit: IP ${req.ip} tried to abuse endpoint: ${req.originalUrl}`);
-        res.status(options.statusCode).send(options.message);
-    }
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 15, // Only 15 attempts allowed
+  message: {
+    success: false,
+    message:
+      'Boht zyada koshish ki gayi hai. Meharbani kar ke 15 minutes baad dobara try karein.',
+  },
+  handler: (req, res, next, options) => {
+    logger.warn(
+      `⚠️ Rate Limit Hit: IP ${req.ip} tried to abuse endpoint: ${req.originalUrl}`
+    );
+    res.status(options.statusCode).send(options.message);
+  },
 });
 
 // ==========================================
@@ -99,20 +101,19 @@ app.use('/api/bookings', bookingRoutes);
 app.use('/api/users', userRoutes);
 
 app.get('/', (req, res) => {
-    res.send('Server is running ');
+  res.send('Server is running ');
 });
 
 // ==========================================
 // DATABASE CONNECTION WITH WINSTON LOGGING
 // ==========================================
 async function connectDB() {
-    try {
-        await mongoose.connect(process.env.MONGO_URI);
-        logger.info('Database status: MongoDB connected successfully');
-    }
-    catch (error) {
-        logger.error(`Database connection failed: ${error.message}`);
-    }
+  try {
+    await mongoose.connect(process.env.MONGO_URI);
+    logger.info('Database status: MongoDB connected successfully');
+  } catch (error) {
+    logger.error(`Database connection failed: ${error.message}`);
+  }
 }
 connectDB();
 
@@ -123,21 +124,23 @@ initNotificationListeners();
 // SOCKET.IO REAL-TIME ROUTINES
 // ==========================================
 io.on('connection', (socket) => {
-    logger.info(`⚡ Socket status: User connected with ID: ${socket.id}`);
+  logger.info(`⚡ Socket status: User connected with ID: ${socket.id}`);
 
-    socket.on('joinRoom', (conversationId) => {
-        socket.join(conversationId);
-        logger.info(`🚪 Room event: Socket ${socket.id} joined conversation room: ${conversationId}`);
-    });
+  socket.on('joinRoom', (conversationId) => {
+    socket.join(conversationId);
+    logger.info(
+      `🚪 Room event: Socket ${socket.id} joined conversation room: ${conversationId}`
+    );
+  });
 
-    socket.on('sendMessage', (messageData) => {
-        const { conversationId } = messageData;
-        socket.to(conversationId).emit('receiveMessage', messageData);
-    });
+  socket.on('sendMessage', (messageData) => {
+    const { conversationId } = messageData;
+    socket.to(conversationId).emit('receiveMessage', messageData);
+  });
 
-    socket.on('disconnect', () => {
-        logger.info(`❌ Socket status: User disconnected properly: ${socket.id}`);
-    });
+  socket.on('disconnect', () => {
+    logger.info(`❌ Socket status: User disconnected properly: ${socket.id}`);
+  });
 });
 
 // Centralized Custom Error Handling Middleware (Always at the end)
@@ -148,9 +151,9 @@ app.use(errorMiddleware);
 // ==========================================
 const PORT = process.env.PORT || 5000;
 if (process.env.NODE_ENV !== 'test') {
-    httpServer.listen(PORT, () => {
-        logger.info(`🚀 Production Server is running on port ${PORT}`);
-    });
+  httpServer.listen(PORT, () => {
+    logger.info(`🚀 Production Server is running on port ${PORT}`);
+  });
 }
 
 export default app;

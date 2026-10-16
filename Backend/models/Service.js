@@ -36,7 +36,8 @@ const serviceSchema = new mongoose.Schema(
           // Check karta hai ke number integers ho ya max 2 decimal places tak ho (e.g. 99.99)
           return /^\d+(\.\d{1,2})?$/.test(value.toString());
         },
-        message: 'Price formats sirf plain number ya do decimal places tak valid hain (e.g. 49.99)!',
+        message:
+          'Price formats sirf plain number ya do decimal places tak valid hain (e.g. 49.99)!',
       },
     },
     images: {
@@ -44,10 +45,10 @@ const serviceSchema = new mongoose.Schema(
       default: [],
     },
   },
-  { 
+  {
     timestamps: true,
     toJSON: { virtuals: true },
-    toObject: { virtuals: true }
+    toObject: { virtuals: true },
   }
 );
 
@@ -65,7 +66,7 @@ serviceSchema.pre('save', function (next) {
       .toLowerCase()
       .trim()
       .replace(/[\s\W\-_]+/g, '-') // Spaces aur special characters ko hyphen '-' se replace karega
-      .replace(/^-+|-+$/g, '');   // Start aur end se extra hyphens clear karega
+      .replace(/^-+|-+$/g, ''); // Start aur end se extra hyphens clear karega
   }
   next(); // Express/Mongoose chain ko agay barhanay ke liye mandatory hai
 });

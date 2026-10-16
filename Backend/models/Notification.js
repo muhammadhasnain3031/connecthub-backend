@@ -6,24 +6,30 @@ const NotificationSchema = new mongoose.Schema(
     userId: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'User',
-      required: true
+      required: true,
     },
     type: {
       type: String,
-      enum: ['booking_created', 'booking_accepted', 'booking_cancelled', 'payment_received', 'message_received'],
-      required: true
+      enum: [
+        'booking_created',
+        'booking_accepted',
+        'booking_cancelled',
+        'payment_received',
+        'message_received',
+      ],
+      required: true,
     },
     message: {
       type: String,
-      required: true
+      required: true,
     },
     isRead: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   {
-    timestamps: true // Auto creates createdAt and updatedAt flags
+    timestamps: true, // Auto creates createdAt and updatedAt flags
   }
 );
 

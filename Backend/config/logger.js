@@ -31,7 +31,7 @@ const format = winston.format.combine(
 const transports = [
   // Console par dekhne ke liye (With Colors)
   new winston.transports.Console({
-    format: winston.format.combine(winston.format.colorize({ all: true }))
+    format: winston.format.combine(winston.format.colorize({ all: true })),
   }),
   // Saare errors ko is file mein save karne ke liye
   new winston.transports.File({
@@ -39,8 +39,8 @@ const transports = [
     level: 'error',
   }),
   // Saare logs (error, info, warn) ko is file mein save karne ke liye
-  new winston.transports.File({ 
-    filename: 'logs/combined.log' 
+  new winston.transports.File({
+    filename: 'logs/combined.log',
   }),
 ];
 
