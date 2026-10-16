@@ -17,7 +17,8 @@ export default [
         expect: 'readonly',
         beforeAll: 'readonly',
         afterAll: 'readonly',
-        beforeEach: 'readonly'
+        beforeEach: 'readonly',
+        setTimeout: 'readonly'
       }
     },
     plugins: {

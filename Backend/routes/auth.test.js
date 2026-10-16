@@ -12,23 +12,22 @@ describe('Auth Endpoints Integration Tests Framework', () => {
     if (mongoose.connection.readyState === 0) {
       await mongoose.connect(testDbUri);
     }
-  }, 15000); // Extended timeout for initial connection
+  }, 15000);
 
   // 2. Teardown Phase: Safe tracking disconnect state
   afterAll(async () => {
-    // Pehle database ko clean aur close karein
     if (mongoose.connection.readyState !== 0) {
       try {
         await mongoose.connection.dropDatabase();
         await mongoose.connection.close();
-      } catch (_err) {
-        // Errors ko silent catch karein taake pipeline leak na ho
+      } catch {
+        // ⚡ FIX: Unused '_err' parameter removed from catch block to satisfy ESLint
       }
     }
     
-    // Open event listeners aur timeouts ko forcefully clear karne ke liye delay loop
+    // Open event listeners aur timeouts ko clear karne ke liye delay loop
     await new Promise((resolve) => setTimeout(resolve, 1000));
-  });
+  }, 15000);
 
   // 3. Isolation Loop Routine: Data sanitization before processing
   beforeEach(async () => {
@@ -42,7 +41,6 @@ describe('Auth Endpoints Integration Tests Framework', () => {
     expect(true).toBe(true);
   });
 
-  // Endpoint path matching Express app mounting router route layout
   describe('POST /api/users/register Implementation Route', () => {
     test('Should handle user tracking and return response parameters', async () => {
       const uniqueTimestamp = Date.now();
@@ -53,7 +51,6 @@ describe('Auth Endpoints Integration Tests Framework', () => {
         role: 'client',
       };
 
-      // Corrected to match user registration endpoint router pipeline
       const response = await request(app)
         .post('/api/users/register')
         .send(sampleUserPayload);
@@ -61,13 +58,12 @@ describe('Auth Endpoints Integration Tests Framework', () => {
       expect(response.statusCode).toBeDefined();
 
       if (response.statusCode === 201) {
-        // ⚡ VERIFIED: Adjusted assertions to perfectly lock actual controller response keys
         expect(response.body).toHaveProperty('success', true);
         expect(response.body).toHaveProperty('user');
         expect(response.body.user).toHaveProperty('email', sampleUserPayload.email);
       } else {
         console.log(`[Route Trace Info]: Received status ${response.statusCode}`);
       }
-    }, 15000); // 15 seconds async execution processing timeout handler
+    }, 15000);
   });
 });
