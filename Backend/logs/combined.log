@@ -13,3 +13,979 @@
 2026-10-16 13:50:53:5053 [HTTP]: POST /api/users/register 201 255 - 391.372 ms
 2026-10-16 13:53:18:5318 [INFO]: Database status: MongoDB connected successfully
 2026-10-16 13:53:20:5320 [HTTP]: POST /api/users/register 201 255 - 387.214 ms
+2026-10-16 15:30:16:3016 [INFO]: 🚀 Production Server is running on port 5000
+2026-10-16 15:30:18:3018 [INFO]: Database status: MongoDB connected successfully
+2026-10-16 15:30:19:3019 [INFO]: ⚡ Socket status: User connected with ID: glxWUgGHFjV7h8NnAAAA
+2026-10-16 15:30:47:3047 [INFO]: ❌ Socket status: User disconnected properly: glxWUgGHFjV7h8NnAAAA
+2026-10-16 15:30:49:3049 [INFO]: ⚡ Socket status: User connected with ID: NqB8vwzSV7N05zWyAAAB
+2026-10-16 15:30:50:3050 [HTTP]: POST /api/users/login 401 39 - 392.514 ms
+2026-10-16 15:31:02:312 [HTTP]: POST /api/users/register 201 220 - 388.414 ms
+2026-10-16 15:31:08:318 [HTTP]: POST /api/users/login 200 114 - 228.048 ms
+2026-10-16 15:31:08:318 [INFO]: ❌ Socket status: User disconnected properly: NqB8vwzSV7N05zWyAAAB
+2026-10-16 15:31:08:318 [INFO]: ⚡ Socket status: User connected with ID: -uVG0iW8XTfCuYURAAAC
+2026-10-16 15:31:16:3116 [HTTP]: GET /api/services?page=1&limit=6 200 64 - 271.434 ms
+2026-10-16 15:31:16:3116 [HTTP]: GET /api/services?page=1&limit=6 304 - - 303.956 ms
+2026-10-16 15:31:23:3123 [HTTP]: POST /api/users/login 200 114 - 213.075 ms
+2026-10-16 15:31:23:3123 [INFO]: ⚡ Socket status: User connected with ID: pFCZHqECqnMY5cymAAAD
+2026-10-16 15:31:52:3152 [INFO]: ⚡ Socket status: User connected with ID: jOyYCi9HTazfc3nzAAAE
+2026-10-16 15:31:53:3153 [INFO]: ❌ Socket status: User disconnected properly: -uVG0iW8XTfCuYURAAAC
+2026-10-16 15:31:57:3157 [INFO]: ⚡ Socket status: User connected with ID: f_BmCSok7GfE_qsiAAAF
+2026-10-16 15:32:23:3223 [HTTP]: GET /api/services?page=1&limit=6 304 - - 285.676 ms
+2026-10-16 15:32:23:3223 [HTTP]: GET /api/services?page=1&limit=6 304 - - 275.846 ms
+2026-10-16 15:32:28:3228 [HTTP]: GET /api/services?page=1&limit=6&category=Web%20Development 200 64 - 292.634 ms
+2026-10-16 15:32:37:3237 [INFO]: ❌ Socket status: User disconnected properly: jOyYCi9HTazfc3nzAAAE
+2026-10-16 15:34:24:3424 [INFO]: ❌ Socket status: User disconnected properly: pFCZHqECqnMY5cymAAAD
+2026-10-16 15:34:24:3424 [INFO]: ⚡ Socket status: User connected with ID: rIxoQng9uH_ZHIsUAAAG
+2026-10-16 15:34:24:3424 [INFO]: ❌ Socket status: User disconnected properly: f_BmCSok7GfE_qsiAAAF
+2026-10-16 15:34:25:3425 [INFO]: ⚡ Socket status: User connected with ID: znn_iAFP10eTKdpEAAAH
+2026-10-16 15:34:26:3426 [INFO]: ❌ Socket status: User disconnected properly: znn_iAFP10eTKdpEAAAH
+2026-10-16 15:34:26:3426 [INFO]: ⚡ Socket status: User connected with ID: NtWRMcLl_6LOp0OWAAAI
+2026-10-16 15:34:26:3426 [INFO]: ❌ Socket status: User disconnected properly: NtWRMcLl_6LOp0OWAAAI
+2026-10-16 15:34:26:3426 [INFO]: ⚡ Socket status: User connected with ID: rSd8kn5TdtUon37dAAAJ
+2026-10-16 15:34:26:3426 [INFO]: ❌ Socket status: User disconnected properly: rSd8kn5TdtUon37dAAAJ
+2026-10-16 15:34:27:3427 [INFO]: ⚡ Socket status: User connected with ID: KZuIBVT7_ChvoRzWAAAK
+2026-10-16 15:34:27:3427 [INFO]: ⚡ Socket status: User connected with ID: HBG7QSBmB_afERYNAAAL
+2026-10-16 15:35:12:3512 [INFO]: ❌ Socket status: User disconnected properly: KZuIBVT7_ChvoRzWAAAK
+2026-10-16 15:37:04:374 [INFO]: 🚪 Room event: Socket HBG7QSBmB_afERYNAAAL joined conversation room: general
+2026-10-16 15:37:04:374 [INFO]: 🚪 Room event: Socket HBG7QSBmB_afERYNAAAL joined conversation room: general
+2026-10-16 15:37:13:3713 [HTTP]: GET /api/services?page=1&limit=6 304 - - 852.208 ms
+2026-10-16 15:37:14:3714 [HTTP]: GET /api/services?page=1&limit=6 304 - - 343.145 ms
+2026-10-16 15:37:56:3756 [HTTP]: POST /api/users/login 200 114 - 209.249 ms
+2026-10-16 15:37:56:3756 [INFO]: ❌ Socket status: User disconnected properly: HBG7QSBmB_afERYNAAAL
+2026-10-16 15:37:56:3756 [INFO]: ⚡ Socket status: User connected with ID: e2F6Sn2A0X9n2yV_AAAM
+2026-10-16 15:37:58:3758 [HTTP]: GET /api/services?page=1&limit=6 304 - - 246.515 ms
+2026-10-16 15:37:58:3758 [HTTP]: GET /api/services?page=1&limit=6 304 - - 255.458 ms
+2026-10-16 16:28:47:2847 [INFO]: ❌ Socket status: User disconnected properly: rIxoQng9uH_ZHIsUAAAG
+2026-10-16 16:28:47:2847 [INFO]: ⚡ Socket status: User connected with ID: wdiA0aY8E1MhCuadAAAN
+2026-10-16 16:29:07:297 [INFO]: ❌ Socket status: User disconnected properly: e2F6Sn2A0X9n2yV_AAAM
+2026-10-16 16:29:28:2928 [INFO]: ⚡ Socket status: User connected with ID: JPhML5NuqGDL92iXAAAO
+2026-10-16 16:29:28:2928 [HTTP]: GET /api/services?page=1&limit=6 304 - - 282.781 ms
+2026-10-16 16:29:29:2929 [HTTP]: GET /api/services?page=1&limit=6 304 - - 640.929 ms
+2026-10-16 16:29:32:2932 [INFO]: ❌ Socket status: User disconnected properly: wdiA0aY8E1MhCuadAAAN
+2026-10-16 16:29:47:2947 [INFO]: ⚡ Socket status: User connected with ID: keOkwW7dWd_OtJdPAAAP
+2026-10-16 16:30:13:3013 [INFO]: ❌ Socket status: User disconnected properly: JPhML5NuqGDL92iXAAAO
+2026-10-16 16:30:28:3028 [INFO]: ⚡ Socket status: User connected with ID: -k1q1jUY9iepaOauAAAQ
+2026-10-16 16:30:28:3028 [HTTP]: GET /api/services?page=1&limit=6 304 - - 357.733 ms
+2026-10-16 16:30:29:3029 [HTTP]: GET /api/services?page=1&limit=6 304 - - 268.345 ms
+2026-10-16 16:30:32:3032 [INFO]: ❌ Socket status: User disconnected properly: keOkwW7dWd_OtJdPAAAP
+2026-10-16 16:30:47:3047 [INFO]: ⚡ Socket status: User connected with ID: _eZ9hsewbyxLb0m4AAAR
+2026-10-16 16:31:13:3113 [INFO]: ❌ Socket status: User disconnected properly: -k1q1jUY9iepaOauAAAQ
+2026-10-16 16:31:28:3128 [INFO]: ⚡ Socket status: User connected with ID: wECxm7aqwaegsz3zAAAS
+2026-10-16 16:31:28:3128 [HTTP]: GET /api/services?page=1&limit=6 304 - - 268.567 ms
+2026-10-16 16:31:29:3129 [HTTP]: GET /api/services?page=1&limit=6 304 - - 273.564 ms
+2026-10-16 16:31:32:3132 [INFO]: ❌ Socket status: User disconnected properly: _eZ9hsewbyxLb0m4AAAR
+2026-10-16 16:31:47:3147 [INFO]: ⚡ Socket status: User connected with ID: tiFBJoSBXBsCpeEjAAAT
+2026-10-16 16:32:13:3213 [INFO]: ❌ Socket status: User disconnected properly: wECxm7aqwaegsz3zAAAS
+2026-10-16 16:32:28:3228 [INFO]: ⚡ Socket status: User connected with ID: G6IeENiS1dmHDjHeAAAU
+2026-10-16 16:32:28:3228 [HTTP]: GET /api/services?page=1&limit=6 304 - - 247.192 ms
+2026-10-16 16:32:29:3229 [HTTP]: GET /api/services?page=1&limit=6 304 - - 248.377 ms
+2026-10-16 16:32:32:3232 [INFO]: ❌ Socket status: User disconnected properly: tiFBJoSBXBsCpeEjAAAT
+2026-10-16 16:32:47:3247 [INFO]: ⚡ Socket status: User connected with ID: r5zyWlgvBAuIYp1OAAAV
+2026-10-16 16:33:13:3313 [INFO]: ❌ Socket status: User disconnected properly: G6IeENiS1dmHDjHeAAAU
+2026-10-16 16:33:28:3328 [INFO]: ⚡ Socket status: User connected with ID: iz_RqLTN4Ij_vYksAAAW
+2026-10-16 16:33:29:3329 [HTTP]: GET /api/services?page=1&limit=6 304 - - 504.013 ms
+2026-10-16 16:33:29:3329 [HTTP]: GET /api/services?page=1&limit=6 304 - - 261.287 ms
+2026-10-16 16:33:32:3332 [INFO]: ❌ Socket status: User disconnected properly: r5zyWlgvBAuIYp1OAAAV
+2026-10-16 16:33:47:3347 [INFO]: ⚡ Socket status: User connected with ID: Jx_vR2NTAyp3_K4gAAAX
+2026-10-16 16:34:07:347 [INFO]: ❌ Socket status: User disconnected properly: iz_RqLTN4Ij_vYksAAAW
+2026-10-16 16:34:07:347 [INFO]: ❌ Socket status: User disconnected properly: Jx_vR2NTAyp3_K4gAAAX
+2026-10-16 16:34:07:347 [INFO]: ⚡ Socket status: User connected with ID: oByIIF5s9-h_klqyAAAY
+2026-10-16 16:34:07:347 [INFO]: ⚡ Socket status: User connected with ID: uMBrbBtsLgVSbIZaAAAZ
+2026-10-16 16:34:08:348 [HTTP]: GET /api/services?page=1&limit=6 304 - - 267.933 ms
+2026-10-16 16:34:08:348 [HTTP]: GET /api/services?page=1&limit=6 304 - - 270.535 ms
+2026-10-16 16:50:47:5047 [INFO]: ❌ Socket status: User disconnected properly: oByIIF5s9-h_klqyAAAY
+2026-10-16 16:50:47:5047 [INFO]: ⚡ Socket status: User connected with ID: RPAVuaxlQF5f_gQWAAAa
+2026-10-16 16:51:08:518 [INFO]: ❌ Socket status: User disconnected properly: uMBrbBtsLgVSbIZaAAAZ
+2026-10-16 16:51:28:5128 [INFO]: ⚡ Socket status: User connected with ID: Y5dOnpjlCGM4DQbkAAAb
+2026-10-16 16:51:28:5128 [HTTP]: GET /api/services?page=1&limit=6 304 - - 244.531 ms
+2026-10-16 16:51:29:5129 [HTTP]: GET /api/services?page=1&limit=6 304 - - 601.720 ms
+2026-10-16 16:51:32:5132 [INFO]: ❌ Socket status: User disconnected properly: RPAVuaxlQF5f_gQWAAAa
+2026-10-16 16:51:33:5133 [INFO]: ❌ Socket status: User disconnected properly: Y5dOnpjlCGM4DQbkAAAb
+2026-10-16 16:51:34:5134 [INFO]: ⚡ Socket status: User connected with ID: hCQEUU8RmJgLKBeAAAAc
+2026-10-16 16:51:34:5134 [INFO]: ⚡ Socket status: User connected with ID: OLThWi9CsdqoOZsLAAAd
+2026-10-16 16:51:34:5134 [HTTP]: GET /api/services?page=1&limit=6 304 - - 240.967 ms
+2026-10-16 16:51:34:5134 [HTTP]: GET /api/services?page=1&limit=6 304 - - 250.622 ms
+2026-10-16 16:54:14:5414 [INFO]: ❌ Socket status: User disconnected properly: hCQEUU8RmJgLKBeAAAAc
+2026-10-16 16:54:14:5414 [INFO]: ❌ Socket status: User disconnected properly: OLThWi9CsdqoOZsLAAAd
+2026-10-16 16:54:14:5414 [INFO]: ⚡ Socket status: User connected with ID: EV0IvqVh0WUnwuAFAAAe
+2026-10-16 16:54:14:5414 [INFO]: ⚡ Socket status: User connected with ID: 26FkIVHj5Q6kCXhOAAAf
+2026-10-16 16:54:15:5415 [HTTP]: GET /api/services?page=1&limit=6 304 - - 248.591 ms
+2026-10-16 16:54:15:5415 [HTTP]: GET /api/services?page=1&limit=6 304 - - 242.166 ms
+2026-10-16 16:54:28:5428 [INFO]: ❌ Socket status: User disconnected properly: 26FkIVHj5Q6kCXhOAAAf
+2026-10-16 16:54:28:5428 [INFO]: ⚡ Socket status: User connected with ID: xjjExia8GEksxnBzAAAg
+2026-10-16 16:54:29:5429 [HTTP]: GET /api/services?page=1&limit=6 304 - - 825.954 ms
+2026-10-16 16:54:29:5429 [HTTP]: GET /api/services?page=1&limit=6 304 - - 248.237 ms
+2026-10-16 16:54:47:5447 [INFO]: ❌ Socket status: User disconnected properly: EV0IvqVh0WUnwuAFAAAe
+2026-10-16 16:54:47:5447 [INFO]: ⚡ Socket status: User connected with ID: rjQqC9mXHwjYIE4VAAAh
+2026-10-16 16:55:04:554 [INFO]: ❌ Socket status: User disconnected properly: xjjExia8GEksxnBzAAAg
+2026-10-16 16:55:04:554 [INFO]: ❌ Socket status: User disconnected properly: rjQqC9mXHwjYIE4VAAAh
+2026-10-16 16:55:04:554 [INFO]: ⚡ Socket status: User connected with ID: TgmPyyPANS5h7212AAAi
+2026-10-16 16:55:04:554 [INFO]: ⚡ Socket status: User connected with ID: a6TxA7sZyT_CCEqOAAAj
+2026-10-16 16:55:05:555 [HTTP]: GET /api/services?page=1&limit=6 304 - - 386.077 ms
+2026-10-16 16:55:05:555 [HTTP]: GET /api/services?page=1&limit=6 304 - - 258.214 ms
+2026-10-16 16:55:24:5524 [INFO]: ❌ Socket status: User disconnected properly: a6TxA7sZyT_CCEqOAAAj
+2026-10-16 16:55:24:5524 [INFO]: ❌ Socket status: User disconnected properly: TgmPyyPANS5h7212AAAi
+2026-10-16 16:55:24:5524 [INFO]: ⚡ Socket status: User connected with ID: 14Kt3xTnq1lOsgk2AAAk
+2026-10-16 16:55:24:5524 [INFO]: ⚡ Socket status: User connected with ID: B8_uqQp7_pRQPVVmAAAl
+2026-10-16 16:55:24:5524 [HTTP]: GET /api/services?page=1&limit=6 304 - - 271.289 ms
+2026-10-16 16:55:24:5524 [HTTP]: GET /api/services?page=1&limit=6 304 - - 245.716 ms
+2026-10-16 17:20:36:2036 [INFO]: ❌ Socket status: User disconnected properly: B8_uqQp7_pRQPVVmAAAl
+2026-10-16 17:20:36:2036 [INFO]: ❌ Socket status: User disconnected properly: 14Kt3xTnq1lOsgk2AAAk
+2026-10-16 17:20:37:2037 [INFO]: ⚡ Socket status: User connected with ID: NAE3WZwkwxdXPFDJAAAm
+2026-10-16 17:20:37:2037 [INFO]: ⚡ Socket status: User connected with ID: 8j-1JdncW2mQav_CAAAn
+2026-10-16 17:20:37:2037 [HTTP]: GET /api/services?page=1&limit=6 304 - - 288.347 ms
+2026-10-16 17:20:38:2038 [HTTP]: GET /api/services?page=1&limit=6 304 - - 248.856 ms
+2026-10-16 17:20:47:2047 [INFO]: ❌ Socket status: User disconnected properly: NAE3WZwkwxdXPFDJAAAm
+2026-10-16 17:20:47:2047 [INFO]: ⚡ Socket status: User connected with ID: rTFkppNXq9LdH8itAAAo
+2026-10-16 17:21:01:211 [INFO]: ❌ Socket status: User disconnected properly: 8j-1JdncW2mQav_CAAAn
+2026-10-16 17:21:01:211 [INFO]: ❌ Socket status: User disconnected properly: rTFkppNXq9LdH8itAAAo
+2026-10-16 17:21:01:211 [INFO]: ⚡ Socket status: User connected with ID: Absfxns3RROdfkIwAAAp
+2026-10-16 17:21:01:211 [INFO]: ⚡ Socket status: User connected with ID: AGDb48K7M24LwcUDAAAq
+2026-10-16 17:21:02:212 [HTTP]: GET /api/services?page=1&limit=6 304 - - 414.429 ms
+2026-10-16 17:21:02:212 [HTTP]: GET /api/services?page=1&limit=6 304 - - 653.625 ms
+2026-10-16 17:21:28:2128 [INFO]: ❌ Socket status: User disconnected properly: AGDb48K7M24LwcUDAAAq
+2026-10-16 17:21:28:2128 [INFO]: ⚡ Socket status: User connected with ID: ZQpVMyY1a-rUvz8XAAAr
+2026-10-16 17:21:28:2128 [HTTP]: GET /api/services?page=1&limit=6 304 - - 255.876 ms
+2026-10-16 17:21:29:2129 [HTTP]: GET /api/services?page=1&limit=6 304 - - 273.677 ms
+2026-10-16 17:21:36:2136 [INFO]: ❌ Socket status: User disconnected properly: Absfxns3RROdfkIwAAAp
+2026-10-16 17:21:36:2136 [INFO]: ❌ Socket status: User disconnected properly: ZQpVMyY1a-rUvz8XAAAr
+2026-10-16 17:21:36:2136 [INFO]: ⚡ Socket status: User connected with ID: qB46jQ4tS4QPHpWsAAAs
+2026-10-16 17:21:36:2136 [INFO]: ⚡ Socket status: User connected with ID: mhtjADs41raw640QAAAt
+2026-10-16 17:21:36:2136 [HTTP]: GET /api/services?page=1&limit=6 304 - - 242.684 ms
+2026-10-16 17:21:37:2137 [HTTP]: GET /api/services?page=1&limit=6 304 - - 244.332 ms
+2026-10-16 17:25:28:2528 [INFO]: ❌ Socket status: User disconnected properly: mhtjADs41raw640QAAAt
+2026-10-16 17:25:28:2528 [INFO]: ⚡ Socket status: User connected with ID: BgzPFjHCmmBcvHGLAAAu
+2026-10-16 17:25:28:2528 [HTTP]: GET /api/services?page=1&limit=6 304 - - 252.408 ms
+2026-10-16 17:25:29:2529 [HTTP]: GET /api/services?page=1&limit=6 304 - - 241.906 ms
+2026-10-16 17:25:46:2546 [INFO]: ❌ Socket status: User disconnected properly: BgzPFjHCmmBcvHGLAAAu
+2026-10-16 17:25:46:2546 [INFO]: ❌ Socket status: User disconnected properly: qB46jQ4tS4QPHpWsAAAs
+2026-10-16 17:25:47:2547 [INFO]: ⚡ Socket status: User connected with ID: x5VsbHfmxxD2DSS4AAAv
+2026-10-16 17:25:47:2547 [INFO]: ⚡ Socket status: User connected with ID: 6O6ZccL7HhKrbFapAAAw
+2026-10-16 17:25:47:2547 [HTTP]: GET /api/services?page=1&limit=6 304 - - 247.890 ms
+2026-10-16 17:25:47:2547 [HTTP]: GET /api/services?page=1&limit=6 304 - - 243.844 ms
+2026-10-16 17:26:01:261 [INFO]: ❌ Socket status: User disconnected properly: x5VsbHfmxxD2DSS4AAAv
+2026-10-16 17:26:01:261 [INFO]: ❌ Socket status: User disconnected properly: 6O6ZccL7HhKrbFapAAAw
+2026-10-16 17:26:02:262 [INFO]: ⚡ Socket status: User connected with ID: HIr_9wejPVtNOyS5AAAx
+2026-10-16 17:26:02:262 [INFO]: ⚡ Socket status: User connected with ID: KU8h72HTQMzQ-oc9AAAy
+2026-10-16 17:26:02:262 [HTTP]: GET /api/services?page=1&limit=6 304 - - 255.508 ms
+2026-10-16 17:26:02:262 [HTTP]: GET /api/services?page=1&limit=6 304 - - 243.491 ms
+2026-10-16 17:26:28:2628 [INFO]: ❌ Socket status: User disconnected properly: HIr_9wejPVtNOyS5AAAx
+2026-10-16 17:26:28:2628 [INFO]: ⚡ Socket status: User connected with ID: IBEFYfFlN4yPRV0RAAAz
+2026-10-16 17:26:28:2628 [HTTP]: GET /api/services?page=1&limit=6 304 - - 245.470 ms
+2026-10-16 17:26:28:2628 [HTTP]: GET /api/services?page=1&limit=6 304 - - 242.317 ms
+2026-10-16 17:26:31:2631 [INFO]: ❌ Socket status: User disconnected properly: KU8h72HTQMzQ-oc9AAAy
+2026-10-16 17:26:31:2631 [INFO]: ⚡ Socket status: User connected with ID: b8XqP6cfYzEVhdRbAAA0
+2026-10-16 17:30:28:3028 [INFO]: ❌ Socket status: User disconnected properly: IBEFYfFlN4yPRV0RAAAz
+2026-10-16 17:30:28:3028 [INFO]: ⚡ Socket status: User connected with ID: 5Rx2Fbb9oTLOZrMJAAA1
+2026-10-16 17:30:28:3028 [HTTP]: GET /api/services?page=1&limit=6 304 - - 260.286 ms
+2026-10-16 17:30:29:3029 [HTTP]: GET /api/services?page=1&limit=6 304 - - 246.822 ms
+2026-10-16 17:30:37:3037 [INFO]: ❌ Socket status: User disconnected properly: b8XqP6cfYzEVhdRbAAA0
+2026-10-16 17:30:47:3047 [INFO]: ⚡ Socket status: User connected with ID: oGtEPCWPzfejsXFuAAA2
+2026-10-16 17:31:13:3113 [INFO]: ❌ Socket status: User disconnected properly: 5Rx2Fbb9oTLOZrMJAAA1
+2026-10-16 17:31:28:3128 [INFO]: ⚡ Socket status: User connected with ID: oID3kohxsyitpGQCAAA3
+2026-10-16 17:31:28:3128 [HTTP]: GET /api/services?page=1&limit=6 304 - - 247.423 ms
+2026-10-16 17:31:28:3128 [HTTP]: GET /api/services?page=1&limit=6 304 - - 245.374 ms
+2026-10-16 17:31:32:3132 [INFO]: ❌ Socket status: User disconnected properly: oGtEPCWPzfejsXFuAAA2
+2026-10-16 17:31:37:3137 [INFO]: ❌ Socket status: User disconnected properly: oID3kohxsyitpGQCAAA3
+2026-10-16 17:31:37:3137 [INFO]: ⚡ Socket status: User connected with ID: -AVKhjPhUtkS-XnQAAA4
+2026-10-16 17:31:37:3137 [INFO]: ⚡ Socket status: User connected with ID: Z9ToiOIJjBV4lDJHAAA5
+2026-10-16 17:31:37:3137 [HTTP]: GET /api/services?page=1&limit=6 304 - - 251.208 ms
+2026-10-16 17:31:37:3137 [HTTP]: GET /api/services?page=1&limit=6 304 - - 273.737 ms
+2026-10-16 17:31:47:3147 [INFO]: ❌ Socket status: User disconnected properly: -AVKhjPhUtkS-XnQAAA4
+2026-10-16 17:31:47:3147 [INFO]: ⚡ Socket status: User connected with ID: YDyunfMCsssxFJrqAAA6
+2026-10-16 17:31:52:3152 [INFO]: ❌ Socket status: User disconnected properly: Z9ToiOIJjBV4lDJHAAA5
+2026-10-16 17:31:52:3152 [INFO]: ❌ Socket status: User disconnected properly: YDyunfMCsssxFJrqAAA6
+2026-10-16 17:31:52:3152 [INFO]: ⚡ Socket status: User connected with ID: UYdg5iWUIVqaZiAlAAA7
+2026-10-16 17:31:52:3152 [INFO]: ⚡ Socket status: User connected with ID: JbtcnD86CgMgaVqwAAA8
+2026-10-16 17:31:52:3152 [HTTP]: GET /api/services?page=1&limit=6 304 - - 257.918 ms
+2026-10-16 17:31:52:3152 [HTTP]: GET /api/services?page=1&limit=6 304 - - 244.722 ms
+2026-10-16 17:32:28:3228 [INFO]: ❌ Socket status: User disconnected properly: JbtcnD86CgMgaVqwAAA8
+2026-10-16 17:32:28:3228 [INFO]: ⚡ Socket status: User connected with ID: lFbypxwsRpu7vz7IAAA9
+2026-10-16 17:32:28:3228 [HTTP]: GET /api/services?page=1&limit=6 304 - - 258.721 ms
+2026-10-16 17:32:28:3228 [HTTP]: GET /api/services?page=1&limit=6 304 - - 258.203 ms
+2026-10-16 17:32:32:3232 [INFO]: ❌ Socket status: User disconnected properly: UYdg5iWUIVqaZiAlAAA7
+2026-10-16 17:32:32:3232 [INFO]: ⚡ Socket status: User connected with ID: 6AxWTtBNttHvVzCQAAA-
+2026-10-16 17:32:47:3247 [INFO]: ❌ Socket status: User disconnected properly: 6AxWTtBNttHvVzCQAAA-
+2026-10-16 17:32:47:3247 [INFO]: ⚡ Socket status: User connected with ID: he_jSuoY7wnLHZbNAAA_
+2026-10-16 17:33:13:3313 [INFO]: ❌ Socket status: User disconnected properly: lFbypxwsRpu7vz7IAAA9
+2026-10-16 17:33:28:3328 [INFO]: ⚡ Socket status: User connected with ID: wBTUbDT68CEJOO8lAABA
+2026-10-16 17:33:28:3328 [HTTP]: GET /api/services?page=1&limit=6 304 - - 265.409 ms
+2026-10-16 17:33:29:3329 [HTTP]: GET /api/services?page=1&limit=6 304 - - 255.708 ms
+2026-10-16 17:33:32:3332 [INFO]: ❌ Socket status: User disconnected properly: he_jSuoY7wnLHZbNAAA_
+2026-10-16 17:33:47:3347 [INFO]: ⚡ Socket status: User connected with ID: ygLIpStXUR9aFwU6AABB
+2026-10-16 17:34:13:3413 [INFO]: ❌ Socket status: User disconnected properly: wBTUbDT68CEJOO8lAABA
+2026-10-16 17:34:28:3428 [INFO]: ⚡ Socket status: User connected with ID: oVYRZI-hUTHwOyFYAABC
+2026-10-16 17:34:28:3428 [HTTP]: GET /api/services?page=1&limit=6 304 - - 244.782 ms
+2026-10-16 17:34:29:3429 [HTTP]: GET /api/services?page=1&limit=6 304 - - 253.352 ms
+2026-10-16 17:34:32:3432 [INFO]: ❌ Socket status: User disconnected properly: ygLIpStXUR9aFwU6AABB
+2026-10-16 17:34:47:3447 [INFO]: ⚡ Socket status: User connected with ID: 7SanLTcaN9Y3ho7cAABD
+2026-10-16 17:35:13:3513 [INFO]: ❌ Socket status: User disconnected properly: oVYRZI-hUTHwOyFYAABC
+2026-10-16 17:35:28:3528 [INFO]: ⚡ Socket status: User connected with ID: Pnlxkvhq9Sp_72LwAABE
+2026-10-16 17:35:28:3528 [HTTP]: GET /api/services?page=1&limit=6 304 - - 253.458 ms
+2026-10-16 17:35:29:3529 [HTTP]: GET /api/services?page=1&limit=6 304 - - 246.038 ms
+2026-10-16 17:35:32:3532 [INFO]: ❌ Socket status: User disconnected properly: 7SanLTcaN9Y3ho7cAABD
+2026-10-16 17:35:47:3547 [INFO]: ⚡ Socket status: User connected with ID: ZTx9jLM_8R847VmAAABF
+2026-10-16 17:36:13:3613 [INFO]: ❌ Socket status: User disconnected properly: Pnlxkvhq9Sp_72LwAABE
+2026-10-16 17:36:28:3628 [INFO]: ⚡ Socket status: User connected with ID: 7vYz-5bY-oMQEmrPAABG
+2026-10-16 17:36:28:3628 [HTTP]: GET /api/services?page=1&limit=6 304 - - 250.108 ms
+2026-10-16 17:36:29:3629 [HTTP]: GET /api/services?page=1&limit=6 304 - - 243.916 ms
+2026-10-16 17:36:32:3632 [INFO]: ❌ Socket status: User disconnected properly: ZTx9jLM_8R847VmAAABF
+2026-10-16 17:36:37:3637 [INFO]: ❌ Socket status: User disconnected properly: 7vYz-5bY-oMQEmrPAABG
+2026-10-16 17:36:37:3637 [INFO]: ⚡ Socket status: User connected with ID: f2YxckN5Ld9H1PqeAABH
+2026-10-16 17:36:37:3637 [INFO]: ⚡ Socket status: User connected with ID: HN4hUw5MCeIlagd1AABI
+2026-10-16 17:36:38:3638 [HTTP]: GET /api/services?page=1&limit=6 304 - - 258.563 ms
+2026-10-16 17:36:38:3638 [HTTP]: GET /api/services?page=1&limit=6 304 - - 248.993 ms
+2026-10-16 17:37:28:3728 [INFO]: ❌ Socket status: User disconnected properly: HN4hUw5MCeIlagd1AABI
+2026-10-16 17:37:28:3728 [INFO]: ⚡ Socket status: User connected with ID: HoG_KGevrGhaWVUfAABJ
+2026-10-16 17:37:28:3728 [HTTP]: GET /api/services?page=1&limit=6 304 - - 246.795 ms
+2026-10-16 17:37:28:3728 [HTTP]: GET /api/services?page=1&limit=6 304 - - 243.917 ms
+2026-10-16 17:37:32:3732 [INFO]: ❌ Socket status: User disconnected properly: f2YxckN5Ld9H1PqeAABH
+2026-10-16 17:37:32:3732 [INFO]: ⚡ Socket status: User connected with ID: 3LZ0meNEMGI9Xy8_AABK
+2026-10-16 17:40:28:4028 [INFO]: ❌ Socket status: User disconnected properly: HoG_KGevrGhaWVUfAABJ
+2026-10-16 17:40:28:4028 [INFO]: ⚡ Socket status: User connected with ID: rKkLK0lMD5G9rrY0AABL
+2026-10-16 17:40:28:4028 [HTTP]: GET /api/services?page=1&limit=6 304 - - 245.552 ms
+2026-10-16 17:40:29:4029 [HTTP]: GET /api/services?page=1&limit=6 304 - - 243.520 ms
+2026-10-16 17:40:47:4047 [INFO]: ❌ Socket status: User disconnected properly: 3LZ0meNEMGI9Xy8_AABK
+2026-10-16 17:40:47:4047 [INFO]: ⚡ Socket status: User connected with ID: w1A8yiMAXuhGbGyaAABM
+2026-10-16 17:41:13:4113 [INFO]: ❌ Socket status: User disconnected properly: rKkLK0lMD5G9rrY0AABL
+2026-10-16 17:41:28:4128 [INFO]: ⚡ Socket status: User connected with ID: Yvwlp-UlP_evZcOEAABN
+2026-10-16 17:41:29:4129 [HTTP]: GET /api/services?page=1&limit=6 304 - - 591.890 ms
+2026-10-16 17:41:29:4129 [HTTP]: GET /api/services?page=1&limit=6 304 - - 242.632 ms
+2026-10-16 17:41:32:4132 [INFO]: ❌ Socket status: User disconnected properly: w1A8yiMAXuhGbGyaAABM
+2026-10-16 17:41:38:4138 [INFO]: ❌ Socket status: User disconnected properly: Yvwlp-UlP_evZcOEAABN
+2026-10-16 17:41:38:4138 [INFO]: ⚡ Socket status: User connected with ID: -0QBEOp60O3kxT47AABO
+2026-10-16 17:41:38:4138 [INFO]: ⚡ Socket status: User connected with ID: 3FR4n7pmWP4hAjY9AABP
+2026-10-16 17:41:38:4138 [HTTP]: GET /api/services?page=1&limit=6 304 - - 241.842 ms
+2026-10-16 17:41:38:4138 [HTTP]: GET /api/services?page=1&limit=6 304 - - 245.269 ms
+2026-10-16 17:42:23:4223 [INFO]: ❌ Socket status: User disconnected properly: 3FR4n7pmWP4hAjY9AABP
+2026-10-16 17:42:23:4223 [INFO]: ❌ Socket status: User disconnected properly: -0QBEOp60O3kxT47AABO
+2026-10-16 17:42:28:4228 [INFO]: ⚡ Socket status: User connected with ID: Dwm0i9itPjYb9V8zAABQ
+2026-10-16 17:42:28:4228 [INFO]: ⚡ Socket status: User connected with ID: H0LZgNF7uE6XWOhzAABR
+2026-10-16 17:42:28:4228 [HTTP]: GET /api/services?page=1&limit=6 304 - - 246.196 ms
+2026-10-16 17:42:28:4228 [HTTP]: GET /api/services?page=1&limit=6 304 - - 248.701 ms
+2026-10-16 17:43:28:4328 [INFO]: ❌ Socket status: User disconnected properly: Dwm0i9itPjYb9V8zAABQ
+2026-10-16 17:43:28:4328 [INFO]: ⚡ Socket status: User connected with ID: MO3e7PzDtbb-3IfUAABS
+2026-10-16 17:43:28:4328 [HTTP]: GET /api/services?page=1&limit=6 304 - - 245.338 ms
+2026-10-16 17:43:29:4329 [HTTP]: GET /api/services?page=1&limit=6 304 - - 249.688 ms
+2026-10-16 17:43:38:4338 [INFO]: ❌ Socket status: User disconnected properly: H0LZgNF7uE6XWOhzAABR
+2026-10-16 17:43:47:4347 [INFO]: ⚡ Socket status: User connected with ID: lljcPHnQu3mEE67WAABT
+2026-10-16 17:44:13:4413 [INFO]: ❌ Socket status: User disconnected properly: MO3e7PzDtbb-3IfUAABS
+2026-10-16 17:44:28:4428 [INFO]: ⚡ Socket status: User connected with ID: 9lXy7JXdIgAoMsbKAABU
+2026-10-16 17:44:28:4428 [HTTP]: GET /api/services?page=1&limit=6 304 - - 246.686 ms
+2026-10-16 17:44:29:4429 [HTTP]: GET /api/services?page=1&limit=6 304 - - 242.444 ms
+2026-10-16 17:44:32:4432 [INFO]: ❌ Socket status: User disconnected properly: lljcPHnQu3mEE67WAABT
+2026-10-16 17:44:47:4447 [INFO]: ⚡ Socket status: User connected with ID: CY9QvAU9KnBKGqzpAABV
+2026-10-16 17:45:13:4513 [INFO]: ❌ Socket status: User disconnected properly: 9lXy7JXdIgAoMsbKAABU
+2026-10-16 17:45:28:4528 [INFO]: ⚡ Socket status: User connected with ID: 8ZO_nUxsJviQ9ZyBAABW
+2026-10-16 17:45:28:4528 [HTTP]: GET /api/services?page=1&limit=6 304 - - 245.277 ms
+2026-10-16 17:45:28:4528 [HTTP]: GET /api/services?page=1&limit=6 304 - - 243.503 ms
+2026-10-16 17:45:32:4532 [INFO]: ❌ Socket status: User disconnected properly: CY9QvAU9KnBKGqzpAABV
+2026-10-16 17:45:47:4547 [INFO]: ⚡ Socket status: User connected with ID: vcg3ylPw-s5-2zzdAABX
+2026-10-16 17:46:13:4613 [INFO]: ❌ Socket status: User disconnected properly: 8ZO_nUxsJviQ9ZyBAABW
+2026-10-16 17:46:28:4628 [INFO]: ⚡ Socket status: User connected with ID: xiy8-0ELg40DF2mcAABY
+2026-10-16 17:46:28:4628 [HTTP]: GET /api/services?page=1&limit=6 304 - - 244.898 ms
+2026-10-16 17:46:28:4628 [HTTP]: GET /api/services?page=1&limit=6 304 - - 242.943 ms
+2026-10-16 17:46:32:4632 [INFO]: ❌ Socket status: User disconnected properly: vcg3ylPw-s5-2zzdAABX
+2026-10-16 17:46:38:4638 [INFO]: ❌ Socket status: User disconnected properly: xiy8-0ELg40DF2mcAABY
+2026-10-16 17:46:38:4638 [INFO]: ⚡ Socket status: User connected with ID: VYpUbyMzLVbHhtU-AABZ
+2026-10-16 17:46:38:4638 [INFO]: ⚡ Socket status: User connected with ID: yus8Mt-Klx1bYThFAABa
+2026-10-16 17:46:38:4638 [HTTP]: GET /api/services?page=1&limit=6 304 - - 243.137 ms
+2026-10-16 17:46:39:4639 [HTTP]: GET /api/services?page=1&limit=6 304 - - 250.245 ms
+2026-10-16 17:48:03:483 [INFO]: ❌ Socket status: User disconnected properly: VYpUbyMzLVbHhtU-AABZ
+2026-10-16 17:48:03:483 [INFO]: ❌ Socket status: User disconnected properly: yus8Mt-Klx1bYThFAABa
+2026-10-16 17:48:03:483 [INFO]: ⚡ Socket status: User connected with ID: gP3aQHl05gFgSyazAABb
+2026-10-16 17:48:03:483 [INFO]: ⚡ Socket status: User connected with ID: 9hcC3mDSNJJDXAqNAABc
+2026-10-16 17:48:04:484 [HTTP]: GET /api/services?page=1&limit=6 304 - - 256.793 ms
+2026-10-16 17:48:04:484 [HTTP]: GET /api/services?page=1&limit=6 304 - - 241.408 ms
+2026-10-16 18:15:47:1547 [INFO]: ❌ Socket status: User disconnected properly: gP3aQHl05gFgSyazAABb
+2026-10-16 18:15:47:1547 [INFO]: ⚡ Socket status: User connected with ID: DRkC3E1oKB82LOIsAABd
+2026-10-16 18:16:19:1619 [INFO]: ❌ Socket status: User disconnected properly: 9hcC3mDSNJJDXAqNAABc
+2026-10-16 18:16:28:1628 [INFO]: ⚡ Socket status: User connected with ID: -fEi7GreAyxUyndzAABe
+2026-10-16 18:16:28:1628 [HTTP]: GET /api/services?page=1&limit=6 304 - - 242.907 ms
+2026-10-16 18:16:29:1629 [HTTP]: GET /api/services?page=1&limit=6 304 - - 250.430 ms
+2026-10-16 18:16:32:1632 [INFO]: ❌ Socket status: User disconnected properly: DRkC3E1oKB82LOIsAABd
+2026-10-16 18:16:47:1647 [INFO]: ⚡ Socket status: User connected with ID: OLJXtzdItljLtk_dAABf
+2026-10-16 18:17:13:1713 [INFO]: ❌ Socket status: User disconnected properly: -fEi7GreAyxUyndzAABe
+2026-10-16 18:17:28:1728 [INFO]: ⚡ Socket status: User connected with ID: kgK16r5Oucv5VJi6AABg
+2026-10-16 18:17:28:1728 [HTTP]: GET /api/services?page=1&limit=6 304 - - 472.397 ms
+2026-10-16 18:17:29:1729 [HTTP]: GET /api/services?page=1&limit=6 304 - - 659.168 ms
+2026-10-16 18:17:31:1731 [INFO]: ❌ Socket status: User disconnected properly: OLJXtzdItljLtk_dAABf
+2026-10-16 18:17:31:1731 [INFO]: ⚡ Socket status: User connected with ID: vj3BEqtOEo6fz82SAABh
+2026-10-16 18:18:28:1828 [INFO]: ❌ Socket status: User disconnected properly: kgK16r5Oucv5VJi6AABg
+2026-10-16 18:18:28:1828 [INFO]: ⚡ Socket status: User connected with ID: NMQsopq6mZKPSE0IAABi
+2026-10-16 18:18:28:1828 [HTTP]: GET /api/services?page=1&limit=6 304 - - 269.916 ms
+2026-10-16 18:18:29:1829 [HTTP]: GET /api/services?page=1&limit=6 304 - - 240.742 ms
+2026-10-16 18:18:41:1841 [INFO]: ❌ Socket status: User disconnected properly: vj3BEqtOEo6fz82SAABh
+2026-10-16 18:18:47:1847 [INFO]: ⚡ Socket status: User connected with ID: WS_83IOLPJqjWgUZAABj
+2026-10-16 18:19:13:1913 [INFO]: ❌ Socket status: User disconnected properly: NMQsopq6mZKPSE0IAABi
+2026-10-16 18:19:16:1916 [INFO]: ❌ Socket status: User disconnected properly: WS_83IOLPJqjWgUZAABj
+2026-10-16 18:19:16:1916 [INFO]: ⚡ Socket status: User connected with ID: NpoZDT8D2p3uaBP2AABk
+2026-10-16 18:19:16:1916 [INFO]: ⚡ Socket status: User connected with ID: kOcMWrSmU1o-qveOAABl
+2026-10-16 18:19:16:1916 [HTTP]: GET /api/services?page=1&limit=6 304 - - 248.896 ms
+2026-10-16 18:19:17:1917 [HTTP]: GET /api/services?page=1&limit=6 304 - - 270.260 ms
+2026-10-16 18:19:28:1928 [INFO]: ❌ Socket status: User disconnected properly: NpoZDT8D2p3uaBP2AABk
+2026-10-16 18:19:28:1928 [INFO]: ⚡ Socket status: User connected with ID: 1LRgonRJXRXKKmwrAABm
+2026-10-16 18:19:28:1928 [HTTP]: GET /api/services?page=1&limit=6 304 - - 262.520 ms
+2026-10-16 18:19:28:1928 [HTTP]: GET /api/services?page=1&limit=6 304 - - 269.459 ms
+2026-10-16 18:19:47:1947 [INFO]: ❌ Socket status: User disconnected properly: kOcMWrSmU1o-qveOAABl
+2026-10-16 18:19:47:1947 [INFO]: ⚡ Socket status: User connected with ID: -mg8y6_dtr-vY-aIAABn
+2026-10-16 18:20:13:2013 [INFO]: ❌ Socket status: User disconnected properly: 1LRgonRJXRXKKmwrAABm
+2026-10-16 18:20:28:2028 [INFO]: ⚡ Socket status: User connected with ID: YtBxZAopaUrnPgQwAABo
+2026-10-16 18:20:28:2028 [HTTP]: GET /api/services?page=1&limit=6 304 - - 245.381 ms
+2026-10-16 18:20:28:2028 [HTTP]: GET /api/services?page=1&limit=6 304 - - 241.301 ms
+2026-10-16 18:20:32:2032 [INFO]: ❌ Socket status: User disconnected properly: -mg8y6_dtr-vY-aIAABn
+2026-10-16 18:20:47:2047 [INFO]: ⚡ Socket status: User connected with ID: X1WdFbvIPzczjCVJAABp
+2026-10-16 18:21:13:2113 [INFO]: ❌ Socket status: User disconnected properly: YtBxZAopaUrnPgQwAABo
+2026-10-16 18:21:28:2128 [INFO]: ⚡ Socket status: User connected with ID: 6zZJqiNdfSEM4o3TAABq
+2026-10-16 18:21:29:2129 [HTTP]: GET /api/services?page=1&limit=6 304 - - 655.221 ms
+2026-10-16 18:21:29:2129 [HTTP]: GET /api/services?page=1&limit=6 304 - - 277.895 ms
+2026-10-16 18:21:32:2132 [INFO]: ❌ Socket status: User disconnected properly: X1WdFbvIPzczjCVJAABp
+2026-10-16 18:21:47:2147 [INFO]: ⚡ Socket status: User connected with ID: 8fMAKvNg29VQ4l7pAABr
+2026-10-16 18:21:51:2151 [INFO]: ❌ Socket status: User disconnected properly: 6zZJqiNdfSEM4o3TAABq
+2026-10-16 18:21:51:2151 [INFO]: ⚡ Socket status: User connected with ID: _D3BCvIcOqRlzsNoAABs
+2026-10-16 18:21:52:2152 [HTTP]: GET /api/services?page=1&limit=6 304 - - 250.964 ms
+2026-10-16 18:21:52:2152 [HTTP]: GET /api/services?page=1&limit=6 304 - - 245.311 ms
+2026-10-16 18:22:01:221 [INFO]: ❌ Socket status: User disconnected properly: 8fMAKvNg29VQ4l7pAABr
+2026-10-16 18:22:01:221 [INFO]: ❌ Socket status: User disconnected properly: _D3BCvIcOqRlzsNoAABs
+2026-10-16 18:22:01:221 [INFO]: ⚡ Socket status: User connected with ID: bh3Fo-JeYTSg1QiSAABt
+2026-10-16 18:22:01:221 [INFO]: ⚡ Socket status: User connected with ID: r4olrATvhfBHnB6DAABu
+2026-10-16 18:22:02:222 [HTTP]: GET /api/services?page=1&limit=6 304 - - 245.389 ms
+2026-10-16 18:22:02:222 [HTTP]: GET /api/services?page=1&limit=6 304 - - 251.070 ms
+2026-10-16 18:22:28:2228 [INFO]: ❌ Socket status: User disconnected properly: bh3Fo-JeYTSg1QiSAABt
+2026-10-16 18:22:28:2228 [INFO]: ⚡ Socket status: User connected with ID: gBWeEH_2qV-_b8UDAABv
+2026-10-16 18:22:28:2228 [HTTP]: GET /api/services?page=1&limit=6 304 - - 246.460 ms
+2026-10-16 18:22:28:2228 [HTTP]: GET /api/services?page=1&limit=6 304 - - 251.053 ms
+2026-10-16 18:22:46:2246 [INFO]: ❌ Socket status: User disconnected properly: r4olrATvhfBHnB6DAABu
+2026-10-16 18:22:47:2247 [INFO]: ⚡ Socket status: User connected with ID: oaemBtHYNNCTP1y5AABw
+2026-10-16 18:23:13:2313 [INFO]: ❌ Socket status: User disconnected properly: gBWeEH_2qV-_b8UDAABv
+2026-10-16 18:23:28:2328 [INFO]: ⚡ Socket status: User connected with ID: gXxjI2RsHaqOqJ8ZAABx
+2026-10-16 18:23:28:2328 [HTTP]: GET /api/services?page=1&limit=6 304 - - 265.378 ms
+2026-10-16 18:23:28:2328 [HTTP]: GET /api/services?page=1&limit=6 304 - - 267.810 ms
+2026-10-16 18:23:32:2332 [INFO]: ❌ Socket status: User disconnected properly: oaemBtHYNNCTP1y5AABw
+2026-10-16 18:23:47:2347 [INFO]: ⚡ Socket status: User connected with ID: 1AOXCV96uzqanbDMAABy
+2026-10-16 18:24:13:2413 [INFO]: ❌ Socket status: User disconnected properly: gXxjI2RsHaqOqJ8ZAABx
+2026-10-16 18:24:28:2428 [INFO]: ⚡ Socket status: User connected with ID: YxXBQ42_CPbRFrOKAABz
+2026-10-16 18:24:28:2428 [HTTP]: GET /api/services?page=1&limit=6 304 - - 254.417 ms
+2026-10-16 18:24:28:2428 [HTTP]: GET /api/services?page=1&limit=6 304 - - 258.643 ms
+2026-10-16 18:24:32:2432 [INFO]: ❌ Socket status: User disconnected properly: 1AOXCV96uzqanbDMAABy
+2026-10-16 18:24:47:2447 [INFO]: ⚡ Socket status: User connected with ID: aZ2vNrzxf2RWjnkkAAB0
+2026-10-16 18:25:13:2513 [INFO]: ❌ Socket status: User disconnected properly: YxXBQ42_CPbRFrOKAABz
+2026-10-16 18:25:28:2528 [INFO]: ⚡ Socket status: User connected with ID: vrrnWI727VyONCKvAAB1
+2026-10-16 18:25:28:2528 [HTTP]: GET /api/services?page=1&limit=6 304 - - 285.190 ms
+2026-10-16 18:25:29:2529 [HTTP]: GET /api/services?page=1&limit=6 304 - - 276.814 ms
+2026-10-16 18:25:32:2532 [INFO]: ❌ Socket status: User disconnected properly: aZ2vNrzxf2RWjnkkAAB0
+2026-10-16 18:25:47:2547 [INFO]: ⚡ Socket status: User connected with ID: MTbQmxImTiDoKawbAAB2
+2026-10-16 18:26:13:2613 [INFO]: ❌ Socket status: User disconnected properly: vrrnWI727VyONCKvAAB1
+2026-10-16 18:26:28:2628 [INFO]: ⚡ Socket status: User connected with ID: WVcuIWqBkQ3RZXuFAAB3
+2026-10-16 18:26:28:2628 [HTTP]: GET /api/services?page=1&limit=6 304 - - 251.130 ms
+2026-10-16 18:26:28:2628 [HTTP]: GET /api/services?page=1&limit=6 304 - - 258.274 ms
+2026-10-16 18:26:32:2632 [INFO]: ❌ Socket status: User disconnected properly: MTbQmxImTiDoKawbAAB2
+2026-10-16 18:26:42:2642 [INFO]: ❌ Socket status: User disconnected properly: WVcuIWqBkQ3RZXuFAAB3
+2026-10-16 18:26:42:2642 [INFO]: ⚡ Socket status: User connected with ID: 51Tiyg26rzi1Y4STAAB4
+2026-10-16 18:26:42:2642 [INFO]: ⚡ Socket status: User connected with ID: UciRM-C0n1W0phyWAAB5
+2026-10-16 18:26:42:2642 [HTTP]: GET /api/services?page=1&limit=6 304 - - 273.631 ms
+2026-10-16 18:26:42:2642 [HTTP]: GET /api/services?page=1&limit=6 304 - - 271.781 ms
+2026-10-16 18:30:28:3028 [INFO]: ❌ Socket status: User disconnected properly: UciRM-C0n1W0phyWAAB5
+2026-10-16 18:30:28:3028 [INFO]: ⚡ Socket status: User connected with ID: cEBy3oEXXPZW3I-kAAB6
+2026-10-16 18:30:28:3028 [HTTP]: GET /api/services?page=1&limit=6 304 - - 294.835 ms
+2026-10-16 18:30:29:3029 [HTTP]: GET /api/services?page=1&limit=6 304 - - 280.191 ms
+2026-10-16 18:30:42:3042 [INFO]: ❌ Socket status: User disconnected properly: cEBy3oEXXPZW3I-kAAB6
+2026-10-16 18:30:42:3042 [INFO]: ❌ Socket status: User disconnected properly: 51Tiyg26rzi1Y4STAAB4
+2026-10-16 18:30:42:3042 [INFO]: ⚡ Socket status: User connected with ID: u9a5XGv64jk__dkaAAB7
+2026-10-16 18:30:42:3042 [INFO]: ⚡ Socket status: User connected with ID: TjDHAISJscaWNJaHAAB8
+2026-10-16 18:30:43:3043 [HTTP]: GET /api/services?page=1&limit=6 304 - - 648.724 ms
+2026-10-16 18:30:43:3043 [HTTP]: GET /api/services?page=1&limit=6 304 - - 287.939 ms
+2026-10-16 18:30:52:3052 [INFO]: ❌ Socket status: User disconnected properly: u9a5XGv64jk__dkaAAB7
+2026-10-16 18:30:52:3052 [INFO]: ❌ Socket status: User disconnected properly: TjDHAISJscaWNJaHAAB8
+2026-10-16 18:30:52:3052 [INFO]: ⚡ Socket status: User connected with ID: AWWd2rlHTabAcBuyAAB9
+2026-10-16 18:30:52:3052 [INFO]: ⚡ Socket status: User connected with ID: LQa_6jU_tr_bfLpBAAB-
+2026-10-16 18:30:52:3052 [HTTP]: GET /api/services?page=1&limit=6 304 - - 287.634 ms
+2026-10-16 18:30:53:3053 [HTTP]: GET /api/services?page=1&limit=6 304 - - 669.802 ms
+2026-10-16 18:34:22:3422 [INFO]: ❌ Socket status: User disconnected properly: AWWd2rlHTabAcBuyAAB9
+2026-10-16 18:34:22:3422 [INFO]: ❌ Socket status: User disconnected properly: LQa_6jU_tr_bfLpBAAB-
+2026-10-16 18:34:23:3423 [INFO]: ⚡ Socket status: User connected with ID: XW48Ey9Qm-IpQxB6AAB_
+2026-10-16 18:34:23:3423 [INFO]: ⚡ Socket status: User connected with ID: GSR2hAhhhM23480hAACA
+2026-10-16 18:34:23:3423 [HTTP]: GET /api/services?page=1&limit=6 304 - - 675.006 ms
+2026-10-16 18:34:24:3424 [HTTP]: GET /api/services?page=1&limit=6 304 - - 284.496 ms
+2026-10-16 18:34:28:3428 [INFO]: ❌ Socket status: User disconnected properly: GSR2hAhhhM23480hAACA
+2026-10-16 18:34:28:3428 [INFO]: ⚡ Socket status: User connected with ID: yMIefjoiHbk7Ls6TAACB
+2026-10-16 18:34:28:3428 [HTTP]: GET /api/services?page=1&limit=6 304 - - 292.486 ms
+2026-10-16 18:34:29:3429 [HTTP]: GET /api/services?page=1&limit=6 304 - - 288.325 ms
+2026-10-16 18:34:47:3447 [INFO]: ❌ Socket status: User disconnected properly: XW48Ey9Qm-IpQxB6AAB_
+2026-10-16 18:34:47:3447 [INFO]: ⚡ Socket status: User connected with ID: agrWkcKMR-x9r4mCAACC
+2026-10-16 18:35:13:3513 [INFO]: ❌ Socket status: User disconnected properly: yMIefjoiHbk7Ls6TAACB
+2026-10-16 18:35:28:3528 [INFO]: ⚡ Socket status: User connected with ID: FqY5Vyc8_BFOGf9WAACD
+2026-10-16 18:35:28:3528 [HTTP]: GET /api/services?page=1&limit=6 304 - - 283.795 ms
+2026-10-16 18:35:29:3529 [HTTP]: GET /api/services?page=1&limit=6 304 - - 282.911 ms
+2026-10-16 18:35:32:3532 [INFO]: ❌ Socket status: User disconnected properly: agrWkcKMR-x9r4mCAACC
+2026-10-16 18:35:47:3547 [INFO]: ⚡ Socket status: User connected with ID: AWwc4AaDZsBiCcQRAACE
+2026-10-16 18:36:13:3613 [INFO]: ❌ Socket status: User disconnected properly: FqY5Vyc8_BFOGf9WAACD
+2026-10-16 18:36:28:3628 [INFO]: ⚡ Socket status: User connected with ID: CNsa2HaPn8z-4WqoAACF
+2026-10-16 18:36:29:3629 [HTTP]: GET /api/services?page=1&limit=6 304 - - 263.021 ms
+2026-10-16 18:36:29:3629 [HTTP]: GET /api/services?page=1&limit=6 304 - - 258.484 ms
+2026-10-16 18:36:32:3632 [INFO]: ❌ Socket status: User disconnected properly: AWwc4AaDZsBiCcQRAACE
+2026-10-16 18:36:47:3647 [INFO]: ⚡ Socket status: User connected with ID: ZY75i8NCG46l5OzOAACG
+2026-10-16 18:36:57:3657 [INFO]: ❌ Socket status: User disconnected properly: ZY75i8NCG46l5OzOAACG
+2026-10-16 18:36:57:3657 [INFO]: ❌ Socket status: User disconnected properly: CNsa2HaPn8z-4WqoAACF
+2026-10-16 18:36:58:3658 [INFO]: ⚡ Socket status: User connected with ID: _wfZaAyZccActJdUAACH
+2026-10-16 18:36:58:3658 [INFO]: ⚡ Socket status: User connected with ID: mVRaIz76tVRiPpR4AACI
+2026-10-16 18:36:58:3658 [HTTP]: GET /api/services?page=1&limit=6 304 - - 249.628 ms
+2026-10-16 18:36:59:3659 [HTTP]: GET /api/services?page=1&limit=6 304 - - 242.518 ms
+2026-10-16 19:54:47:5447 [INFO]: ❌ Socket status: User disconnected properly: _wfZaAyZccActJdUAACH
+2026-10-16 19:54:47:5447 [INFO]: ⚡ Socket status: User connected with ID: bwdBvMnPueoG2P17AACJ
+2026-10-16 19:55:15:5515 [INFO]: ❌ Socket status: User disconnected properly: mVRaIz76tVRiPpR4AACI
+2026-10-16 19:55:28:5528 [INFO]: ⚡ Socket status: User connected with ID: lxYnzz0o0GSRuauuAACK
+2026-10-16 19:55:28:5528 [HTTP]: GET /api/services?page=1&limit=6 304 - - 295.836 ms
+2026-10-16 19:55:29:5529 [HTTP]: GET /api/services?page=1&limit=6 304 - - 658.014 ms
+2026-10-16 19:55:32:5532 [INFO]: ❌ Socket status: User disconnected properly: bwdBvMnPueoG2P17AACJ
+2026-10-16 19:55:47:5547 [INFO]: ⚡ Socket status: User connected with ID: AEO24a6ZlTtR19x2AACL
+2026-10-16 19:56:13:5613 [INFO]: ❌ Socket status: User disconnected properly: lxYnzz0o0GSRuauuAACK
+2026-10-16 19:56:15:5615 [INFO]: ❌ Socket status: User disconnected properly: AEO24a6ZlTtR19x2AACL
+2026-10-16 19:56:15:5615 [INFO]: ⚡ Socket status: User connected with ID: OUfVJYqcbWJqt5VUAACM
+2026-10-16 19:56:15:5615 [INFO]: ⚡ Socket status: User connected with ID: kgO_MmnQaq9OXMYmAACN
+2026-10-16 19:56:15:5615 [HTTP]: GET /api/services?page=1&limit=6 304 - - 299.817 ms
+2026-10-16 19:56:16:5616 [HTTP]: GET /api/services?page=1&limit=6 304 - - 267.755 ms
+2026-10-16 20:00:20:020 [INFO]: ❌ Socket status: User disconnected properly: kgO_MmnQaq9OXMYmAACN
+2026-10-16 20:00:20:020 [INFO]: ❌ Socket status: User disconnected properly: OUfVJYqcbWJqt5VUAACM
+2026-10-16 20:00:28:028 [INFO]: ⚡ Socket status: User connected with ID: 6myD8a6EWUTy3hTxAACO
+2026-10-16 20:00:28:028 [HTTP]: GET /api/services?page=1&limit=6 304 - - 296.166 ms
+2026-10-16 20:00:29:029 [HTTP]: GET /api/services?page=1&limit=6 304 - - 302.779 ms
+2026-10-16 20:00:47:047 [INFO]: ⚡ Socket status: User connected with ID: AYl1x2TTSb4e3fWWAACP
+2026-10-16 20:01:13:113 [INFO]: ❌ Socket status: User disconnected properly: 6myD8a6EWUTy3hTxAACO
+2026-10-16 20:01:28:128 [INFO]: ⚡ Socket status: User connected with ID: lCGI1Z_QaT-GEuwfAACQ
+2026-10-16 20:01:28:128 [HTTP]: GET /api/services?page=1&limit=6 304 - - 281.782 ms
+2026-10-16 20:01:29:129 [HTTP]: GET /api/services?page=1&limit=6 304 - - 643.284 ms
+2026-10-16 20:01:32:132 [INFO]: ❌ Socket status: User disconnected properly: AYl1x2TTSb4e3fWWAACP
+2026-10-16 20:01:47:147 [INFO]: ⚡ Socket status: User connected with ID: oyVXWCjoH05oqbxlAACR
+2026-10-16 20:02:05:25 [INFO]: ❌ Socket status: User disconnected properly: lCGI1Z_QaT-GEuwfAACQ
+2026-10-16 20:02:05:25 [INFO]: ❌ Socket status: User disconnected properly: oyVXWCjoH05oqbxlAACR
+2026-10-16 20:02:06:26 [INFO]: ⚡ Socket status: User connected with ID: eKlZ_u5RJcOHlXFxAACS
+2026-10-16 20:02:06:26 [INFO]: ⚡ Socket status: User connected with ID: Kc-FLp9J13jt-UdWAACT
+2026-10-16 20:02:06:26 [HTTP]: GET /api/services?page=1&limit=6 304 - - 286.462 ms
+2026-10-16 20:02:06:26 [HTTP]: GET /api/services?page=1&limit=6 304 - - 290.588 ms
+2026-10-16 20:02:45:245 [INFO]: ❌ Socket status: User disconnected properly: Kc-FLp9J13jt-UdWAACT
+2026-10-16 20:02:45:245 [INFO]: ❌ Socket status: User disconnected properly: eKlZ_u5RJcOHlXFxAACS
+2026-10-16 20:02:46:246 [INFO]: ⚡ Socket status: User connected with ID: 5PiY5lVJrg3Sy_eJAACU
+2026-10-16 20:02:46:246 [INFO]: ⚡ Socket status: User connected with ID: J2jahSEbE9Gk60kNAACV
+2026-10-16 20:02:46:246 [HTTP]: GET /api/services?page=1&limit=6 304 - - 287.206 ms
+2026-10-16 20:02:46:246 [HTTP]: GET /api/services?page=1&limit=6 304 - - 277.286 ms
+2026-10-16 20:03:00:30 [INFO]: ❌ Socket status: User disconnected properly: J2jahSEbE9Gk60kNAACV
+2026-10-16 20:03:00:30 [INFO]: ❌ Socket status: User disconnected properly: 5PiY5lVJrg3Sy_eJAACU
+2026-10-16 20:03:01:31 [INFO]: ⚡ Socket status: User connected with ID: wK_2FGoP1MLHR-XwAACW
+2026-10-16 20:03:01:31 [INFO]: ⚡ Socket status: User connected with ID: DSaZbJk9fozRkHoEAACX
+2026-10-16 20:03:01:31 [HTTP]: GET /api/services?page=1&limit=6 304 - - 282.670 ms
+2026-10-16 20:03:01:31 [HTTP]: GET /api/services?page=1&limit=6 304 - - 262.433 ms
+2026-10-16 20:03:10:310 [INFO]: ❌ Socket status: User disconnected properly: wK_2FGoP1MLHR-XwAACW
+2026-10-16 20:03:10:310 [INFO]: ❌ Socket status: User disconnected properly: DSaZbJk9fozRkHoEAACX
+2026-10-16 20:03:11:311 [INFO]: ⚡ Socket status: User connected with ID: wcQCHfZY4Z9v6Bs3AACY
+2026-10-16 20:03:11:311 [INFO]: ⚡ Socket status: User connected with ID: Dppwv4nD2KN__BW0AACZ
+2026-10-16 20:03:12:312 [HTTP]: GET /api/services?page=1&limit=6 304 - - 991.398 ms
+2026-10-16 20:03:13:313 [HTTP]: GET /api/services?page=1&limit=6 304 - - 1556.383 ms
+2026-10-16 20:03:28:328 [INFO]: ❌ Socket status: User disconnected properly: Dppwv4nD2KN__BW0AACZ
+2026-10-16 20:03:28:328 [INFO]: ⚡ Socket status: User connected with ID: 0qECDbtw_wfI7mevAACa
+2026-10-16 20:03:29:329 [HTTP]: GET /api/services?page=1&limit=6 304 - - 1182.036 ms
+2026-10-16 20:03:30:330 [HTTP]: GET /api/services?page=1&limit=6 304 - - 453.291 ms
+2026-10-16 20:03:30:330 [INFO]: ❌ Socket status: User disconnected properly: wcQCHfZY4Z9v6Bs3AACY
+2026-10-16 20:03:31:331 [INFO]: ⚡ Socket status: User connected with ID: GSYH01ke8EE0wfW3AACb
+2026-10-16 20:05:28:528 [INFO]: ❌ Socket status: User disconnected properly: 0qECDbtw_wfI7mevAACa
+2026-10-16 20:05:28:528 [INFO]: ⚡ Socket status: User connected with ID: Ps6sCft87wFpcLYEAACc
+2026-10-16 20:05:29:529 [HTTP]: GET /api/services?page=1&limit=6 304 - - 951.111 ms
+2026-10-16 20:05:30:530 [HTTP]: GET /api/services?page=1&limit=6 304 - - 869.095 ms
+2026-10-16 20:05:47:547 [INFO]: ❌ Socket status: User disconnected properly: GSYH01ke8EE0wfW3AACb
+2026-10-16 20:05:47:547 [INFO]: ⚡ Socket status: User connected with ID: DndTqbnvYAoncKBnAACd
+2026-10-16 20:06:13:613 [INFO]: ❌ Socket status: User disconnected properly: Ps6sCft87wFpcLYEAACc
+2026-10-16 20:06:28:628 [INFO]: ⚡ Socket status: User connected with ID: VnzB9gbs68eO7GWjAACe
+2026-10-16 20:06:28:628 [HTTP]: GET /api/services?page=1&limit=6 304 - - 288.273 ms
+2026-10-16 20:06:29:629 [HTTP]: GET /api/services?page=1&limit=6 304 - - 786.654 ms
+2026-10-16 20:06:32:632 [INFO]: ❌ Socket status: User disconnected properly: DndTqbnvYAoncKBnAACd
+2026-10-16 20:06:47:647 [INFO]: ⚡ Socket status: User connected with ID: Vo9xrIdz10UBwUTHAACf
+2026-10-16 20:07:06:76 [INFO]: ❌ Socket status: User disconnected properly: VnzB9gbs68eO7GWjAACe
+2026-10-16 20:07:06:76 [INFO]: ❌ Socket status: User disconnected properly: Vo9xrIdz10UBwUTHAACf
+2026-10-16 20:07:06:76 [INFO]: ⚡ Socket status: User connected with ID: EUdZlsYDtfPwb6pmAACg
+2026-10-16 20:07:06:76 [INFO]: ⚡ Socket status: User connected with ID: q3IPS9TQN8iEG2qGAACh
+2026-10-16 20:07:07:77 [HTTP]: GET /api/services?page=1&limit=6 304 - - 284.565 ms
+2026-10-16 20:07:07:77 [HTTP]: GET /api/services?page=1&limit=6 304 - - 297.170 ms
+2026-10-16 20:07:47:747 [INFO]: ❌ Socket status: User disconnected properly: EUdZlsYDtfPwb6pmAACg
+2026-10-16 20:07:47:747 [INFO]: ⚡ Socket status: User connected with ID: YnbPEwBnXyIAV78VAACi
+2026-10-16 20:08:11:811 [INFO]: ❌ Socket status: User disconnected properly: q3IPS9TQN8iEG2qGAACh
+2026-10-16 20:08:11:811 [INFO]: ❌ Socket status: User disconnected properly: YnbPEwBnXyIAV78VAACi
+2026-10-16 20:08:11:811 [INFO]: ⚡ Socket status: User connected with ID: 70dqdNDJsZ4FWRFeAACj
+2026-10-16 20:08:11:811 [INFO]: ⚡ Socket status: User connected with ID: qNzBQDgPX5EBeuzWAACk
+2026-10-16 20:08:12:812 [HTTP]: GET /api/services?page=1&limit=6 304 - - 294.732 ms
+2026-10-16 20:08:12:812 [HTTP]: GET /api/services?page=1&limit=6 304 - - 297.426 ms
+2026-10-16 20:09:47:947 [INFO]: ❌ Socket status: User disconnected properly: qNzBQDgPX5EBeuzWAACk
+2026-10-16 20:09:47:947 [INFO]: ⚡ Socket status: User connected with ID: cL5eVzepsYzyyn3sAACl
+2026-10-16 20:10:11:1011 [INFO]: ❌ Socket status: User disconnected properly: 70dqdNDJsZ4FWRFeAACj
+2026-10-16 20:10:28:1028 [INFO]: ⚡ Socket status: User connected with ID: rcwuanvmnku5QmC2AACm
+2026-10-16 20:10:28:1028 [INFO]: ❌ Socket status: User disconnected properly: cL5eVzepsYzyyn3sAACl
+2026-10-16 20:10:28:1028 [HTTP]: GET /api/services?page=1&limit=6 304 - - 300.374 ms
+2026-10-16 20:10:29:1029 [HTTP]: GET /api/services?page=1&limit=6 304 - - 684.067 ms
+2026-10-16 20:10:47:1047 [INFO]: ⚡ Socket status: User connected with ID: sLzQ_4Tc2Mg-eBTzAACn
+2026-10-16 20:11:13:1113 [INFO]: ❌ Socket status: User disconnected properly: rcwuanvmnku5QmC2AACm
+2026-10-16 20:11:28:1128 [INFO]: ⚡ Socket status: User connected with ID: aJZjRMd1HGHdqvzdAACo
+2026-10-16 20:11:28:1128 [HTTP]: GET /api/services?page=1&limit=6 304 - - 263.438 ms
+2026-10-16 20:11:29:1129 [HTTP]: GET /api/services?page=1&limit=6 304 - - 274.947 ms
+2026-10-16 20:11:32:1132 [INFO]: ❌ Socket status: User disconnected properly: sLzQ_4Tc2Mg-eBTzAACn
+2026-10-16 20:11:47:1147 [INFO]: ⚡ Socket status: User connected with ID: CAgMepD1triQaodyAACp
+2026-10-16 20:12:06:126 [INFO]: ❌ Socket status: User disconnected properly: aJZjRMd1HGHdqvzdAACo
+2026-10-16 20:12:06:126 [INFO]: ❌ Socket status: User disconnected properly: CAgMepD1triQaodyAACp
+2026-10-16 20:12:07:127 [INFO]: ⚡ Socket status: User connected with ID: bl3gfnss-tsoOQIAAACq
+2026-10-16 20:12:07:127 [INFO]: ⚡ Socket status: User connected with ID: Ffp9TwAD-48KVKBgAACr
+2026-10-16 20:12:07:127 [HTTP]: GET /api/services?page=1&limit=6 304 - - 283.935 ms
+2026-10-16 20:12:07:127 [HTTP]: GET /api/services?page=1&limit=6 304 - - 295.274 ms
+2026-10-16 20:15:42:1542 [INFO]: ❌ Socket status: User disconnected properly: Ffp9TwAD-48KVKBgAACr
+2026-10-16 20:15:42:1542 [INFO]: ❌ Socket status: User disconnected properly: bl3gfnss-tsoOQIAAACq
+2026-10-16 20:15:43:1543 [INFO]: ⚡ Socket status: User connected with ID: bDfWgbRj5WzbLhn7AACs
+2026-10-16 20:15:43:1543 [INFO]: ⚡ Socket status: User connected with ID: dMPIXJOKmZdFB4hRAACt
+2026-10-16 20:15:43:1543 [HTTP]: GET /api/services?page=1&limit=6 304 - - 246.928 ms
+2026-10-16 20:15:43:1543 [HTTP]: GET /api/services?page=1&limit=6 304 - - 248.647 ms
+2026-10-16 20:15:47:1547 [INFO]: ❌ Socket status: User disconnected properly: bDfWgbRj5WzbLhn7AACs
+2026-10-16 20:15:47:1547 [INFO]: ⚡ Socket status: User connected with ID: WVGSAfPthIzNLWdcAACu
+2026-10-16 20:15:57:1557 [INFO]: ❌ Socket status: User disconnected properly: dMPIXJOKmZdFB4hRAACt
+2026-10-16 20:15:57:1557 [INFO]: ❌ Socket status: User disconnected properly: WVGSAfPthIzNLWdcAACu
+2026-10-16 20:15:57:1557 [INFO]: ⚡ Socket status: User connected with ID: tJnOIGWNXUSyC4LIAACv
+2026-10-16 20:15:57:1557 [INFO]: ⚡ Socket status: User connected with ID: U7maFlTWe2iEeYt6AACw
+2026-10-16 20:15:58:1558 [HTTP]: GET /api/services?page=1&limit=6 304 - - 596.830 ms
+2026-10-16 20:15:58:1558 [HTTP]: GET /api/services?page=1&limit=6 304 - - 247.643 ms
+2026-10-16 20:19:12:1912 [INFO]: ❌ Socket status: User disconnected properly: tJnOIGWNXUSyC4LIAACv
+2026-10-16 20:19:12:1912 [INFO]: ❌ Socket status: User disconnected properly: U7maFlTWe2iEeYt6AACw
+2026-10-16 20:19:13:1913 [INFO]: ⚡ Socket status: User connected with ID: JGrTfF6CJiTjEsuOAACx
+2026-10-16 20:19:13:1913 [INFO]: ⚡ Socket status: User connected with ID: uuEQjqGPeH07i1A0AACy
+2026-10-16 20:19:13:1913 [HTTP]: GET /api/services?page=1&limit=6 304 - - 269.838 ms
+2026-10-16 20:19:14:1914 [HTTP]: GET /api/services?page=1&limit=6 304 - - 988.863 ms
+2026-10-16 20:35:03:353 [INFO]: ❌ Socket status: User disconnected properly: uuEQjqGPeH07i1A0AACy
+2026-10-16 20:35:03:353 [INFO]: ❌ Socket status: User disconnected properly: JGrTfF6CJiTjEsuOAACx
+2026-10-16 20:35:04:354 [INFO]: ⚡ Socket status: User connected with ID: G69Jpdi-rYsNogisAACz
+2026-10-16 20:35:04:354 [INFO]: ⚡ Socket status: User connected with ID: UdznEM_6vacEiyO_AAC0
+2026-10-16 20:35:04:354 [HTTP]: GET /api/services?page=1&limit=6 304 - - 267.372 ms
+2026-10-16 20:35:05:355 [HTTP]: GET /api/services?page=1&limit=6 304 - - 295.840 ms
+2026-10-16 20:36:23:3623 [INFO]: ❌ Socket status: User disconnected properly: G69Jpdi-rYsNogisAACz
+2026-10-16 20:36:23:3623 [INFO]: ❌ Socket status: User disconnected properly: UdznEM_6vacEiyO_AAC0
+2026-10-16 20:36:24:3624 [INFO]: ⚡ Socket status: User connected with ID: BEJ5hP2wYnzeO93cAAC1
+2026-10-16 20:36:24:3624 [INFO]: ⚡ Socket status: User connected with ID: VowcHybv8N_siZ2bAAC2
+2026-10-16 20:36:24:3624 [HTTP]: GET /api/services?page=1&limit=6 304 - - 334.946 ms
+2026-10-16 20:36:24:3624 [HTTP]: GET /api/services?page=1&limit=6 304 - - 285.321 ms
+2026-10-16 21:16:17:1617 [INFO]: ❌ Socket status: User disconnected properly: BEJ5hP2wYnzeO93cAAC1
+2026-10-16 21:16:17:1617 [INFO]: ❌ Socket status: User disconnected properly: VowcHybv8N_siZ2bAAC2
+2026-10-16 21:16:18:1618 [INFO]: ⚡ Socket status: User connected with ID: KhW1Q7KjDBoaKZTzAAC3
+2026-10-16 21:16:18:1618 [INFO]: ⚡ Socket status: User connected with ID: ebJ-AfqTWCm9uFYlAAC4
+2026-10-16 21:16:19:1619 [HTTP]: GET /api/services?page=1&limit=6 304 - - 1088.836 ms
+2026-10-16 21:16:19:1619 [HTTP]: GET /api/services?page=1&limit=6 304 - - 638.064 ms
+2026-10-16 21:16:28:1628 [INFO]: ❌ Socket status: User disconnected properly: ebJ-AfqTWCm9uFYlAAC4
+2026-10-16 21:16:28:1628 [INFO]: ⚡ Socket status: User connected with ID: ovkLqsB5EDv4rROFAAC5
+2026-10-16 21:16:29:1629 [HTTP]: GET /api/services?page=1&limit=6 304 - - 630.504 ms
+2026-10-16 21:16:29:1629 [HTTP]: GET /api/services?page=1&limit=6 304 - - 264.431 ms
+2026-10-16 21:16:47:1647 [INFO]: ❌ Socket status: User disconnected properly: KhW1Q7KjDBoaKZTzAAC3
+2026-10-16 21:16:47:1647 [INFO]: ⚡ Socket status: User connected with ID: eIP1d95tVAtefZODAAC6
+2026-10-16 21:17:13:1713 [INFO]: ❌ Socket status: User disconnected properly: ovkLqsB5EDv4rROFAAC5
+2026-10-16 21:17:22:1722 [INFO]: ❌ Socket status: User disconnected properly: eIP1d95tVAtefZODAAC6
+2026-10-16 21:17:23:1723 [INFO]: ⚡ Socket status: User connected with ID: 3BF2GbxCuHDIA27IAAC7
+2026-10-16 21:17:23:1723 [INFO]: ⚡ Socket status: User connected with ID: 6Zd968DBTC30sbKvAAC8
+2026-10-16 21:17:24:1724 [HTTP]: GET /api/services?page=1&limit=6 304 - - 1023.960 ms
+2026-10-16 21:17:25:1725 [HTTP]: GET /api/services?page=1&limit=6 304 - - 655.381 ms
+2026-10-16 21:19:28:1928 [INFO]: ❌ Socket status: User disconnected properly: 6Zd968DBTC30sbKvAAC8
+2026-10-16 21:19:28:1928 [INFO]: ⚡ Socket status: User connected with ID: WrdHvHzo29ChDmqpAAC9
+2026-10-16 21:19:28:1928 [HTTP]: GET /api/services?page=1&limit=6 304 - - 290.577 ms
+2026-10-16 21:19:29:1929 [HTTP]: GET /api/services?page=1&limit=6 304 - - 289.480 ms
+2026-10-16 21:19:47:1947 [INFO]: ❌ Socket status: User disconnected properly: 3BF2GbxCuHDIA27IAAC7
+2026-10-16 21:19:47:1947 [INFO]: ⚡ Socket status: User connected with ID: dWI8vtEPQET6qa4yAAC-
+2026-10-16 21:20:13:2013 [INFO]: ❌ Socket status: User disconnected properly: WrdHvHzo29ChDmqpAAC9
+2026-10-16 21:20:18:2018 [INFO]: ❌ Socket status: User disconnected properly: dWI8vtEPQET6qa4yAAC-
+2026-10-16 21:20:18:2018 [INFO]: ⚡ Socket status: User connected with ID: bnaf2sqsftaRjWZjAAC_
+2026-10-16 21:20:18:2018 [INFO]: ⚡ Socket status: User connected with ID: MdgdqUjPYGT8VxhIAADA
+2026-10-16 21:20:18:2018 [HTTP]: GET /api/services?page=1&limit=6 304 - - 279.919 ms
+2026-10-16 21:20:18:2018 [HTTP]: GET /api/services?page=1&limit=6 304 - - 276.256 ms
+2026-10-16 21:20:28:2028 [INFO]: ❌ Socket status: User disconnected properly: bnaf2sqsftaRjWZjAAC_
+2026-10-16 21:20:28:2028 [INFO]: ⚡ Socket status: User connected with ID: 3W7714gUYWIPqWGYAADB
+2026-10-16 21:20:30:2030 [HTTP]: GET /api/services?page=1&limit=6 304 - - 2317.998 ms
+2026-10-16 21:20:31:2031 [HTTP]: GET /api/services?page=1&limit=6 304 - - 275.862 ms
+2026-10-16 21:20:47:2047 [INFO]: ❌ Socket status: User disconnected properly: MdgdqUjPYGT8VxhIAADA
+2026-10-16 21:20:47:2047 [INFO]: ⚡ Socket status: User connected with ID: qD0MGO9GM7kHdGgoAADC
+2026-10-16 21:21:13:2113 [INFO]: ❌ Socket status: User disconnected properly: 3W7714gUYWIPqWGYAADB
+2026-10-16 21:21:18:2118 [INFO]: ❌ Socket status: User disconnected properly: qD0MGO9GM7kHdGgoAADC
+2026-10-16 21:21:18:2118 [INFO]: ⚡ Socket status: User connected with ID: t7IiPYMH6DID7rPWAADD
+2026-10-16 21:21:18:2118 [INFO]: ⚡ Socket status: User connected with ID: LkdPKP3Ylcg0JOskAADE
+2026-10-16 21:21:19:2119 [HTTP]: GET /api/services?page=1&limit=6 304 - - 644.209 ms
+2026-10-16 21:21:19:2119 [HTTP]: GET /api/services?page=1&limit=6 304 - - 272.892 ms
+2026-10-16 21:21:28:2128 [INFO]: ❌ Socket status: User disconnected properly: LkdPKP3Ylcg0JOskAADE
+2026-10-16 21:21:28:2128 [INFO]: ⚡ Socket status: User connected with ID: agik7G7X5xwd8ZHJAADF
+2026-10-16 21:21:28:2128 [HTTP]: GET /api/services?page=1&limit=6 304 - - 274.860 ms
+2026-10-16 21:21:28:2128 [HTTP]: GET /api/services?page=1&limit=6 304 - - 269.404 ms
+2026-10-16 21:21:47:2147 [INFO]: ❌ Socket status: User disconnected properly: t7IiPYMH6DID7rPWAADD
+2026-10-16 21:21:47:2147 [INFO]: ⚡ Socket status: User connected with ID: e2ISvwQEuuEC_FfVAADG
+2026-10-16 21:21:58:2158 [INFO]: ❌ Socket status: User disconnected properly: agik7G7X5xwd8ZHJAADF
+2026-10-16 21:21:58:2158 [INFO]: ❌ Socket status: User disconnected properly: e2ISvwQEuuEC_FfVAADG
+2026-10-16 21:21:58:2158 [INFO]: ⚡ Socket status: User connected with ID: rn0De3ttvXzIhE47AADH
+2026-10-16 21:21:58:2158 [INFO]: ⚡ Socket status: User connected with ID: OmpNgk48h0eZVzawAADI
+2026-10-16 21:21:59:2159 [HTTP]: GET /api/services?page=1&limit=6 304 - - 647.704 ms
+2026-10-16 21:21:59:2159 [HTTP]: GET /api/services?page=1&limit=6 304 - - 277.217 ms
+2026-10-16 21:22:23:2223 [INFO]: ❌ Socket status: User disconnected properly: OmpNgk48h0eZVzawAADI
+2026-10-16 21:22:23:2223 [INFO]: ❌ Socket status: User disconnected properly: rn0De3ttvXzIhE47AADH
+2026-10-16 21:22:23:2223 [INFO]: ⚡ Socket status: User connected with ID: zeqopc5sTChBfJy1AADJ
+2026-10-16 21:22:23:2223 [INFO]: ⚡ Socket status: User connected with ID: d-WnNJw49JUNTixaAADK
+2026-10-16 21:22:23:2223 [HTTP]: GET /api/services?page=1&limit=6 304 - - 290.995 ms
+2026-10-16 21:22:24:2224 [HTTP]: GET /api/services?page=1&limit=6 304 - - 639.117 ms
+2026-10-16 21:24:28:2428 [INFO]: ❌ Socket status: User disconnected properly: d-WnNJw49JUNTixaAADK
+2026-10-16 21:24:28:2428 [INFO]: ⚡ Socket status: User connected with ID: CgPFJVGfFeX-Ax6jAADL
+2026-10-16 21:24:28:2428 [HTTP]: GET /api/services?page=1&limit=6 304 - - 280.113 ms
+2026-10-16 21:24:29:2429 [HTTP]: GET /api/services?page=1&limit=6 304 - - 275.560 ms
+2026-10-16 21:24:47:2447 [INFO]: ❌ Socket status: User disconnected properly: zeqopc5sTChBfJy1AADJ
+2026-10-16 21:24:48:2448 [INFO]: ⚡ Socket status: User connected with ID: SEWtaHEXZcDyiau8AADM
+2026-10-16 21:25:13:2513 [INFO]: ❌ Socket status: User disconnected properly: CgPFJVGfFeX-Ax6jAADL
+2026-10-16 21:25:28:2528 [INFO]: ⚡ Socket status: User connected with ID: hHQEqM_o_YK-5x9RAADN
+2026-10-16 21:25:28:2528 [HTTP]: GET /api/services?page=1&limit=6 304 - - 250.318 ms
+2026-10-16 21:25:29:2529 [HTTP]: GET /api/services?page=1&limit=6 304 - - 241.445 ms
+2026-10-16 21:25:33:2533 [INFO]: ❌ Socket status: User disconnected properly: SEWtaHEXZcDyiau8AADM
+2026-10-16 21:25:47:2547 [INFO]: ⚡ Socket status: User connected with ID: yKoeMUYa1FobpvBpAADO
+2026-10-16 21:26:13:2613 [INFO]: ❌ Socket status: User disconnected properly: hHQEqM_o_YK-5x9RAADN
+2026-10-16 21:26:28:2628 [INFO]: ⚡ Socket status: User connected with ID: nzUJ5hlhnXjDoNp-AADP
+2026-10-16 21:26:28:2628 [HTTP]: GET /api/services?page=1&limit=6 304 - - 279.580 ms
+2026-10-16 21:26:29:2629 [HTTP]: GET /api/services?page=1&limit=6 304 - - 265.796 ms
+2026-10-16 21:26:32:2632 [INFO]: ❌ Socket status: User disconnected properly: yKoeMUYa1FobpvBpAADO
+2026-10-16 21:26:47:2647 [INFO]: ⚡ Socket status: User connected with ID: d5Wqt8zRz6nZT-8TAADQ
+2026-10-16 21:27:13:2713 [INFO]: ❌ Socket status: User disconnected properly: nzUJ5hlhnXjDoNp-AADP
+2026-10-16 21:27:18:2718 [INFO]: ❌ Socket status: User disconnected properly: d5Wqt8zRz6nZT-8TAADQ
+2026-10-16 21:27:19:2719 [INFO]: ⚡ Socket status: User connected with ID: _QkdSiTWs6FSSt96AADR
+2026-10-16 21:27:19:2719 [INFO]: ⚡ Socket status: User connected with ID: Z5oYgtOagCAK574dAADS
+2026-10-16 21:27:19:2719 [HTTP]: GET /api/services?page=1&limit=6 304 - - 272.781 ms
+2026-10-16 21:27:19:2719 [HTTP]: GET /api/services?page=1&limit=6 304 - - 275.630 ms
+2026-10-16 21:28:33:2833 [INFO]: ❌ Socket status: User disconnected properly: Z5oYgtOagCAK574dAADS
+2026-10-16 21:28:33:2833 [INFO]: ❌ Socket status: User disconnected properly: _QkdSiTWs6FSSt96AADR
+2026-10-16 21:28:34:2834 [INFO]: ⚡ Socket status: User connected with ID: 8bsMTQUzVVrQXkaTAADT
+2026-10-16 21:28:34:2834 [INFO]: ⚡ Socket status: User connected with ID: HyKOEIe7mHPyx1vfAADU
+2026-10-16 21:28:35:2835 [HTTP]: GET /api/services?page=1&limit=6 304 - - 987.605 ms
+2026-10-16 21:28:35:2835 [HTTP]: GET /api/services?page=1&limit=6 304 - - 782.902 ms
+2026-10-16 21:28:43:2843 [INFO]: ❌ Socket status: User disconnected properly: 8bsMTQUzVVrQXkaTAADT
+2026-10-16 21:28:43:2843 [INFO]: ❌ Socket status: User disconnected properly: HyKOEIe7mHPyx1vfAADU
+2026-10-16 21:28:44:2844 [INFO]: ⚡ Socket status: User connected with ID: kd-2nac2pAyaUwRPAADV
+2026-10-16 21:28:44:2844 [INFO]: ⚡ Socket status: User connected with ID: sqtfmoAT8Zh1HXm6AADW
+2026-10-16 21:28:44:2844 [HTTP]: GET /api/services?page=1&limit=6 304 - - 273.137 ms
+2026-10-16 21:28:44:2844 [HTTP]: GET /api/services?page=1&limit=6 304 - - 276.972 ms
+2026-10-16 21:29:28:2928 [INFO]: ❌ Socket status: User disconnected properly: sqtfmoAT8Zh1HXm6AADW
+2026-10-16 21:29:28:2928 [INFO]: ⚡ Socket status: User connected with ID: VSg-yxm4I5gqJM6zAADX
+2026-10-16 21:29:28:2928 [HTTP]: GET /api/services?page=1&limit=6 304 - - 261.035 ms
+2026-10-16 21:29:28:2928 [HTTP]: GET /api/services?page=1&limit=6 304 - - 268.100 ms
+2026-10-16 21:29:33:2933 [INFO]: ❌ Socket status: User disconnected properly: kd-2nac2pAyaUwRPAADV
+2026-10-16 21:29:33:2933 [INFO]: ❌ Socket status: User disconnected properly: VSg-yxm4I5gqJM6zAADX
+2026-10-16 21:29:34:2934 [INFO]: ⚡ Socket status: User connected with ID: orYpHwv3JrXkZiyXAADY
+2026-10-16 21:29:34:2934 [INFO]: ⚡ Socket status: User connected with ID: 3-Z9Ma-Dv7FSCgbiAADZ
+2026-10-16 21:29:34:2934 [HTTP]: GET /api/services?page=1&limit=6 304 - - 258.324 ms
+2026-10-16 21:29:35:2935 [HTTP]: GET /api/services?page=1&limit=6 304 - - 962.402 ms
+2026-10-16 21:29:47:2947 [INFO]: ❌ Socket status: User disconnected properly: 3-Z9Ma-Dv7FSCgbiAADZ
+2026-10-16 21:29:47:2947 [INFO]: ⚡ Socket status: User connected with ID: CCzLDW4FdamaVmvcAADa
+2026-10-16 21:29:58:2958 [INFO]: ❌ Socket status: User disconnected properly: orYpHwv3JrXkZiyXAADY
+2026-10-16 21:29:58:2958 [INFO]: ❌ Socket status: User disconnected properly: CCzLDW4FdamaVmvcAADa
+2026-10-16 21:29:59:2959 [INFO]: ⚡ Socket status: User connected with ID: pHIEHmnlJJks5opmAADb
+2026-10-16 21:29:59:2959 [INFO]: ⚡ Socket status: User connected with ID: MKzEhgex1WHBda0UAADc
+2026-10-16 21:29:59:2959 [HTTP]: GET /api/services?page=1&limit=6 304 - - 278.056 ms
+2026-10-16 21:29:59:2959 [HTTP]: GET /api/services?page=1&limit=6 304 - - 278.517 ms
+2026-10-16 21:30:28:3028 [INFO]: ❌ Socket status: User disconnected properly: MKzEhgex1WHBda0UAADc
+2026-10-16 21:30:28:3028 [INFO]: ⚡ Socket status: User connected with ID: roMoQ5cjb2qJFXu5AADd
+2026-10-16 21:30:44:3044 [INFO]: ❌ Socket status: User disconnected properly: pHIEHmnlJJks5opmAADb
+2026-10-16 21:30:47:3047 [INFO]: ⚡ Socket status: User connected with ID: 50uz43swQnIxjjdjAADe
+2026-10-16 21:30:55:3055 [HTTP]: GET /api/services?page=1&limit=6 200 64 - 7334.595 ms
+2026-10-16 21:30:55:3055 [HTTP]: GET /api/services?page=1&limit=6 304 - - 27340.046 ms
+2026-10-16 21:31:13:3113 [INFO]: ❌ Socket status: User disconnected properly: roMoQ5cjb2qJFXu5AADd
+2026-10-16 21:31:28:3128 [INFO]: ⚡ Socket status: User connected with ID: VPdoCmzK_dqikBdXAADf
+2026-10-16 21:31:28:3128 [HTTP]: GET /api/services?page=1&limit=6 304 - - 276.480 ms
+2026-10-16 21:31:29:3129 [HTTP]: GET /api/services?page=1&limit=6 304 - - 649.319 ms
+2026-10-16 21:31:32:3132 [INFO]: ❌ Socket status: User disconnected properly: 50uz43swQnIxjjdjAADe
+2026-10-16 21:31:47:3147 [INFO]: ⚡ Socket status: User connected with ID: LiCMGgqH4iEDSBNjAADg
+2026-10-16 21:32:13:3213 [INFO]: ❌ Socket status: User disconnected properly: VPdoCmzK_dqikBdXAADf
+2026-10-16 21:32:28:3228 [INFO]: ⚡ Socket status: User connected with ID: VRu6xYI1v241ZDmLAADh
+2026-10-16 21:32:29:3229 [HTTP]: GET /api/services?page=1&limit=6 304 - - 1008.517 ms
+2026-10-16 21:32:30:3230 [HTTP]: GET /api/services?page=1&limit=6 304 - - 1014.470 ms
+2026-10-16 21:32:32:3232 [INFO]: ❌ Socket status: User disconnected properly: LiCMGgqH4iEDSBNjAADg
+2026-10-16 21:32:34:3234 [INFO]: ❌ Socket status: User disconnected properly: VRu6xYI1v241ZDmLAADh
+2026-10-16 21:32:34:3234 [INFO]: ⚡ Socket status: User connected with ID: ROcNRRaB7_4ZxlzhAADi
+2026-10-16 21:32:34:3234 [INFO]: ⚡ Socket status: User connected with ID: ti1OBj7kRL_b1MezAADj
+2026-10-16 21:32:35:3235 [HTTP]: GET /api/services?page=1&limit=6 304 - - 282.040 ms
+2026-10-16 21:32:36:3236 [HTTP]: GET /api/services?page=1&limit=6 304 - - 1014.428 ms
+2026-10-16 21:32:47:3247 [INFO]: ❌ Socket status: User disconnected properly: ti1OBj7kRL_b1MezAADj
+2026-10-16 21:32:47:3247 [INFO]: ⚡ Socket status: User connected with ID: 7b9zZI7OYYb6rgBNAADk
+2026-10-16 21:33:04:334 [INFO]: ❌ Socket status: User disconnected properly: ROcNRRaB7_4ZxlzhAADi
+2026-10-16 21:33:04:334 [INFO]: ❌ Socket status: User disconnected properly: 7b9zZI7OYYb6rgBNAADk
+2026-10-16 21:33:04:334 [INFO]: ⚡ Socket status: User connected with ID: 1NlBQrMmDUltJUzWAADl
+2026-10-16 21:33:04:334 [INFO]: ⚡ Socket status: User connected with ID: LAgua2zhiaWC54PjAADm
+2026-10-16 21:33:05:335 [HTTP]: GET /api/services?page=1&limit=6 304 - - 277.514 ms
+2026-10-16 21:33:05:335 [HTTP]: GET /api/services?page=1&limit=6 304 - - 267.607 ms
+2026-10-16 21:35:47:3547 [INFO]: ❌ Socket status: User disconnected properly: 1NlBQrMmDUltJUzWAADl
+2026-10-16 21:35:47:3547 [INFO]: ⚡ Socket status: User connected with ID: cadEjRWBXlmXYLI7AADn
+2026-10-16 21:36:19:3619 [INFO]: ❌ Socket status: User disconnected properly: LAgua2zhiaWC54PjAADm
+2026-10-16 21:36:28:3628 [INFO]: ⚡ Socket status: User connected with ID: 6dqcMCvOYIR7SlZhAADo
+2026-10-16 21:36:28:3628 [HTTP]: GET /api/services?page=1&limit=6 304 - - 283.926 ms
+2026-10-16 21:36:29:3629 [HTTP]: GET /api/services?page=1&limit=6 304 - - 266.015 ms
+2026-10-16 21:36:32:3632 [INFO]: ❌ Socket status: User disconnected properly: cadEjRWBXlmXYLI7AADn
+2026-10-16 21:36:47:3647 [INFO]: ⚡ Socket status: User connected with ID: 1TfNLrGq5sHAMpT1AADp
+2026-10-16 21:37:13:3713 [INFO]: ❌ Socket status: User disconnected properly: 6dqcMCvOYIR7SlZhAADo
+2026-10-16 21:37:24:3724 [INFO]: ❌ Socket status: User disconnected properly: 1TfNLrGq5sHAMpT1AADp
+2026-10-16 21:37:25:3725 [INFO]: ⚡ Socket status: User connected with ID: HuDTh6e1OhsA2bhHAADq
+2026-10-16 21:37:25:3725 [INFO]: ⚡ Socket status: User connected with ID: sj66acKbqdb1c03JAADr
+2026-10-16 21:37:25:3725 [HTTP]: GET /api/services?page=1&limit=6 304 - - 631.968 ms
+2026-10-16 21:37:26:3726 [HTTP]: GET /api/services?page=1&limit=6 304 - - 632.104 ms
+2026-10-16 21:39:15:3915 [INFO]: ❌ Socket status: User disconnected properly: HuDTh6e1OhsA2bhHAADq
+2026-10-16 21:39:15:3915 [INFO]: ❌ Socket status: User disconnected properly: sj66acKbqdb1c03JAADr
+2026-10-16 21:39:15:3915 [INFO]: ⚡ Socket status: User connected with ID: KpHTIdJD5z_BwpHgAADs
+2026-10-16 21:39:15:3915 [INFO]: ⚡ Socket status: User connected with ID: N5oxWdrRzsYGxreuAADt
+2026-10-16 21:39:16:3916 [HTTP]: GET /api/services?page=1&limit=6 304 - - 685.470 ms
+2026-10-16 21:39:17:3917 [HTTP]: GET /api/services?page=1&limit=6 304 - - 1341.911 ms
+2026-10-16 21:39:28:3928 [INFO]: ❌ Socket status: User disconnected properly: N5oxWdrRzsYGxreuAADt
+2026-10-16 21:39:28:3928 [INFO]: ⚡ Socket status: User connected with ID: HmFR4eE7CFg9vebxAADu
+2026-10-16 21:39:29:3929 [HTTP]: GET /api/services?page=1&limit=6 304 - - 649.962 ms
+2026-10-16 21:39:29:3929 [HTTP]: GET /api/services?page=1&limit=6 304 - - 406.775 ms
+2026-10-16 21:39:40:3940 [INFO]: ❌ Socket status: User disconnected properly: HmFR4eE7CFg9vebxAADu
+2026-10-16 21:39:40:3940 [INFO]: ❌ Socket status: User disconnected properly: KpHTIdJD5z_BwpHgAADs
+2026-10-16 21:39:40:3940 [INFO]: ⚡ Socket status: User connected with ID: mwajwsUu6M5v-HAXAADv
+2026-10-16 21:39:40:3940 [INFO]: ⚡ Socket status: User connected with ID: GszswbtFj-ST7nkvAADw
+2026-10-16 21:39:40:3940 [HTTP]: GET /api/services?page=1&limit=6 304 - - 372.118 ms
+2026-10-16 21:39:41:3941 [HTTP]: GET /api/services?page=1&limit=6 304 - - 739.147 ms
+2026-10-16 21:39:47:3947 [INFO]: ❌ Socket status: User disconnected properly: GszswbtFj-ST7nkvAADw
+2026-10-16 21:39:47:3947 [INFO]: ⚡ Socket status: User connected with ID: 5VcJJDf6u7CalT-yAADx
+2026-10-16 21:40:00:400 [INFO]: ❌ Socket status: User disconnected properly: 5VcJJDf6u7CalT-yAADx
+2026-10-16 21:40:00:400 [INFO]: ❌ Socket status: User disconnected properly: mwajwsUu6M5v-HAXAADv
+2026-10-16 21:40:00:400 [INFO]: ⚡ Socket status: User connected with ID: yofOjYBGCBSJ3VJCAADy
+2026-10-16 21:40:00:400 [INFO]: ⚡ Socket status: User connected with ID: 7jFDIWmVI8aC9TP8AADz
+2026-10-16 21:40:01:401 [HTTP]: GET /api/services?page=1&limit=6 304 - - 751.916 ms
+2026-10-16 21:40:01:401 [HTTP]: GET /api/services?page=1&limit=6 304 - - 273.018 ms
+2026-10-16 21:40:10:4010 [INFO]: ❌ Socket status: User disconnected properly: 7jFDIWmVI8aC9TP8AADz
+2026-10-16 21:40:10:4010 [INFO]: ❌ Socket status: User disconnected properly: yofOjYBGCBSJ3VJCAADy
+2026-10-16 21:40:10:4010 [INFO]: ⚡ Socket status: User connected with ID: ez8nBq4ju3W5YqNZAAD0
+2026-10-16 21:40:10:4010 [INFO]: ⚡ Socket status: User connected with ID: eqZKIVI-n1CquEjgAAD1
+2026-10-16 21:40:10:4010 [HTTP]: GET /api/services?page=1&limit=6 304 - - 402.342 ms
+2026-10-16 21:40:11:4011 [HTTP]: GET /api/services?page=1&limit=6 304 - - 259.150 ms
+2026-10-16 21:40:28:4028 [INFO]: ❌ Socket status: User disconnected properly: eqZKIVI-n1CquEjgAAD1
+2026-10-16 21:40:28:4028 [INFO]: ⚡ Socket status: User connected with ID: rhkeS5VsJMtGbHSDAAD2
+2026-10-16 21:40:30:4030 [HTTP]: GET /api/services?page=1&limit=6 304 - - 1601.583 ms
+2026-10-16 21:40:30:4030 [HTTP]: GET /api/services?page=1&limit=6 304 - - 539.184 ms
+2026-10-16 21:40:47:4047 [INFO]: ❌ Socket status: User disconnected properly: ez8nBq4ju3W5YqNZAAD0
+2026-10-16 21:40:47:4047 [INFO]: ⚡ Socket status: User connected with ID: rlY9SQN3Jhn9CcnIAAD3
+2026-10-16 21:41:13:4113 [INFO]: ❌ Socket status: User disconnected properly: rhkeS5VsJMtGbHSDAAD2
+2026-10-16 21:41:28:4128 [INFO]: ⚡ Socket status: User connected with ID: BocYOQpHeMyUIGVvAAD4
+2026-10-16 21:41:29:4129 [HTTP]: GET /api/services?page=1&limit=6 304 - - 502.280 ms
+2026-10-16 21:41:29:4129 [HTTP]: GET /api/services?page=1&limit=6 304 - - 611.290 ms
+2026-10-16 21:41:32:4132 [INFO]: ❌ Socket status: User disconnected properly: rlY9SQN3Jhn9CcnIAAD3
+2026-10-16 21:41:47:4147 [INFO]: ⚡ Socket status: User connected with ID: T4Vz9g7oV4Jzj5-nAAD5
+2026-10-16 21:42:13:4213 [INFO]: ❌ Socket status: User disconnected properly: BocYOQpHeMyUIGVvAAD4
+2026-10-16 21:42:25:4225 [INFO]: ❌ Socket status: User disconnected properly: T4Vz9g7oV4Jzj5-nAAD5
+2026-10-16 21:42:25:4225 [INFO]: ⚡ Socket status: User connected with ID: o9CVZHXpaMB93L1WAAD6
+2026-10-16 21:42:25:4225 [INFO]: ⚡ Socket status: User connected with ID: 1X3Vz72R0nTxktL9AAD7
+2026-10-16 21:42:26:4226 [HTTP]: GET /api/services?page=1&limit=6 304 - - 272.663 ms
+2026-10-16 21:42:26:4226 [HTTP]: GET /api/services?page=1&limit=6 304 - - 279.053 ms
+2026-10-16 21:42:47:4247 [INFO]: ❌ Socket status: User disconnected properly: 1X3Vz72R0nTxktL9AAD7
+2026-10-16 21:42:47:4247 [INFO]: ⚡ Socket status: User connected with ID: VldSt9DGAelVH6M3AAD8
+2026-10-16 21:43:10:4310 [INFO]: ❌ Socket status: User disconnected properly: o9CVZHXpaMB93L1WAAD6
+2026-10-16 21:43:28:4328 [INFO]: ⚡ Socket status: User connected with ID: 4regNHhaNMSXb5gIAAD9
+2026-10-16 21:43:31:4331 [HTTP]: GET /api/services?page=1&limit=6 304 - - 2819.804 ms
+2026-10-16 21:43:32:4332 [HTTP]: GET /api/services?page=1&limit=6 304 - - 859.077 ms
+2026-10-16 21:43:32:4332 [INFO]: ❌ Socket status: User disconnected properly: VldSt9DGAelVH6M3AAD8
+2026-10-16 21:43:47:4347 [INFO]: ⚡ Socket status: User connected with ID: NfLnuxDV4o8qje6LAAD-
+2026-10-16 21:44:13:4413 [INFO]: ❌ Socket status: User disconnected properly: 4regNHhaNMSXb5gIAAD9
+2026-10-16 21:44:28:4428 [INFO]: ⚡ Socket status: User connected with ID: 1S1WxQ_XbOWlYnxbAAD_
+2026-10-16 21:44:29:4429 [HTTP]: GET /api/services?page=1&limit=6 304 - - 879.873 ms
+2026-10-16 21:44:30:4430 [HTTP]: GET /api/services?page=1&limit=6 304 - - 881.492 ms
+2026-10-16 21:44:32:4432 [INFO]: ❌ Socket status: User disconnected properly: NfLnuxDV4o8qje6LAAD-
+2026-10-16 21:44:47:4447 [INFO]: ⚡ Socket status: User connected with ID: aL70RE4RMLYKbjayAAEA
+2026-10-16 21:45:13:4513 [INFO]: ❌ Socket status: User disconnected properly: 1S1WxQ_XbOWlYnxbAAD_
+2026-10-16 21:45:28:4528 [INFO]: ⚡ Socket status: User connected with ID: KofkBKsxcqsyK1nmAAEB
+2026-10-16 21:45:28:4528 [HTTP]: GET /api/services?page=1&limit=6 304 - - 262.699 ms
+2026-10-16 21:45:29:4529 [HTTP]: GET /api/services?page=1&limit=6 304 - - 247.829 ms
+2026-10-16 21:45:32:4532 [INFO]: ❌ Socket status: User disconnected properly: aL70RE4RMLYKbjayAAEA
+2026-10-16 21:45:47:4547 [INFO]: ⚡ Socket status: User connected with ID: Osj7eUlskzeyjREhAAEC
+2026-10-16 21:46:13:4613 [INFO]: ❌ Socket status: User disconnected properly: KofkBKsxcqsyK1nmAAEB
+2026-10-16 21:46:28:4628 [INFO]: ⚡ Socket status: User connected with ID: mdyIIGh2BhhZCrD7AAED
+2026-10-16 21:46:28:4628 [HTTP]: GET /api/services?page=1&limit=6 304 - - 301.563 ms
+2026-10-16 21:46:29:4629 [HTTP]: GET /api/services?page=1&limit=6 304 - - 281.748 ms
+2026-10-16 21:46:32:4632 [INFO]: ❌ Socket status: User disconnected properly: Osj7eUlskzeyjREhAAEC
+2026-10-16 21:46:47:4647 [INFO]: ⚡ Socket status: User connected with ID: DdvBFJouFj2prqpLAAEE
+2026-10-16 21:47:13:4713 [INFO]: ❌ Socket status: User disconnected properly: mdyIIGh2BhhZCrD7AAED
+2026-10-16 21:47:25:4725 [INFO]: ❌ Socket status: User disconnected properly: DdvBFJouFj2prqpLAAEE
+2026-10-16 21:47:26:4726 [INFO]: ⚡ Socket status: User connected with ID: 1a1lHG1ZQZoZpbTUAAEF
+2026-10-16 21:47:26:4726 [INFO]: ⚡ Socket status: User connected with ID: I2mjqge2d2btkke3AAEG
+2026-10-16 21:47:26:4726 [HTTP]: GET /api/services?page=1&limit=6 304 - - 285.419 ms
+2026-10-16 21:47:26:4726 [HTTP]: GET /api/services?page=1&limit=6 304 - - 269.978 ms
+2026-10-16 21:50:36:5036 [INFO]: ❌ Socket status: User disconnected properly: I2mjqge2d2btkke3AAEG
+2026-10-16 21:50:36:5036 [INFO]: ❌ Socket status: User disconnected properly: 1a1lHG1ZQZoZpbTUAAEF
+2026-10-16 21:50:36:5036 [INFO]: ⚡ Socket status: User connected with ID: CPBTOeao3EFO7_YIAAEH
+2026-10-16 21:50:36:5036 [INFO]: ⚡ Socket status: User connected with ID: Al3nMa39baPD1yPzAAEI
+2026-10-16 21:50:36:5036 [HTTP]: GET /api/services?page=1&limit=6 304 - - 281.913 ms
+2026-10-16 21:50:37:5037 [HTTP]: GET /api/services?page=1&limit=6 304 - - 272.848 ms
+2026-10-16 21:50:47:5047 [INFO]: ❌ Socket status: User disconnected properly: CPBTOeao3EFO7_YIAAEH
+2026-10-16 21:50:47:5047 [INFO]: ⚡ Socket status: User connected with ID: qbVdAYjQUrAC3lsmAAEJ
+2026-10-16 21:51:01:511 [INFO]: ❌ Socket status: User disconnected properly: qbVdAYjQUrAC3lsmAAEJ
+2026-10-16 21:51:01:511 [INFO]: ❌ Socket status: User disconnected properly: Al3nMa39baPD1yPzAAEI
+2026-10-16 21:51:01:511 [INFO]: ⚡ Socket status: User connected with ID: _VasZuwSQ_Gn8w5JAAEK
+2026-10-16 21:51:01:511 [INFO]: ⚡ Socket status: User connected with ID: xZ6TCmiAwEX9C9xlAAEL
+2026-10-16 21:51:01:511 [HTTP]: GET /api/services?page=1&limit=6 304 - - 242.913 ms
+2026-10-16 21:51:01:511 [HTTP]: GET /api/services?page=1&limit=6 304 - - 244.644 ms
+2026-10-16 21:52:47:5247 [INFO]: ❌ Socket status: User disconnected properly: _VasZuwSQ_Gn8w5JAAEK
+2026-10-16 21:52:47:5247 [INFO]: ⚡ Socket status: User connected with ID: Ck0ZrxS4OYY3IQNvAAEM
+2026-10-16 21:53:01:531 [INFO]: ❌ Socket status: User disconnected properly: xZ6TCmiAwEX9C9xlAAEL
+2026-10-16 21:53:06:536 [INFO]: ❌ Socket status: User disconnected properly: Ck0ZrxS4OYY3IQNvAAEM
+2026-10-16 21:53:06:536 [INFO]: ⚡ Socket status: User connected with ID: eEpIA6-i1qak1OAUAAEN
+2026-10-16 21:53:06:536 [INFO]: ⚡ Socket status: User connected with ID: v3iGdiiN2-9Tq8I5AAEO
+2026-10-16 21:53:07:537 [HTTP]: GET /api/services?page=1&limit=6 304 - - 272.303 ms
+2026-10-16 21:53:07:537 [HTTP]: GET /api/services?page=1&limit=6 304 - - 624.365 ms
+2026-10-16 21:53:28:5328 [INFO]: ❌ Socket status: User disconnected properly: v3iGdiiN2-9Tq8I5AAEO
+2026-10-16 21:53:28:5328 [INFO]: ⚡ Socket status: User connected with ID: RBoxbFQsVi3PYNPoAAEP
+2026-10-16 21:53:28:5328 [HTTP]: GET /api/services?page=1&limit=6 304 - - 257.334 ms
+2026-10-16 21:53:28:5328 [HTTP]: GET /api/services?page=1&limit=6 304 - - 254.595 ms
+2026-10-16 21:53:47:5347 [INFO]: ❌ Socket status: User disconnected properly: eEpIA6-i1qak1OAUAAEN
+2026-10-16 21:53:47:5347 [INFO]: ⚡ Socket status: User connected with ID: HI8OrEe8UiF6aCrIAAEQ
+2026-10-16 21:54:13:5413 [INFO]: ❌ Socket status: User disconnected properly: RBoxbFQsVi3PYNPoAAEP
+2026-10-16 21:54:28:5428 [INFO]: ⚡ Socket status: User connected with ID: AoeNz1DlW9c4uSKsAAER
+2026-10-16 21:54:28:5428 [HTTP]: GET /api/services?page=1&limit=6 304 - - 261.630 ms
+2026-10-16 21:54:29:5429 [HTTP]: GET /api/services?page=1&limit=6 304 - - 257.807 ms
+2026-10-16 21:54:32:5432 [INFO]: ❌ Socket status: User disconnected properly: HI8OrEe8UiF6aCrIAAEQ
+2026-10-16 21:54:47:5447 [INFO]: ⚡ Socket status: User connected with ID: mZcLOBvDQt6GQrHLAAES
+2026-10-16 21:55:13:5513 [INFO]: ❌ Socket status: User disconnected properly: AoeNz1DlW9c4uSKsAAER
+2026-10-16 21:55:28:5528 [INFO]: ⚡ Socket status: User connected with ID: qcCF_JzIeuPjLNI6AAET
+2026-10-16 21:55:28:5528 [HTTP]: GET /api/services?page=1&limit=6 304 - - 280.064 ms
+2026-10-16 21:55:29:5529 [HTTP]: GET /api/services?page=1&limit=6 304 - - 275.219 ms
+2026-10-16 21:55:32:5532 [INFO]: ❌ Socket status: User disconnected properly: mZcLOBvDQt6GQrHLAAES
+2026-10-16 21:55:47:5547 [INFO]: ⚡ Socket status: User connected with ID: Jq17n_7l-TIrhbtdAAEU
+2026-10-16 21:56:13:5613 [INFO]: ❌ Socket status: User disconnected properly: qcCF_JzIeuPjLNI6AAET
+2026-10-16 21:56:28:5628 [INFO]: ⚡ Socket status: User connected with ID: TYN44dwPY-GcA2WJAAEV
+2026-10-16 21:56:28:5628 [HTTP]: GET /api/services?page=1&limit=6 304 - - 271.794 ms
+2026-10-16 21:56:29:5629 [HTTP]: GET /api/services?page=1&limit=6 304 - - 631.879 ms
+2026-10-16 21:56:32:5632 [INFO]: ❌ Socket status: User disconnected properly: Jq17n_7l-TIrhbtdAAEU
+2026-10-16 21:56:47:5647 [INFO]: ⚡ Socket status: User connected with ID: qv4qyXnWoB-xkf6UAAEW
+2026-10-16 21:57:13:5713 [INFO]: ❌ Socket status: User disconnected properly: TYN44dwPY-GcA2WJAAEV
+2026-10-16 21:57:28:5728 [INFO]: ⚡ Socket status: User connected with ID: UmAFKRzaVR2VBJcuAAEX
+2026-10-16 21:57:28:5728 [HTTP]: GET /api/services?page=1&limit=6 304 - - 277.875 ms
+2026-10-16 21:57:29:5729 [HTTP]: GET /api/services?page=1&limit=6 304 - - 288.260 ms
+2026-10-16 21:57:32:5732 [INFO]: ❌ Socket status: User disconnected properly: qv4qyXnWoB-xkf6UAAEW
+2026-10-16 21:57:47:5747 [INFO]: ⚡ Socket status: User connected with ID: Y7YHk3JOa1IUtkV8AAEY
+2026-10-16 21:58:13:5813 [INFO]: ❌ Socket status: User disconnected properly: UmAFKRzaVR2VBJcuAAEX
+2026-10-16 21:58:28:5828 [INFO]: ⚡ Socket status: User connected with ID: Z5laab4KRuUsMpnOAAEZ
+2026-10-16 21:58:28:5828 [HTTP]: GET /api/services?page=1&limit=6 304 - - 276.240 ms
+2026-10-16 21:58:29:5829 [HTTP]: GET /api/services?page=1&limit=6 304 - - 279.067 ms
+2026-10-16 21:58:32:5832 [INFO]: ❌ Socket status: User disconnected properly: Y7YHk3JOa1IUtkV8AAEY
+2026-10-16 21:58:47:5847 [INFO]: ⚡ Socket status: User connected with ID: uxJb0YOgBV-0MWsHAAEa
+2026-10-16 21:59:13:5913 [INFO]: ❌ Socket status: User disconnected properly: Z5laab4KRuUsMpnOAAEZ
+2026-10-16 21:59:28:5928 [INFO]: ⚡ Socket status: User connected with ID: pk_1KS4WoDSsoQs0AAEb
+2026-10-16 21:59:28:5928 [HTTP]: GET /api/services?page=1&limit=6 304 - - 278.073 ms
+2026-10-16 21:59:29:5929 [HTTP]: GET /api/services?page=1&limit=6 304 - - 294.664 ms
+2026-10-16 21:59:32:5932 [INFO]: ❌ Socket status: User disconnected properly: uxJb0YOgBV-0MWsHAAEa
+2026-10-16 21:59:47:5947 [INFO]: ⚡ Socket status: User connected with ID: ZiiNVGrwICrOWugkAAEc
+2026-10-16 22:00:13:013 [INFO]: ❌ Socket status: User disconnected properly: pk_1KS4WoDSsoQs0AAEb
+2026-10-16 22:00:28:028 [INFO]: ⚡ Socket status: User connected with ID: 82Ij5-fujhp_3WvDAAEd
+2026-10-16 22:00:28:028 [HTTP]: GET /api/services?page=1&limit=6 304 - - 267.369 ms
+2026-10-16 22:00:29:029 [HTTP]: GET /api/services?page=1&limit=6 304 - - 264.844 ms
+2026-10-16 22:00:32:032 [INFO]: ❌ Socket status: User disconnected properly: ZiiNVGrwICrOWugkAAEc
+2026-10-16 22:00:47:047 [INFO]: ⚡ Socket status: User connected with ID: 33hiUkwdwm7mj-CEAAEe
+2026-10-16 22:01:13:113 [INFO]: ❌ Socket status: User disconnected properly: 82Ij5-fujhp_3WvDAAEd
+2026-10-16 22:01:28:128 [INFO]: ⚡ Socket status: User connected with ID: G3XhRVQKX7-WSvJDAAEf
+2026-10-16 22:01:28:128 [HTTP]: GET /api/services?page=1&limit=6 304 - - 261.167 ms
+2026-10-16 22:01:29:129 [HTTP]: GET /api/services?page=1&limit=6 304 - - 273.518 ms
+2026-10-16 22:01:32:132 [INFO]: ❌ Socket status: User disconnected properly: 33hiUkwdwm7mj-CEAAEe
+2026-10-16 22:01:47:147 [INFO]: ⚡ Socket status: User connected with ID: I7HjiDq9m-FFs0cmAAEg
+2026-10-16 22:02:13:213 [INFO]: ❌ Socket status: User disconnected properly: G3XhRVQKX7-WSvJDAAEf
+2026-10-16 22:02:27:227 [INFO]: ❌ Socket status: User disconnected properly: I7HjiDq9m-FFs0cmAAEg
+2026-10-16 22:02:27:227 [INFO]: ⚡ Socket status: User connected with ID: v915pPWWNKQL8MZfAAEh
+2026-10-16 22:02:27:227 [INFO]: ⚡ Socket status: User connected with ID: 9iUN4LWTOAaFxTEIAAEi
+2026-10-16 22:02:27:227 [HTTP]: GET /api/services?page=1&limit=6 304 - - 271.631 ms
+2026-10-16 22:02:28:228 [HTTP]: GET /api/services?page=1&limit=6 304 - - 265.906 ms
+2026-10-16 22:02:47:247 [INFO]: ❌ Socket status: User disconnected properly: v915pPWWNKQL8MZfAAEh
+2026-10-16 22:02:47:247 [INFO]: ⚡ Socket status: User connected with ID: N4N7Y0iNNyNnoBKGAAEj
+2026-10-16 22:03:12:312 [INFO]: ❌ Socket status: User disconnected properly: N4N7Y0iNNyNnoBKGAAEj
+2026-10-16 22:03:12:312 [INFO]: ❌ Socket status: User disconnected properly: 9iUN4LWTOAaFxTEIAAEi
+2026-10-16 22:03:12:312 [INFO]: ⚡ Socket status: User connected with ID: Iz9czijtZWm3xew3AAEk
+2026-10-16 22:03:12:312 [INFO]: ⚡ Socket status: User connected with ID: DfN3vkELmOggt-3sAAEl
+2026-10-16 22:03:12:312 [HTTP]: GET /api/services?page=1&limit=6 304 - - 242.945 ms
+2026-10-16 22:03:13:313 [HTTP]: GET /api/services?page=1&limit=6 304 - - 247.209 ms
+2026-10-16 22:03:28:328 [INFO]: ❌ Socket status: User disconnected properly: DfN3vkELmOggt-3sAAEl
+2026-10-16 22:03:28:328 [INFO]: ⚡ Socket status: User connected with ID: lw68PQCs7LSmFExaAAEm
+2026-10-16 22:03:28:328 [HTTP]: GET /api/services?page=1&limit=6 304 - - 257.371 ms
+2026-10-16 22:03:29:329 [HTTP]: GET /api/services?page=1&limit=6 304 - - 267.875 ms
+2026-10-16 22:03:47:347 [INFO]: ❌ Socket status: User disconnected properly: Iz9czijtZWm3xew3AAEk
+2026-10-16 22:03:47:347 [INFO]: ⚡ Socket status: User connected with ID: UWP1Rv-pNd5rgLbKAAEn
+2026-10-16 22:03:52:352 [INFO]: ❌ Socket status: User disconnected properly: lw68PQCs7LSmFExaAAEm
+2026-10-16 22:03:52:352 [INFO]: ❌ Socket status: User disconnected properly: UWP1Rv-pNd5rgLbKAAEn
+2026-10-16 22:03:52:352 [INFO]: ⚡ Socket status: User connected with ID: a-8zPDrXnIlTlM4bAAEo
+2026-10-16 22:03:52:352 [INFO]: ⚡ Socket status: User connected with ID: Dcasod6jM4Xy0hnHAAEp
+2026-10-16 22:03:53:353 [HTTP]: GET /api/services?page=1&limit=6 304 - - 980.486 ms
+2026-10-16 22:03:53:353 [HTTP]: GET /api/services?page=1&limit=6 304 - - 242.532 ms
+2026-10-16 22:04:02:42 [INFO]: ❌ Socket status: User disconnected properly: a-8zPDrXnIlTlM4bAAEo
+2026-10-16 22:04:02:42 [INFO]: ❌ Socket status: User disconnected properly: Dcasod6jM4Xy0hnHAAEp
+2026-10-16 22:04:02:42 [INFO]: ⚡ Socket status: User connected with ID: JOhTeCV08yTMyi4_AAEq
+2026-10-16 22:04:02:42 [INFO]: ⚡ Socket status: User connected with ID: EOb6AatpsyqUrMvOAAEr
+2026-10-16 22:04:02:42 [HTTP]: GET /api/services?page=1&limit=6 304 - - 312.909 ms
+2026-10-16 22:04:03:43 [HTTP]: GET /api/services?page=1&limit=6 304 - - 272.708 ms
+2026-10-16 22:04:28:428 [INFO]: ❌ Socket status: User disconnected properly: EOb6AatpsyqUrMvOAAEr
+2026-10-16 22:04:28:428 [INFO]: ⚡ Socket status: User connected with ID: gbxBTqCRGU7dR2C2AAEs
+2026-10-16 22:04:29:429 [HTTP]: GET /api/services?page=1&limit=6 304 - - 621.128 ms
+2026-10-16 22:04:29:429 [HTTP]: GET /api/services?page=1&limit=6 304 - - 251.557 ms
+2026-10-16 22:04:47:447 [INFO]: ❌ Socket status: User disconnected properly: JOhTeCV08yTMyi4_AAEq
+2026-10-16 22:04:47:447 [INFO]: ⚡ Socket status: User connected with ID: zbsjGHcg5GlVLBXDAAEt
+2026-10-16 22:05:13:513 [INFO]: ❌ Socket status: User disconnected properly: gbxBTqCRGU7dR2C2AAEs
+2026-10-16 22:05:28:528 [INFO]: ⚡ Socket status: User connected with ID: Z49wRkf3BH1gV0CIAAEu
+2026-10-16 22:05:28:528 [HTTP]: GET /api/services?page=1&limit=6 304 - - 248.307 ms
+2026-10-16 22:05:29:529 [HTTP]: GET /api/services?page=1&limit=6 304 - - 627.571 ms
+2026-10-16 22:05:32:532 [INFO]: ❌ Socket status: User disconnected properly: zbsjGHcg5GlVLBXDAAEt
+2026-10-16 22:05:47:547 [INFO]: ⚡ Socket status: User connected with ID: hnBeKge6xq_SnLO2AAEv
+2026-10-16 22:06:13:613 [INFO]: ❌ Socket status: User disconnected properly: Z49wRkf3BH1gV0CIAAEu
+2026-10-16 22:06:28:628 [INFO]: ⚡ Socket status: User connected with ID: evwIehDuIymknrP0AAEw
+2026-10-16 22:06:28:628 [HTTP]: GET /api/services?page=1&limit=6 304 - - 242.206 ms
+2026-10-16 22:06:29:629 [HTTP]: GET /api/services?page=1&limit=6 304 - - 241.528 ms
+2026-10-16 22:06:32:632 [INFO]: ❌ Socket status: User disconnected properly: hnBeKge6xq_SnLO2AAEv
+2026-10-16 22:06:47:647 [INFO]: ⚡ Socket status: User connected with ID: D_nicxuDzKQbJDvcAAEx
+2026-10-16 22:07:13:713 [INFO]: ❌ Socket status: User disconnected properly: evwIehDuIymknrP0AAEw
+2026-10-16 22:07:27:727 [INFO]: ❌ Socket status: User disconnected properly: D_nicxuDzKQbJDvcAAEx
+2026-10-16 22:07:28:728 [INFO]: ⚡ Socket status: User connected with ID: wibYu_kU-JsGoIKcAAEy
+2026-10-16 22:07:28:728 [INFO]: ⚡ Socket status: User connected with ID: kYrE2CKFmxxE9YA6AAEz
+2026-10-16 22:07:28:728 [HTTP]: GET /api/services?page=1&limit=6 304 - - 271.081 ms
+2026-10-16 22:07:28:728 [HTTP]: GET /api/services?page=1&limit=6 304 - - 259.664 ms
+2026-10-16 22:07:47:747 [INFO]: ❌ Socket status: User disconnected properly: wibYu_kU-JsGoIKcAAEy
+2026-10-16 22:07:47:747 [INFO]: ⚡ Socket status: User connected with ID: Ljs1443uL3gbRXIeAAE0
+2026-10-16 22:08:13:813 [INFO]: ❌ Socket status: User disconnected properly: kYrE2CKFmxxE9YA6AAEz
+2026-10-16 22:08:28:828 [INFO]: ⚡ Socket status: User connected with ID: uoLMm8LVaEqzn5YJAAE1
+2026-10-16 22:08:28:828 [HTTP]: GET /api/services?page=1&limit=6 304 - - 266.500 ms
+2026-10-16 22:08:28:828 [HTTP]: GET /api/services?page=1&limit=6 304 - - 244.428 ms
+2026-10-16 22:08:32:832 [INFO]: ❌ Socket status: User disconnected properly: Ljs1443uL3gbRXIeAAE0
+2026-10-16 22:08:42:842 [INFO]: ❌ Socket status: User disconnected properly: uoLMm8LVaEqzn5YJAAE1
+2026-10-16 22:08:43:843 [INFO]: ⚡ Socket status: User connected with ID: B27Mzot4ZZy_cq8GAAE2
+2026-10-16 22:08:43:843 [INFO]: ⚡ Socket status: User connected with ID: JHbzWWB5VjJ4RphqAAE3
+2026-10-16 22:08:43:843 [HTTP]: GET /api/services?page=1&limit=6 304 - - 272.805 ms
+2026-10-16 22:08:43:843 [HTTP]: GET /api/services?page=1&limit=6 304 - - 263.052 ms
+2026-10-16 22:08:57:857 [INFO]: ❌ Socket status: User disconnected properly: B27Mzot4ZZy_cq8GAAE2
+2026-10-16 22:08:57:857 [INFO]: ❌ Socket status: User disconnected properly: JHbzWWB5VjJ4RphqAAE3
+2026-10-16 22:08:58:858 [INFO]: ⚡ Socket status: User connected with ID: 5PnjrnoLJQfi1X__AAE4
+2026-10-16 22:08:58:858 [INFO]: ⚡ Socket status: User connected with ID: ot1sFm-yTAqbbloTAAE5
+2026-10-16 22:08:58:858 [HTTP]: GET /api/services?page=1&limit=6 304 - - 266.599 ms
+2026-10-16 22:08:58:858 [HTTP]: GET /api/services?page=1&limit=6 304 - - 264.192 ms
+2026-10-16 22:09:07:97 [INFO]: ❌ Socket status: User disconnected properly: 5PnjrnoLJQfi1X__AAE4
+2026-10-16 22:09:07:97 [INFO]: ❌ Socket status: User disconnected properly: ot1sFm-yTAqbbloTAAE5
+2026-10-16 22:09:08:98 [INFO]: ⚡ Socket status: User connected with ID: bMIgpZgWyUrjBIabAAE6
+2026-10-16 22:09:08:98 [INFO]: ⚡ Socket status: User connected with ID: qwSnAryuYqkKKQVyAAE7
+2026-10-16 22:09:08:98 [HTTP]: GET /api/services?page=1&limit=6 304 - - 596.717 ms
+2026-10-16 22:09:09:99 [HTTP]: GET /api/services?page=1&limit=6 304 - - 252.864 ms
+2026-10-16 22:09:42:942 [INFO]: ❌ Socket status: User disconnected properly: qwSnAryuYqkKKQVyAAE7
+2026-10-16 22:09:42:942 [INFO]: ❌ Socket status: User disconnected properly: bMIgpZgWyUrjBIabAAE6
+2026-10-16 22:09:43:943 [INFO]: ⚡ Socket status: User connected with ID: z9Bwi6n_4Zo-mNBqAAE8
+2026-10-16 22:09:43:943 [INFO]: ⚡ Socket status: User connected with ID: nlSxKv-tLDhBKVoGAAE9
+2026-10-16 22:09:43:943 [HTTP]: GET /api/services?page=1&limit=6 304 - - 247.442 ms
+2026-10-16 22:09:43:943 [HTTP]: GET /api/services?page=1&limit=6 304 - - 255.386 ms
+2026-10-16 22:09:58:958 [INFO]: ❌ Socket status: User disconnected properly: z9Bwi6n_4Zo-mNBqAAE8
+2026-10-16 22:09:58:958 [INFO]: ❌ Socket status: User disconnected properly: nlSxKv-tLDhBKVoGAAE9
+2026-10-16 22:09:58:958 [INFO]: ⚡ Socket status: User connected with ID: 09Hh0lK5SZnAdzCRAAE-
+2026-10-16 22:09:58:958 [INFO]: ⚡ Socket status: User connected with ID: 5cmULDwrFyHk2YIHAAE_
+2026-10-16 22:09:58:958 [HTTP]: GET /api/services?page=1&limit=6 304 - - 261.194 ms
+2026-10-16 22:09:58:958 [HTTP]: GET /api/services?page=1&limit=6 304 - - 265.250 ms
+2026-10-16 22:10:28:1028 [INFO]: ❌ Socket status: User disconnected properly: 5cmULDwrFyHk2YIHAAE_
+2026-10-16 22:10:28:1028 [INFO]: ⚡ Socket status: User connected with ID: zTawkGeeb2Ue0zwsAAFA
+2026-10-16 22:10:28:1028 [HTTP]: GET /api/services?page=1&limit=6 304 - - 274.004 ms
+2026-10-16 22:10:29:1029 [HTTP]: GET /api/services?page=1&limit=6 304 - - 251.682 ms
+2026-10-16 22:10:43:1043 [INFO]: ❌ Socket status: User disconnected properly: 09Hh0lK5SZnAdzCRAAE-
+2026-10-16 22:10:47:1047 [INFO]: ⚡ Socket status: User connected with ID: Us20ofQMv2H-MPKKAAFB
+2026-10-16 22:11:13:1113 [INFO]: ❌ Socket status: User disconnected properly: zTawkGeeb2Ue0zwsAAFA
+2026-10-16 22:11:28:1128 [INFO]: ⚡ Socket status: User connected with ID: x8hZ3ns1pzqqvM10AAFC
+2026-10-16 22:11:28:1128 [HTTP]: GET /api/services?page=1&limit=6 304 - - 274.204 ms
+2026-10-16 22:11:29:1129 [HTTP]: GET /api/services?page=1&limit=6 304 - - 266.195 ms
+2026-10-16 22:11:32:1132 [INFO]: ❌ Socket status: User disconnected properly: Us20ofQMv2H-MPKKAAFB
+2026-10-16 22:11:47:1147 [INFO]: ⚡ Socket status: User connected with ID: N3Vx4n_x1M3ImwQeAAFD
+2026-10-16 22:12:13:1213 [INFO]: ❌ Socket status: User disconnected properly: x8hZ3ns1pzqqvM10AAFC
+2026-10-16 22:12:28:1228 [INFO]: ⚡ Socket status: User connected with ID: AT8z4i8qX7vSmdbQAAFE
+2026-10-16 22:12:28:1228 [HTTP]: GET /api/services?page=1&limit=6 304 - - 255.082 ms
+2026-10-16 22:12:29:1229 [HTTP]: GET /api/services?page=1&limit=6 304 - - 273.135 ms
+2026-10-16 22:12:32:1232 [INFO]: ❌ Socket status: User disconnected properly: N3Vx4n_x1M3ImwQeAAFD
+2026-10-16 22:12:47:1247 [INFO]: ⚡ Socket status: User connected with ID: TWH4rW9jUKBx9hg-AAFF

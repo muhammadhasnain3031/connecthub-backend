@@ -29,10 +29,12 @@ import { initNotificationListeners } from './listeners/notificationListener.js';
 
 const app = express();
 const httpServer = createServer(app);
+const FRONTEND_URL = process.env.FRONTEND_URL || 'http://localhost:5173';
+
 
 const io = new Server(httpServer, {
   cors: {
-    origin: 'http://localhost:5173',
+    origin: FRONTEND_URL,
     credentials: true,
   },
 });
@@ -77,7 +79,7 @@ const authLimiter = rateLimit({
 // ==========================================
 // MIDDLEWARES PIPELINE (ORDER MATTERS)
 // ==========================================
-app.use(cors({ origin: 'http://localhost:5173', credentials: true }));
+app.use(cors({ origin: FRONTEND_URL, credentials: true }));
 app.use(helmet());
 app.use(globalLimiter);
 app.use(morganMiddleware); // Injected right after security layers to track every request
