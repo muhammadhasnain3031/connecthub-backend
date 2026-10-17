@@ -3,7 +3,7 @@ import { io } from "socket.io-client";
 import { useSelector } from "react-redux";
 
 const ChatContext = createContext(null);
-const SOCKET_URL = "http://localhost:5000";
+const SOCKET_URL = "https://connecthub-backend-three.vercel.app";
 
 export const ChatProvider = ({ children }) => {
   const [socket, setSocket] = useState(null);

@@ -41,7 +41,7 @@ const ServicesList = () => {
         if (minPrice) queryParams += `&minPrice=${minPrice}`;
         if (maxPrice) queryParams += `&maxPrice=${maxPrice}`;
 
-        const res = await axios.get(`http://localhost:5000/api/services${queryParams}`);
+        const res = await axios.get(`https://connecthub-backend-three.vercel.app/api/services${queryParams}`);
         setServices(res.data.services || []);
         setTotalPages(res.data.totalPages || 1);
       } catch (err) {

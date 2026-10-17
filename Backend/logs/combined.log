@@ -989,3 +989,5 @@
 2026-10-16 22:12:29:1229 [HTTP]: GET /api/services?page=1&limit=6 304 - - 273.135 ms
 2026-10-16 22:12:32:1232 [INFO]: ❌ Socket status: User disconnected properly: N3Vx4n_x1M3ImwQeAAFD
 2026-10-16 22:12:47:1247 [INFO]: ⚡ Socket status: User connected with ID: TWH4rW9jUKBx9hg-AAFF
+2026-10-17 10:08:14:814 [INFO]: 🚀 Production Server is running on port 5000
+2026-10-17 10:08:15:815 [INFO]: Database status: MongoDB connected successfully

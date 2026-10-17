@@ -8,7 +8,7 @@ const CreateService = () => {
     e.preventDefault();
     try {
       const token = localStorage.getItem('token');
-      await axios.post('http://localhost:5000/api/services', formData, {
+      await axios.post('https://connecthub-backend-three.vercel.app/api/services', formData, {
         headers: { Authorization: `Bearer ${token}` }
       });
       alert('Service Created Successfully!');

@@ -2,7 +2,7 @@ import axios from 'axios';
 
 
 const API = axios.create({
-    baseURL : 'http://localhost:5000/api',
+    baseURL : 'https://connecthub-backend-three.vercel.app/api',
     withCredentials : true,
 });
 
