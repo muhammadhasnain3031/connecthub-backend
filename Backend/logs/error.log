@@ -1,0 +1,2 @@
+2026-10-17 13:57:38:5738 [ERROR]: ❌ Data insertion failed: Service validation failed: providerId: Path `providerId` is required.
+2026-10-17 13:58:47:5847 [ERROR]: ❌ Data insertion failed: E11000 duplicate key error collection: connecthub.services index: slug_1 dup key: { slug: null }

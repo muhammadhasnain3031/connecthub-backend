@@ -7,7 +7,9 @@
     "dev": "nodemon server.js",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "lint": "eslint .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "data:import": "node ./config/seeder.js"
+
   },
   "repository": {
     "type": "git",

@@ -991,3 +991,8 @@
 2026-10-16 22:12:47:1247 [INFO]: ⚡ Socket status: User connected with ID: TWH4rW9jUKBx9hg-AAFF
 2026-10-17 10:08:14:814 [INFO]: 🚀 Production Server is running on port 5000
 2026-10-17 10:08:15:815 [INFO]: Database status: MongoDB connected successfully
+2026-10-17 13:57:38:5738 [INFO]: 🗑️ Old data cleared successfully
+2026-10-17 13:58:47:5847 [INFO]: 🗑️ Old data cleared successfully
+2026-10-17 13:58:47:5847 [ERROR]: ❌ Data insertion failed: E11000 duplicate key error collection: connecthub.services index: slug_1 dup key: { slug: null }
+2026-10-17 13:59:40:5940 [INFO]: 🗑️ Old data cleared successfully
+2026-10-17 13:59:40:5940 [INFO]: 🚀 Mock services seeded into Database successfully!
