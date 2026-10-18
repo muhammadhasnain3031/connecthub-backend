@@ -9,7 +9,6 @@
     "lint": "eslint .",
     "format": "prettier --write .",
     "data:import": "node ./config/seeder.js"
-
   },
   "repository": {
     "type": "git",
@@ -41,6 +40,7 @@
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "express-rate-limit": "^8.7.1",
+    "groq-sdk": "^1.6.0",
     "helmet": "^8.3.0",
     "jsonwebtoken": "^9.0.3",
     "mongoose": "^9.9.4",

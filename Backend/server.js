@@ -1,9 +1,12 @@
+
 import dotenv from 'dotenv';
 dotenv.config();
 import express from 'express';
 import mongoose from 'mongoose';
 import { createServer } from 'http';
 import { Server } from 'socket.io';
+import aiRoutes from './routes/aiRoutes.js'
+
 
 // ==========================================
 // DAY 34 LOGGING SYSTEM IMPORTS
@@ -101,6 +104,7 @@ app.use(compression());
 app.use('/api/services', serviceRoutes);
 app.use('/api/bookings', bookingRoutes);
 app.use('/api/users', userRoutes);
+app.use('/api/ai', aiRoutes);
 
 app.get('/', (req, res) => {
   res.send('Server is running ');
