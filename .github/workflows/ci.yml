@@ -44,6 +44,7 @@ jobs:
           # ⚡ FIX: Mapping database URI to the cloud container port
           MONGO_URI: "mongodb://localhost:27017/connecthub_test"
           JWT_SECRET: "ci_pipeline_fallback_dummy_secret_key_string"
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           NODE_ENV: test
           GOOGLE_CLIENT_ID: "dummy_client_id_for_ci_pipeline_://googleusercontent.com"
           GOOGLE_CLIENT_SECRET: "dummy_client_secret_for_ci_pipeline_verification"
