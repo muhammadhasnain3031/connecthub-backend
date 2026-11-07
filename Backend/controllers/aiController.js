@@ -1,11 +1,6 @@
 import Groq from 'groq-sdk';
-import Service  from '../models/Service.js';
-
-// Groq Client Initialize kar rahe hain (.env se key utha kar)
-if (!process.env.GROQ_API_KEY) {
-  import('dotenv').then((dotenv) => dotenv.config());
-}
-const groq = new Groq({ apiKey: process.env.GROQ_API_KEY});
+import Service from '../models/Service.js';
+import logger from '../config/logger.js';
 
 /**
  * @desc    Get AI-powered service recommendations based on user query
@@ -15,6 +10,7 @@ const groq = new Groq({ apiKey: process.env.GROQ_API_KEY});
 export const getAIRecommendations = async (req, res, next) => {
   try {
     const { query } = req.body;
+    const userId = req.user?.id || req.user?._id || 'Anonymous';
 
     // 1. Input Validation
     if (!query) {
@@ -24,10 +20,19 @@ export const getAIRecommendations = async (req, res, next) => {
       });
     }
 
+    // ==========================================
+    // DAY 39: LAZY INITIALIZATION ENGINE (ANTI-CRASH)
+    // ==========================================
+    // Client ab tabhi initialize hoga jab actual request function chalega
+    const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
+
+    if (!process.env.GROQ_API_KEY) {
+      throw new Error("Critical: GROQ_API_KEY is missing from environment variables.");
+    }
+
     // 2. Fetch Available Services from Database
-    // lean() use kar rahe hain (Day 21 pattern) taake performance fast ho aur plain JSON mile
     const availableServices = await Service.find({})
-      .populate('providerId', 'name email') // Provider ki basic details sath lanay k liye
+      .populate('providerId', 'name email') 
       .lean();
 
     if (availableServices.length === 0) {
@@ -39,7 +44,6 @@ export const getAIRecommendations = async (req, res, next) => {
     }
 
     // 3. Format Services Data for LLM Context
-    // Saari services ka ahem data ek string mein convert kar rahe hain taake AI ise samajh sakay
     const servicesContext = availableServices.map(srv => (
       `ID: ${srv._id}, Title: ${srv.title}, Category: ${srv.category}, Price: $${srv.price}, Description: ${srv.description}, Provider: ${srv.providerId?.name || 'Unknown'}`
     )).join('\n\n');
@@ -60,35 +64,36 @@ export const getAIRecommendations = async (req, res, next) => {
       - Keep your response clear, professional, concise, and structured.
     `;
 
-    // 5. Call Groq Cloud API (Non-Streaming Call)
-    // Hum fast aur efficient model llama-3.1-8b-instant use kar rahe hain
-    // Sahi Model Name
-// Final Stable Groq Call Setup
-const chatCompletion = await groq.chat.completions.create({
-  messages: [
-    { role: 'system', content: systemPrompt },
-    { role: 'user', content: query }
-  ],
-   model: 'qwen/qwen3.8-27b', // Yeh model hamesha active aur verified rehta hai
-  temperature: 0.3,
-  max_tokens: 800
-});
+    // 5. Call Groq Cloud API with the active verified model
+    const chatCompletion = await groq.chat.completions.create({
+      messages: [
+        { role: 'system', content: systemPrompt },
+        { role: 'user', content: query }
+      ],
+      model: 'qwen/qwen3.8-27b', 
+      temperature: 0.3,
+      max_tokens: 800
+    });
 
+    // 6. Extract Response Text safely
+    const aiResponse = chatCompletion.choices?.[0]?.message?.content || chatCompletion.choices?.message?.content;
 
-    // 6. Extract Response Text
-    const aiResponse = chatCompletion.choices[0]?.message?.content;
+    // ==========================================
+    // DAY 39: AI ANALYTICS LOGGING GATEWAY
+    // ==========================================
+    logger.info(`📊 [AI Analytics]: User ${userId} searched for: "${query}". Model: qwen/qwen3.8-27b`);
 
     // 7. Send Response Back to Client
     return res.status(200).json({
       success: true,
       query,
+      modelUsed: 'qwen/qwen3.8-27b',
+      timestamp: new Date(),
       recommendations: aiResponse
     });
 
   } catch (error) {
-    // Centralized error handling (Day 17/34 pattern)
-        console.error("❌ Groq Client Error Details:", error.message);
-
+    console.error("❌ Groq Client Error Details:", error.message);
     next(error); 
   }
 };

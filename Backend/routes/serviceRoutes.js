@@ -13,20 +13,20 @@ import {
   authorizeRoles,
   verifyOwnership,
 } from '../middleware/authMiddleware.js';
-import { upload } from '../middleware/upload.js'; // 1. Upload middleware ko import kiya
+import { upload } from '../middleware/upload.js'; 
+import { cacheServices } from '../middleware/cacheMiddleware.js'; // ⚡ DAY 41: Cache Middleware Imported
 
 const router = express.Router();
 
 // Public listing
-router.get('/', getAllServices);
+// ⚡ DAY 41: Route Cache Aside Pattern Injection
+router.get('/', cacheServices, getAllServices);
 router.get('/top-providers', getTopProvidersMetrics);
 router.get('/:id', getServiceById);
 
 // Protected mutation actions
-// 2. POST route me upload.array('images', 5) inject kiya
 router.post('/', protect, upload.array('images', 5), createService);
 
-// 3. Optional: Agar update karte waqt bhi naye images dalne hon to PUT par bhi laga sakte hain
 router.put(
   '/:id',
   protect,
@@ -38,3 +38,4 @@ router.put(
 router.delete('/:id', protect, authorizeRoles('provider'), deleteService);
 
 export default router;
+  

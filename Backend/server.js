@@ -1,12 +1,10 @@
-
 import dotenv from 'dotenv';
 dotenv.config();
 import express from 'express';
 import mongoose from 'mongoose';
 import { createServer } from 'http';
 import { Server } from 'socket.io';
-import aiRoutes from './routes/aiRoutes.js'
-
+import aiRoutes from './routes/aiRoutes.js';
 
 // ==========================================
 // DAY 34 LOGGING SYSTEM IMPORTS
@@ -34,7 +32,6 @@ const app = express();
 const httpServer = createServer(app);
 const FRONTEND_URL = process.env.FRONTEND_URL || 'http://localhost:5173';
 
-
 const io = new Server(httpServer, {
   cors: {
     origin: FRONTEND_URL,
@@ -45,7 +42,6 @@ const io = new Server(httpServer, {
 // ==========================================
 // DAY 34 LOGGING & RATE LIMITER CONFIGURATIONS
 // ==========================================
-// 1. Morgan Stream setup to pipe logs into Winston
 const morganStream = {
   write: (message) => logger.http(message.trim()),
 };
@@ -55,26 +51,21 @@ const morganMiddleware = morgan(
   { stream: morganStream }
 );
 
-// 2. Global Rate Limiter for general endpoints
 const globalLimiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
+  windowMs: 15 * 60 * 1000,
   max: 100,
   message: { success: false, message: 'Too many requests, try again later.' },
 });
 
-// 3. Strict Rate Limiter for Sensitive Auth Routes (Brute-Force Protection)
 const authLimiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 15, // Only 15 attempts allowed
+  windowMs: 15 * 60 * 1000,
+  max: 15,
   message: {
     success: false,
-    message:
-      'Boht zyada koshish ki gayi hai. Meharbani kar ke 15 minutes baad dobara try karein.',
+    message: 'Boht zyada koshish ki gayi hai. Meharbani kar ke 15 minutes baad dobara try karein.',
   },
   handler: (req, res, next, options) => {
-    logger.warn(
-      `⚠️ Rate Limit Hit: IP ${req.ip} tried to abuse endpoint: ${req.originalUrl}`
-    );
+    logger.warn(`⚠️ Rate Limit Hit: IP ${req.ip} tried to abuse endpoint: ${req.originalUrl}`);
     res.status(options.statusCode).send(options.message);
   },
 });
@@ -85,9 +76,8 @@ const authLimiter = rateLimit({
 app.use(cors({ origin: FRONTEND_URL, credentials: true }));
 app.use(helmet());
 app.use(globalLimiter);
-app.use(morganMiddleware); // Injected right after security layers to track every request
+app.use(morganMiddleware);
 
-// Apply strict rate limiting to auth routes before mounting endpoints
 app.use('/api/users/login', authLimiter);
 app.use('/api/users/register', authLimiter);
 
@@ -97,6 +87,15 @@ app.use(cookieParser());
 app.use(passport.initialize());
 app.use(sanitizeInput);
 app.use(compression());
+
+// ==========================================
+// DAY 39: SOCKET.IO REQUEST INJECTION MIDDLEWARE
+// ==========================================
+// Yeh pipeline routes chalne se pehle har request mein socket inject karega
+app.use((req, res, next) => {
+  req.io = io;
+  next();
+});
 
 // ==========================================
 // ROUTES ROUTING
@@ -123,20 +122,24 @@ async function connectDB() {
 }
 connectDB();
 
-// Boot background Pub/Sub event listeners
 initNotificationListeners();
 
 // ==========================================
-// SOCKET.IO REAL-TIME ROUTINES
+// SOCKET.IO REAL-TIME ROUTINES (DAY 39 UPDATED)
 // ==========================================
 io.on('connection', (socket) => {
   logger.info(`⚡ Socket status: User connected with ID: ${socket.id}`);
 
+  // 1. Dynamic User/Provider Room Connection Handler
+  socket.on('joinUserRoom', (userId) => {
+    socket.join(userId);
+    logger.info(`👤 User Room Active: Socket ${socket.id} joined personal identity room: ${userId}`);
+  });
+
+  // 2. Chat Conversation Room Handler
   socket.on('joinRoom', (conversationId) => {
     socket.join(conversationId);
-    logger.info(
-      `🚪 Room event: Socket ${socket.id} joined conversation room: ${conversationId}`
-    );
+    logger.info(`🚪 Room event: Socket ${socket.id} joined conversation room: ${conversationId}`);
   });
 
   socket.on('sendMessage', (messageData) => {
@@ -149,7 +152,6 @@ io.on('connection', (socket) => {
   });
 });
 
-// Centralized Custom Error Handling Middleware (Always at the end)
 app.use(errorMiddleware);
 
 // ==========================================
